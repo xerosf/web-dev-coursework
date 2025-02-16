@@ -18,6 +18,14 @@ Design and develop a website focused on **one** UN Sustainable Development Goal 
 
 ---
 
+## Project Usage:
+ - Make sure *git* is installed and works with *VSCode*.
+ - Create a directory for the project and open it in *VSCode*.
+ - Open up a terminal in *VSCode* and run `git clone https://github.com/xerosf/web-dev-coursework.git` to download and set up the repo locally.
+ - Use the *Source Control* GUI in *VSCode* to conveniently commit and sync changes to the repo.
+
+---
+
 ## 🗺️ Roadmap & Timeline
 
 | Phase                | Timeline       | Tasks                                                                 |
