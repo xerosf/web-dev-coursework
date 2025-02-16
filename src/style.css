@@ -1,3 +1,11 @@
+:root {
+    --lightBackground: #FBF6E9;
+    --darkBackground: #2c2c30;
+    --subtleEmp: #E3F0AF;
+    --roughEmp: #5DB996;
+    --mainCol: #118B50;
+}
+
 body {
-    background-color: honeydew;
+    background-color: var(--darkBackground);
 }
