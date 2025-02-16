@@ -1,4 +1,4 @@
-# 🌐 SDG Website Project - Group Coursework for 4COSC011W
+# 🌐 Group Coursework for 4COSC011W
 
 **Module:** Web Design & Development (4COSC011W)  
 **Team:** Sansith (ST1), Lison (ST2), Emika (ST3), Oshan (ST4)  
