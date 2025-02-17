@@ -1,3 +1,66 @@
 body{
+    margin: 0;   
+    padding:0;
     
+}
+* {
+    box-sizing: border-box;
+}
+main{
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ 
+    
+}
+
+.profile-sec1,.profile-sec2{    
+    width: 50%;
+    
+}
+.profile-sec2{
+    flex-grow: 1;
+
+}
+.profile-sec1{
+    /* padding: 100px; */
+
+}
+.banner{
+    display: flex;
+    gap:2rem;
+    width: 100%;
+    background-color: wheat;
+    padding: 3rem;
+    padding-left: 1.5rem;
+    
+
+}
+.profile-pic{    
+    bottom: 0;
+    background-color: pink;    
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+}
+.details-wrapper{
+    flex-grow: 1;    
+    
+}
+.username{
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 4rem;
+
+}
+.bio{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+footer{
+    padding: 200px;
 }
