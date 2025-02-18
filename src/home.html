@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 13 | Climate Action</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://sdgs.un.org/themes/custom/porto/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #splash-frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 1000;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home content -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create and append iframe
+            const splashFrame = document.createElement('iframe');
+            splashFrame.id = 'splash-frame';
+            splashFrame.src = 'splash.html';
+            document.body.appendChild(splashFrame);
+            
+            // Prevent body scrolling when splash is open
+            document.body.style.overflow = 'hidden';
+
+            // Listen for message from splash iframe
+            window.addEventListener('message', function(event) {
+                if (event.data === 'closeSplash') {
+                    document.body.style.overflow = '';
+                    splashFrame.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

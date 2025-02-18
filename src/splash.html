@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Splash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/splash-styles.css">
+    <style>
+        /* Override any iframe-specific styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .splash-container {
+            opacity: 1; /* Override initial opacity since we want it visible immediately in iframe */
+            animation: none; /* Remove initial animation since it's already visible */
+        }
+    </style>
+    <title>SDG | Climate Action</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Entry Point</h1>
+    <div class="splash-container">
+        <div class="splash-content">
+            <button class="close-splash" aria-label="Close welcome message">×</button>
+            <h1>Welcome</h1>
+            <p>We're glad to have you here</p>
+            <div class="decorative-element"></div>
+        </div>
+    </div>
+
+    <script>
+        function closeSplash() {
+            const container = document.querySelector('.splash-container');
+            const content = document.querySelector('.splash-content');
+            
+            // Use the existing animations from splash-styles.css
+            container.style.animation = 'fadeOut 0.5s ease-out forwards';
+            content.style.animation = 'slideDown 0.5s ease-out forwards';
+            
+            setTimeout(() => {
+                window.parent.postMessage('closeSplash', '*');
+            }, 500);
+        }
+
+        document.querySelector('.close-splash').addEventListener('click', closeSplash);
+
+        document.querySelector('.splash-container').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSplash();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSplash();
+            }
+        });
+    </script>
 </body>
 </html>
