@@ -31,7 +31,7 @@ main{
 .banner{
     display: flex;
     background-color: var(--lightBackground);
-    background: url(dummypfp.jpg);
+    background: url(../res/dummypfp.jpg);
     background-size: cover;
     gap:2rem;
     background-color: var(--lightBackground);
