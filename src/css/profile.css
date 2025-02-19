@@ -1,48 +1,54 @@
-body{
-    margin: 0;   
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
-main{
-    min-height: 100vh;    
+
+main {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#690B22;    
-    
+    background-color: #690B22;
+
 }
+
 /* the whole profile page 2 sections */
-.profile-sec1,.profile-sec2{    
+.profile-sec1,
+.profile-sec2 {
     width: 70%;
-    background-color:  #E07A5F;    
-    
+    background-color: #E07A5F;
+
 }
-.profile-sec2{
+
+.profile-sec2 {
     flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
 }
+
 /* profile pic n shit */
 
-.banner{
+.banner {
     display: flex;
-    background-color: var(--lightBackground);
-    background: url(../res/dummypfp.jpg);
+    background-color: var(--mainCol);
+    background: url(/res/dummypfp.jpg);
     background-size: cover;
-    gap:2rem;
+    gap: 2rem;
     background-color: var(--lightBackground);
     padding: 3rem;
     padding-left: 1.5rem;
     padding-bottom: 1rem;
     position: relative;
     align-items: center;
-    border-radius: 1.5rem ;
+    border-radius: 1.5rem;
 }
-.short-bio{
+
+.short-bio {
     position: absolute;
     right: 3rem;
     width: 40%;
@@ -53,55 +59,67 @@ main{
 
 
 }
-.profile-pic{    
+
+.profile-pic {
     bottom: 0;
     background-color: var(--mainCol);
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
 }
-.profile-pic img{
+
+.profile-pic img {
     width: 100%;
     border-radius: 50%;
 }
-.details-wrapper{
-    flex-grow: 1;    
-    
+
+.details-wrapper {
+    flex-grow: 1;
+
 }
-.username{
+
+.username {
     margin: 0.5rem;
     margin-top: 1.5rem;
     font-size: 4rem;
 
 }
-.bio{
+
+.bio {
     font-size: 1.5rem;
     margin-left: 1rem;
 }
 
 /* Skills,goals,fraustration */
-.interests-wrapper{
+.interests-wrapper {
     padding: .5rem;
     flex: 1;
 }
+
 /* Volenturing and UN support ideas */
-.orther-details-wrapper{
+.orther-details-wrapper {
     flex: 1;
 }
 
 /* Skills card */
-.skills,.frustrations,.exp,.goals,.contact-me-card{
+.skills,
+.frustrations,
+.exp,
+.goals,
+.contact-me-card {
     background-color: #F1E3D3;
     border-radius: 1rem;
     padding: 1rem 0.5rem;
     margin: 0.5rem 0rem;
 }
-.skills{
-    display: flex ;
+
+.skills {
+    display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
 }
-.skill-wrapper{
+
+.skill-wrapper {
     position: relative;
     background-color: #690B22;
     padding: 0.5rem 1rem;
@@ -110,47 +128,59 @@ main{
     margin-bottom: 1rem;
 
 }
-.skill,.skill2,.skill3,.skill4{
+
+.skill,
+.skill2,
+.skill3,
+.skill4 {
     position: absolute;
     background-color: pink;
     border-radius: 1rem;
-    top:0px;
+    top: 0px;
     bottom: 0px;
     left: 0px;
     width: 50%;
-    
+
 }
-.skill2{
+
+.skill2 {
     width: 30%;
 }
-.skill3{
+
+.skill3 {
     width: 70%;
 }
-.skill4{
+
+.skill4 {
     width: 20%;
 }
-.skill-wrapper,.skill-type{
+
+.skill-wrapper,
+.skill-type {
     margin-left: 1rem;
 }
 
 /* Experinces */
-.exp-details{
+.exp-details {
     margin: 0.5rem;
 }
 
 
-ul{
+ul {
     list-style-type: none;
 
 }
-li{
+
+li {
     padding-bottom: .5rem;
 }
-.frustrations-wrapper{
+
+.frustrations-wrapper {
     display: flex;
     flex-wrap: wrap;
- 
+
 }
+
 /* .un-support{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
@@ -158,13 +188,13 @@ li{
 } */
 
 /* Goals */
-.svg-wrapper{
+.svg-wrapper {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: 500;
-    
+
 }
 
 /* 
@@ -174,20 +204,22 @@ li{
 } */
 
 /* Contact Me  */
-.contact-me-form{
+.contact-me-form {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
     margin-top: 0.5rem;
 
 }
-.contact-info{
+
+.contact-info {
     margin: 0rem 1rem;
-    padding:.5rem;
+    padding: .5rem;
     border-radius: 0.5rem;
     border: none;
 }
-.send-but{
+
+.send-but {
     color: pink;
     background-color: #690B22;
     border-radius: 0.5rem;
@@ -198,11 +230,12 @@ li{
     margin-top: 0.5rem;
 
 }
-.orther-details-wrapper{
+
+.orther-details-wrapper {
     padding: 0.5rem;
 }
 
-footer{
+footer {
     padding: 200px;
     border-radius: 2rem;
 }
