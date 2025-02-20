@@ -1,122 +1,96 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-* {
+*{
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
 }
+body{
+    background-color: black;
+    color: white;
+}
+main,footer{
+    padding: 1rem;
+    margin-right: 26%;
+    
+}
+.section1,.section2{
+    border-radius: 2rem;
+    
 
-main {
-    min-height: 100vh;
+}
+/* section 2 (profile-pic) */
+.section2{
+    position: fixed;
+    top: 20px;
+    bottom: 20px;
+    width: 25%;
+    right: 20px;
+    background-color: #F1E3D3;
     display: flex;
     flex-direction: column;
+    padding: 1rem 1rem;
     align-items: center;
-    background-color: #690B22;
-
+    row-gap: 1rem;
+    
 }
-
-/* the whole profile page 2 sections */
-.profile-sec1,
-.profile-sec2 {
-    width: 70%;
-    background-color: #E07A5F;
-
-}
-
-.profile-sec2 {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* profile pic n shit */
-
-.banner {
-    display: flex;
-    background-color: var(--mainCol);
-    background: url(/res/dummypfp.jpg);
-    background-size: cover;
-    gap: 2rem;
-    background-color: var(--lightBackground);
-    padding: 3rem;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
-    position: relative;
-    align-items: center;
-    border-radius: 1.5rem;
-}
-
-.short-bio {
-    position: absolute;
-    right: 3rem;
-    width: 40%;
-    background-color: rgba(0, 0, 0, 0.125);
-    color: white;
-    padding: 3rem;
-    border-radius: 1rem;
-
-
-}
-
-.profile-pic {
-    bottom: 0;
-    background-color: var(--mainCol);
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-}
-
-.profile-pic img {
+.details-wrapper{
+    background-color:black;   
+    font-size: 3rem;
     width: 100%;
-    border-radius: 50%;
+    padding: 2rem 1rem;
+    font-weight: 500;
+    border-radius: 1rem;
+}
+.bio{
+    font-size: 1.75rem;
+    color: gray;
+    padding-left: 0.35rem;
 }
 
-.details-wrapper {
-    flex-grow: 1;
-
+.profile-pic img{
+    border-radius: 3rem;
+    width: 100%;
+}
+.short-bio{
+    background-color: darksalmon;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 0.25rem;
+    min-width: 60%;
+    
 }
 
-.username {
-    margin: 0.5rem;
-    margin-top: 1.5rem;
-    font-size: 4rem;
+.skills-frustration-wrapper{    
+    display: flex;
+    gap: 1rem;
 
 }
-
-.bio {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-}
-
-/* Skills,goals,fraustration */
-.interests-wrapper {
-    padding: .5rem;
-    flex: 1;
-}
-
-/* Volenturing and UN support ideas */
-.orther-details-wrapper {
-    flex: 1;
-}
-
 /* Skills card */
 .skills,
 .frustrations,
 .exp,
 .goals,
-.contact-me-card {
+.contact-me-card,.volunteering,.un-support {
     background-color: #F1E3D3;
     border-radius: 1rem;
     padding: 1rem 0.5rem;
     margin: 0.5rem 0rem;
+    color: black;
+
 }
 
 .skills {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+    flex: 1.75;
+    
+}
+.frustrations{
+    flex: 1;
 }
 
 .skill-wrapper {
@@ -159,12 +133,22 @@ main {
 .skill-type {
     margin-left: 1rem;
 }
+/* frustrations wrapper */
+.frustrations-wrapper {
+    display: flex;
+    
+}
+.svg-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 
-/* Experinces */
+}
 .exp-details {
     margin: 0.5rem;
 }
-
 
 ul {
     list-style-type: none;
@@ -175,45 +159,48 @@ li {
     padding-bottom: .5rem;
 }
 
-.frustrations-wrapper {
+.goals-un-volunteering-wrapper{
     display: flex;
-    flex-wrap: wrap;
+    column-gap: 1rem;
 }
-
-/* .un-support{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-
-} */
-
-/* Goals */
-.svg-wrapper {
+.goals-un-wrapper{
+    flex: 1;
     display: flex;
-    align-items: center;
-    column-gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 500;
+    flex-direction: column;
+}
+.goals{
+    flex: 1;
+}
+.un-support{
+    flex: 1;
+}
+/* volunteering table */
+.vol-table {
+    border: 0.25rem solid black;
+}
+.vol-table th,.vol-table td{
+    padding: 0.25rem;
+    border: 0.25rem solid black;
+    
+}
+.work-time{
+    text-align: center;
+    background-color: rgba(173, 216, 230,0.5);
 
 }
-
-/* 
-.goals-heading{
-    font-size: 2rem;
-    font-weight: 500;
-} */
 
 /* Contact Me  */
 .contact-me-form {
     display: flex;
     flex-direction: column;
-    row-gap: 0.5rem;
+    row-gap: 1rem;
     margin-top: 0.5rem;
 
 }
 
 .contact-info {
     margin: 0rem 1rem;
-    padding: .5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     border: none;
 }
@@ -223,18 +210,13 @@ li {
     background-color: #690B22;
     border-radius: 0.5rem;
     width: 40%;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     border: none;
     margin: auto;
     margin-top: 0.5rem;
 
 }
 
-.orther-details-wrapper {
-    padding: 0.5rem;
-}
-
+/* footer */
 footer {
-    padding: 200px;
-    border-radius: 2rem;
 }
