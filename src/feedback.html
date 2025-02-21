@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Feedback Page</title>
+    </head>
+
+    <style>
+        body {
+            font-family: Helvetica;
+        }
+
+    </style>
+    <body>
+        <h1>Feedback Form</h1>
+        <p>We would appreciate to hear your thoughts and suggestions about our website so we can improve!</p>
+
+        <form>
+            <label>How would you rate your overall experience?</label>
+            <label for="vgood">Very Good</label>
+            <input type="radio" name="experience" id="vgood">
+
+            <label for="good">Good</label>
+            <input type="radio" name="experience" id="good">
+
+            <label for="satisfied">Satisfied</label>
+            <input type="radio" name="experience" id="satisfied">
+
+            <label for="poor">Poor</label>
+            <input type="radio" name="experience" id="poor">
+
+            <hr>
+
+            <label for="firstname">Name: </label>
+            
+            <input type="text" id="firstname" size="25px">
+            <br> <br>
+
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" placeholder="yourname@gmail.com" size="25px">
+            <br> <br>
+            <label for="contactno">Contact Number:</label>
+            <input type="number" id="contactno">
+            <br> <br>
+
+            <label for="feedback">Describe your feedback:</label>
+            <br>
+            <textarea  id="feedback" rows="8" cols="150" placeholder="Describe about your feedback"></textarea>
+            <br> <br>
+            <input id="submitButton" type="submit">
+        </form>
+    </body>
+</html>
