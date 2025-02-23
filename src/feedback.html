@@ -17,10 +17,6 @@
         margin-top: 20px;
       }
 
-      h3 {
-        font-weight: normal;
-      }
-
       label {
         font-size: normal;
         font-weight: normal;
@@ -40,11 +36,13 @@
 
       input,
       textarea {
-        width: 100%;
-        padding: 5px;
-        margin-top: 5px;
-        border: 1px solid;
+        width: auto;
+        padding: 10px;
+        margin: 5px;
+        border: none;
         border-radius: 10px;
+        opacity: 50%;
+        background-color: rgb(228, 228, 228);
       }
 
       button {
@@ -55,15 +53,21 @@
         border: none;
         border-radius: 10px;
       }
+
+      #name, #mail, #contactno, #write {
+        width: 95%;
+      }
+
+      
     </style>
   </head>
 
   <body>
     <h1>Feedback Page</h1>
-    <h3>
+    <p>
       Make sure to give us your feedback so we could improve ourselves for the
       future!
-    </h3>
+    </p>
 
     <form>
       <div class="container">
@@ -106,14 +110,16 @@
         <div class="satisfaction">
           <p>How satisfied are you with our website?</p>
 
-          <input
-            type="radio"
-            id="very_satisfied"
-            name="satisfaction"
-            value="Very Satisfied"
-            required
-          />
-          <label for="very_satisfied">Very Satisfied</label>
+          <span>
+            <input
+              type="radio"
+              id="very_satisfied"
+              name="satisfaction"
+              value="Very Satisfied"
+              required
+            />
+            <label for="very_satisfied">Very Satisfied</label>
+          </span>
 
           <input
             type="radio"
