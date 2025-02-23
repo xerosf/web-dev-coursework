@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+* {
+    font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #000000;
+    background-color: #E3F0AF;
+    display: flex;
+    align-items: center;
+}
+
+li,
+a,
+button {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    list-style: none;
+    background-color: #E3F0AF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 1%;
+    background-color: #E3F0AF;
+    color: #000000;
+}
+
+.logo {
+    cursor: pointer;
+    width: 40px;
+    /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+    /* Adjust the spacing as needed */
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #0088a9;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.nav_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E3F0AF;
+}
+
+.nav_list li {
+    float: left;
+}
+
+.nav_list li a,
+.dropdown {
+    display: inline-block;
+    color: #000000;
+    /* Navbar font color */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav_list li a:hover {
+    background-color: #5DB996;
+}
