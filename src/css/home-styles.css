@@ -46,6 +46,7 @@ header {
 
 .logo {
     cursor: pointer;
+    background-color: #E3F0AF;
     width: 40px;
     /* Adjust the size as needed */
     height: auto;
