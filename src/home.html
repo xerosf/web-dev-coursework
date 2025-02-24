@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climate Change</title>
+    <link rel="logo" href="../res/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/home-styles.css">
 </head>
 
 <body>
     <header>
-        <h1>
-            <img src="/res/logo.svg" alt="Logo" class="logo">
-        </h1>
+        <div class="logo-container">
+            <img src="../res/logo.png" alt="Logo" class="logo" style="width: 150px; height: auto;">
+        </div>
         <nav>
             <ul class="nav_list">
                 <li><a href="#">Home</a></li>
@@ -25,7 +26,26 @@
         </nav>
         <a class="cta" href="#"><button>Contact</button></a>
     </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Create and append iframe
+            const splashFrame = document.createElement('iframe');
+            splashFrame.id = 'splash-frame';
+            splashFrame.src = 'splash.html';
+            document.body.appendChild(splashFrame);
 
+            // Prevent body scrolling when splash is open
+            document.body.style.overflow = 'hidden';
+
+            // Listen for message from splash iframe
+            window.addEventListener('message', function (event) {
+                if (event.data === 'closeSplash') {
+                    document.body.style.overflow = '';
+                    splashFrame.remove();
+                }
+            });
+        });
+    </script>
     <!-- <footer>
         <p>&copy; 2025 Team Project | <a href="student-editor-page.html">Your Editor Page</a></p>
         <p>Ensuring accessibility compliance for all team pages.</p>
