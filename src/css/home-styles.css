@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
 * {
     font-family: "Merriweather", serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
-.hero-img{
+.hero-img {
     background-color: #0088a9;
-    height: 100dvh;
+    height: 90dvh;
     background-image: url(../../res/profile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,9 +20,10 @@
     right: 0px;
     left: 0px;
     z-index: -1;
-    
+
 }
-main{
+
+main {
     padding: 30rem;
     background-color: white;
 }
@@ -38,27 +40,33 @@ header {
     top: 0px;
 
 }
-.nav-list{
+
+.nav-list {
     display: flex;
     list-style: none;
     justify-content: space-between;
-    
+
 }
-.nav-list li{
-    margin: 1rem;
+
+.nav-list li {
+    margin: 10px;
 }
-.nav-list li a{
+
+.nav-list li a {
     text-decoration: none;
     color: black;
 }
-.dropdown-item{
+
+.dropdown-item {
     position: relative;
     margin: 0px;
 }
-.dropdown li{
-    margin: 0px;    
+
+.dropdown li {
+    margin: 3.5px;
 }
-.dropdown{
+
+.dropdown {
     list-style-type: none;
     position: absolute;
     top: -80px;
@@ -66,8 +74,9 @@ header {
     display: none;
 
 }
+
 .dropdown-item:hover .dropdown {
-    display: block; 
+    display: block;
 }
 
 .logo-container {
@@ -83,14 +92,9 @@ header {
     cursor: pointer;
     background-color: #E3F0AF;
     width: 40px;
-    /* Adjust the size as needed */
     height: auto;
     margin-right: 10px;
-    /* Adjust the spacing as needed */
 }
-
-
-
 
 #splash-frame {
     position: fixed;
@@ -182,42 +186,3 @@ footer {
     background-color: #E3F0AF;
     margin-right: 100px;
 }
-
-
-/* .nav_list ul {
-    list-style: none;
-    background: #743ed7;
-    ;
-}
-
-.nav-list ul li {
-    display: inline-block;
-    position: relative;
-}
-
-.nav-list ul li a {
-    display: block;
-    padding: 20px 25px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-list ul li ul.dropdown li {
-    display: none;
-}
-
-.nav-list ul li {
-    width: 100%;
-    background: #743ed7;
-    display: none;
-    z-index: 1;
-}
-
-.nav-list ul li a:hover {
-    background: #8e67d5;
-}
-
-.nav-list ul li:hover ul.dropdown {
-    display: block;
-
-} */

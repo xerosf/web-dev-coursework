@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const splashFrame = document.createElement('iframe');
     splashFrame.id = 'splash-frame';
-    splashFrame.src = 'splash.html';
+    splashFrame.src = '../src/splash.html';
     document.body.appendChild(splashFrame);
 
     document.body.style.overflow = 'hidden';
