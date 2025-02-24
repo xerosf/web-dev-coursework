@@ -99,17 +99,26 @@ Use GitHub Issues to:
 ## Header Usage
 To include the header in your pages, add this to your HTML file:
 ```html
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="path_to_style_file">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home-styles.css">
 </head>
+
 <body>
     <div id="header"></div>
     <script>
-        fetch("path_to_header.html")
+        fetch("../header.html")
             .then(response => response.text())
             .then(data => document.getElementById("header").innerHTML = data);
     </script>
 </body>
+
+</html>
 ```
 ---
 
