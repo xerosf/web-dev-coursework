@@ -100,6 +100,7 @@ button:hover {
 .dropdown {
     display: inline-block;
     color: #000000;
+    /* Navbar font color */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -197,5 +198,44 @@ footer {
 .profile-picture {
     border-radius: 60%;
     background-color: #E3F0AF;
-    margin-right: 50px;
+    margin-right: 100px;
+}
+
+
+.nav_list ul {
+    list-style: none;
+    background: #743ed7;
+    ;
+}
+
+.nav-list ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-list ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list ul li ul.dropdown li {
+    display: none;
+}
+
+.nav-list ul li {
+    width: 100%;
+    background: #743ed7;
+    display: none;
+    z-index: 1;
+}
+
+.nav-list ul li a:hover {
+    background: #8e67d5;
+}
+
+.nav-list ul li:hover ul.dropdown {
+    display: block;
+
 }
