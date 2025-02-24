@@ -97,7 +97,7 @@ Use GitHub Issues to:
 
 ---
 ## Header, Footer Usage
-To include the header and the footer in your pages, add this to your HTML file:
+To include the header and the footer in your pages, use this HTMl template:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -105,8 +105,12 @@ To include the header and the footer in your pages, add this to your HTML file:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Climate Action</title>
+    <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/theme.js" defer></script>
 </head>
 
 <body>
