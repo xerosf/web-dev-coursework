@@ -94,8 +94,9 @@ src/
 │   ├── validation_ST3.html # Emika
 │   ├── validation_ST4.html # Oshan
 ├── template.html # Header and footer template # Lison
-index.html # Splash Screen  # Sansith
-res/ # Images, icons, etc.
+├── index.html # Splash Screen  # Sansith
+├── res/ 
+├──# Images, icons, etc.
 ```
 
 ---
