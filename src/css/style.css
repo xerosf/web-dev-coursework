@@ -1,11 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --lightBackground: #FBF6E9;
+/* :root {
+    --lightBackground: #F2F1EB;
     --darkBackground: #2c2c30;
     --subtleEmp: #E3F0AF;
     --roughEmp: #5DB996;
     --mainCol: #118B50;
+} */
+
+:root {
+    --primary-color: #88AB8E;
+    --background-color: #F2F1EB;
+    --card-background: #EEE7DA;
+    --text-color: #AFC8AD;
+    --accent-color: #AFC8AD;
+    --button-bg: #ffffff;
+    --button-text: #000000;
+    --button-border: #AFC8AD;
+    --shadow-color: rgba(59, 59, 59, 0.1);
+}
+
+[data-theme="dark"] {
+    --primary-color: #000000;
+    --background-color: #222222;
+    --card-background: #3b3b3b;
+    --text-color: #ffffff;
+    --accent-color: #ffffff;
+    --button-bg: #222222;
+    --button-text: #ffffff;
+    --button-border: #ffffff;
+    --shadow-color: none;
 }
 
 body {
