@@ -7,6 +7,7 @@
     <title>Climate Change</title>
     <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
     <link rel="stylesheet" href="css/home-styles.css">
+    <script src="../js/splash.js"></script>
 </head>
 
 <body>
@@ -29,23 +30,6 @@
             <img src="../res/profile.jpg" alt="Profile Picture" style="width: 50px; height: 50px; border-radius: 50%;">
         </div>
     </header>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const splashFrame = document.createElement('iframe');
-            splashFrame.id = 'splash-frame';
-            splashFrame.src = 'splash.html';
-            document.body.appendChild(splashFrame);
-
-            document.body.style.overflow = 'hidden';
-
-            window.addEventListener('message', function (event) {
-                if (event.data === 'closeSplash') {
-                    document.body.style.overflow = '';
-                    splashFrame.remove();
-                }
-            });
-        });
-    </script>
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
