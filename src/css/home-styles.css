@@ -100,7 +100,6 @@ button:hover {
 .dropdown {
     display: inline-block;
     color: #000000;
-    /* Navbar font color */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -196,5 +195,7 @@ footer {
 }
 
 .profile-picture {
+    border-radius: 60%;
     background-color: #E3F0AF;
+    margin-right: 50px;
 }
