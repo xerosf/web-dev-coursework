@@ -96,5 +96,22 @@ Use GitHub Issues to:
 - **All Communications:** Group WhatsApp and SayGex Discord
 
 ---
+## Header Usage
+To include the header in your pages, add this to your HTML file:
+```html
+<head>
+    <link rel="stylesheet" href="path_to_style_file">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch("path_to_header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
+</body>
+```
+
 
 **Ruwan Egodawatte Pihitai!** 🙏 
+
