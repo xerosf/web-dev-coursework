@@ -11,7 +11,7 @@
 .hero-img {
     background-color: #0088a9;
     height: 90dvh;
-    background-image: url(../../res/profile.jpg);
+    background-image: url(../../res/hero.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: sticky;
@@ -70,6 +70,7 @@ header {
     list-style-type: none;
     position: absolute;
     top: -80px;
+    /* to 20px */
     background-color: aqua;
     display: none;
 

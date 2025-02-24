@@ -111,7 +111,7 @@ To include the header in your pages, add this to your HTML file:
     </script>
 </body>
 ```
-
+---
 
 **Ruwan Egodawatte Pihitai!** 🙏 
 
