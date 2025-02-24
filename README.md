@@ -61,21 +61,35 @@ Design and develop a website focused on **one** UN Sustainable Development Goal 
 
 ```
 src/
-├── style.css # Global CSS (Lison)
-├── splash.html # Sansith
-├── home.html # Lison
-├── volunteer.html # Sansith
-├── table.html # Lison
-├── profile.html # Oshan
-├── feedback.html # Emika
-├── sitemap.html # Oshan
-├── team.html # Emika
-├── content_ST1.html # Sansith
-├── content_ST2.html # Lison
-├── content_ST3.html # Emika
-├── content_ST4.html # Oshan
-├── pageEditor_ST1.html # Sansith
-├── ... (other editor/validation pages)
+├── css/
+│   ├── style.css # Global CSS (Lison)
+│   ├── home-styles.css # Additional styles for home page
+├── js/
+│   ├── theme.js # JavaScript for theme handling
+│   ├── script.js # JavaScript for script handling
+├── pages/
+│   ├── splash.html # Sansith
+│   ├── home.html # Lison
+│   ├── volunteer.html # Sansith
+│   ├── table.html # Lison
+│   ├── profile.html # Oshan
+│   ├── feedback.html # Emika
+│   ├── sitemap.html # Oshan
+│   ├── team.html # Emika
+│   ├── content_ST1.html # Sansith
+│   ├── content_ST2.html # Lison
+│   ├── content_ST3.html # Emika
+│   ├── content_ST4.html # Oshan
+│   ├── pageEditor_ST1.html # Sansith
+│   ├── pageEditor_ST2.html # Lison
+│   ├── pageEditor_ST3.html # Emika
+│   ├── pageEditor_ST4.html # Oshan
+│   ├── validation_ST1.html # Sansith
+│   ├── validation_ST2.html # Lison
+│   ├── validation_ST3.html # Emika
+│   ├── validation_ST4.html # Oshan
+├── template.html # Header and footer template
+index.html # Splash Screen 
 res/ # Images, icons, etc.
 ```
 
