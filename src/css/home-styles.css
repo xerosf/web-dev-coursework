@@ -1,33 +1,58 @@
-/* Theme Variables */
-:root {
-    --primary-color: #000000;
-    --background-color: #F2F1EB;
-    --card-background: #EEE7DA;
-    --text-color: #6D8B74;
-    --accent-color: #EEE7DA;
-    --button-bg: #AFC8AD;
-    --button-text: #000000;
-    --button-border: #5F7161;
-    --shadow-color: rgba(59, 59, 59, 0.1);
-}
-
-[data-theme="dark"] {
-    --primary-color: #ffffff;
-    --background-color: #222222;
-    --card-background: #3b3b3b;
-    --text-color: #bdc3c7;
-    --accent-color: #ffffff;
-    --button-bg: #222222;
-    --button-text: #ffffff;
-    --button-border: #ffffff;
-    --shadow-color: none;
-}
-
 /* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Theme Transition Base */
+body,
+header,
+.content,
+.nav-list a,
+.footer-column ul li a,
+.footer-column.social a,
+.logo-container .logo,
+.nav-list .dropdown,
+footer {
+    transition: 
+        background-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        border-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        box-shadow var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        filter var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
+}
+
+/* Add animation for box-shadow changes */
+header,
+.content,
+.nav-list .dropdown {
+    transition: 
+        background-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        box-shadow var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        opacity var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
+}
+
+/* Theme Switch Animation Classes */
+.theme-transition-active {
+    animation: themeChange var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
+}
+
+@keyframes themeChange {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Prevent animation flash on page load */
+.theme-transition-prevent {
+    transition: none !important;
 }
 
 html {
@@ -83,7 +108,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--accent-color);
+    opacity: 0.9;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -93,6 +119,7 @@ header {
 
 .logo-container .logo {
     width: 200px;
+    filter: var(--svg-color);
     height: auto;
 }
 

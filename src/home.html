@@ -1,3 +1,5 @@
+<!-- Remove 'The Stuff' -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climate Action</title>
     <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
+    <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/home-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="./js/theme.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <img src="../res/logo.png" alt="Logo" class="logo">
+            <div class="logo">
+                <img src="../res/logo.svg" alt="Company Logo">
+            </div>
         </div>
         <nav>
             <ul class="nav-list">
@@ -44,6 +51,16 @@
             </ul>
         </nav>
 
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <span class="moon"></span>
+                    <span class="sun"></span>
+                </div>
+            </label>
+        </div>
+
         <div class="profile-picture">
             <img src="../res/profile.jpg" alt="Profile Picture">
         </div>
@@ -62,8 +79,10 @@
 
     <footer>
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="../res/logo.png" alt="Company Logo">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="../res/logo.svg" alt="Company Logo">
+                </div>
             </div>
             <div class="footer-links">
                 <div class="footer-column">

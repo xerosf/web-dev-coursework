@@ -1,16 +1,3 @@
-/* Theme Variables - matching your existing theme */
-:root {
-    --primary-color: #000000;
-    --background-color: #F2F1EB;
-    --card-background: #EEE7DA;
-    --text-color: #6D8B74;
-    --accent-color: #EEE7DA;
-    --button-bg: #AFC8AD;
-    --button-text: #000000;
-    --button-border: #5F7161;
-    --shadow-color: rgba(59, 59, 59, 0.1);
-}
-
 /* General Styles */
 * {
     margin: 0;

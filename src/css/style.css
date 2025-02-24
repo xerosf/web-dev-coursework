@@ -1,39 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* :root {
-    --lightBackground: #F2F1EB;
-    --darkBackground: #2c2c30;
-    --subtleEmp: #E3F0AF;
-    --roughEmp: #5DB996;
-    --mainCol: #118B50;
-} */
 
 :root {
-    --primary-color: #88AB8E;
+    --primary-color: #5F7161;
     --background-color: #F2F1EB;
     --card-background: #EEE7DA;
-    --text-color: #AFC8AD;
-    --accent-color: #AFC8AD;
-    --button-bg: #ffffff;
+    --text-color: #6D8B74;
+    --accent-color: #EEE7DA;
+    --button-bg: #000000;
     --button-text: #000000;
-    --button-border: #AFC8AD;
+    --button-border: #000000;
+    --svg-color: invert(50%) sepia(11%) saturate(671%) hue-rotate(82deg) brightness(100%) contrast(90%);
     --shadow-color: rgba(59, 59, 59, 0.1);
+
+    /* Theme transition controls */
+    --theme-transition-duration: 0.3s;
+    --theme-transition-timing: ease;
+    
+    /* Optional: Different timing for specific elements */
+    --theme-transition-duration-fast: 0.2s;
+    --theme-transition-duration-slow: 0.5s;
 }
 
 [data-theme="dark"] {
-    --primary-color: #000000;
-    --background-color: #222222;
-    --card-background: #3b3b3b;
-    --text-color: #ffffff;
-    --accent-color: #ffffff;
-    --button-bg: #222222;
+    --primary-color: #88AB8E;
+    --background-color: #1e1e1e;
+    --card-background: #353535;
+    --text-color: #AFC8AD;
+    --accent-color: #222222;
+    --button-bg: #ffffff;
     --button-text: #ffffff;
     --button-border: #ffffff;
-    --shadow-color: none;
+    --svg-color: invert(87%) sepia(20%) saturate(254%) hue-rotate(68deg) brightness(88%) contrast(85%);
+    --shadow-color: rgba(59, 59, 59, 0.1);
 }
 
 body {
     font-family: 'Merriweather', serif;
+}
+
+/* Theme switch styling */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Adjust spacing from profile circle */
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    width: 60px;
+    position: relative;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider .sun,
+.slider .moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    z-index: 1;
+}
+
+.slider .sun {
+    right: 10px;
+}
+
+.slider .moon {
+    left: 10px;
+}
+
+/* Transition styles */
+.theme-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.theme-transition-disable * {
+    transition: none !important;
+}
+
+/* Apply theme colors to elements */
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 /* * {
