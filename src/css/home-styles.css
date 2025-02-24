@@ -1,8 +1,34 @@
+/* Theme Variables */
+:root {
+    --primary-color: #000000;
+    --background-color: #F2F1EB;
+    --card-background: #EEE7DA;
+    --text-color: #6D8B74;
+    --accent-color: #EEE7DA;
+    --button-bg: #AFC8AD;
+    --button-text: #000000;
+    --button-border: #5F7161;
+    --shadow-color: rgba(59, 59, 59, 0.1);
+}
+
+[data-theme="dark"] {
+    --primary-color: #ffffff;
+    --background-color: #222222;
+    --card-background: #3b3b3b;
+    --text-color: #bdc3c7;
+    --accent-color: #ffffff;
+    --button-bg: #222222;
+    --button-text: #ffffff;
+    --button-border: #ffffff;
+    --shadow-color: none;
+}
+
 /* General Styles */
 body {
     margin: 0;
+    background-color: var(--background-color);
     font-family: Arial, sans-serif;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -16,8 +42,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -36,13 +62,12 @@ header {
 }
 
 .nav-list li {
-    margin: 0 15px;
-    padding-bottom: 1rem;
+    margin: 1rem 15px;
     position: relative;
 }
 
 .nav-list a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -52,7 +77,7 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #34495e;
+    background-color: var(--background-color);
     list-style: none;
     padding: 10px;
     margin: 0;
@@ -73,7 +98,7 @@ header {
 .content-section {
     padding: 50px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
 }
 
 .content-section h1 {
@@ -83,13 +108,13 @@ header {
 
 .content-section p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--primary-color);
 }
 
 /* Footer Styles */
 footer {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     padding: 20px 0;
 }
 
@@ -117,6 +142,7 @@ footer {
 
 .footer-column h3 {
     font-size: 1.2rem;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
@@ -130,12 +156,12 @@ footer {
 }
 
 .footer-column ul li a {
-    color: #fff;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 .footer-column.social a {
-    color: #fff;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-right: 10px;
 }
