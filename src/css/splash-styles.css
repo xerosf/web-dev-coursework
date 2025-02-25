@@ -7,7 +7,6 @@
 
 body {
 	margin: 0;
-	font-family: Arial, sans-serif;
 	background-color: var(--background-color);
 	min-height: 100vh;
 	display: flex;
@@ -39,17 +38,30 @@ body {
 	box-shadow: 0 8px 32px var(--shadow-color);
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	max-width: 800px;
-	width: 90%;
+	max-width: 900px;
+	width: 80%;
 }
 
 /* Logo Section */
 .logo-section {
 	margin-bottom: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.welcome-text h1 {
+	font-weight: 500;
 }
 
 .splash-logo {
-	width: 200px;
+	width: 150px;
+	margin-top: 20px;
+	height: auto;
+	animation: fadeIn 1s ease-in;
+}
+
+.sdg-logo {
+	width: 130px;
 	height: auto;
 	animation: fadeIn 1s ease-in;
 }
@@ -170,7 +182,7 @@ body {
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
 	.content-wrapper {
-		background: rgba(0, 0, 0, 0.8);
+		background: rgba(0, 0, 0, 0.5);
 	}
 
 	.welcome-text h1,

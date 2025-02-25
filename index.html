@@ -17,10 +17,7 @@
 		<div class="splash-container">
 			<div class="content-wrapper">
 				<div class="logo-section">
-					<img
-						src="./res/splash-logo.svg"
-						alt="Logo"
-						class="splash-logo" />
+					<img src="./res/sdg-logo.svg" alt="Logo" class="sdg-logo" />
 				</div>
 
 				<div class="welcome-text">
@@ -38,6 +35,11 @@
 					<div class="loading-spinner"></div>
 					<p class="loading-text">Loading your experience...</p>
 				</div>
+
+				<!-- <img
+					src="./res/splash-logo.svg"
+					alt="Logo"
+					class="splash-logo" /> -->
 			</div>
 
 			<div class="environmental-facts">
@@ -54,7 +56,7 @@
 			document.addEventListener('DOMContentLoaded', function () {
 				setTimeout(function () {
 					window.location.href = './src/pages/home.html';
-				}, 10000);
+				}, 4000);
 
 				let loadingText = document.querySelector('.loading-text');
 				let dots = 0;
