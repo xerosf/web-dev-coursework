@@ -33,6 +33,7 @@ header,
         opacity var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
 }
 
+
 /* Theme Switch Animation Classes */
 .theme-transition-active {
     animation: themeChange var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);

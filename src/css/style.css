@@ -16,7 +16,7 @@
     /* Theme transition controls */
     --theme-transition-duration: 0.3s;
     --theme-transition-timing: ease;
-    
+
     /* Optional: Different timing for specific elements */
     --theme-transition-duration-fast: 0.2s;
     --theme-transition-duration-slow: 0.5s;
@@ -44,7 +44,8 @@ body {
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
-    margin-left: 10px; /* Adjust spacing from profile circle */
+    margin-left: 10px;
+    /* Adjust spacing from profile circle */
 }
 
 .theme-switch {
@@ -88,11 +89,11 @@ body {
     border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: var(--primary-color);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
