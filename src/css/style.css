@@ -139,19 +139,7 @@ body {
 	color: var(--font-color);
 }
 
-/* * {
-    font-family: "Roboto", serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: white;
+.contact-link {
+	color: var(--text-color);
+	text-decoration: none;
 }
-
-li,
-a,
-button {
-    font-family: "Roboto", serif;
-    font-weight: 500;
-    text-decoration: none;
-    list-style: none;
-} */
