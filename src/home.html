@@ -1,30 +1,32 @@
+<!-- Remove 'The Stuff' -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Change</title>
+    <title>Climate Action</title>
     <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/home-styles.css">
-    
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/home-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="./js/theme.js" defer></script>
 </head>
 
 <body>
-    <div class="hero-img">
-        
-    </div>
     <header>
-        
-
         <div class="logo-container">
-            <img src="../res/logo.png" alt="Logo" class="logo" style="width: 200px; height: auto;">
+            <div class="logo">
+                <img src="../res/logo.svg" alt="Company Logo">
+            </div>
         </div>
-
         <nav>
             <ul class="nav-list">
                 <li><a href="#">Home</a></li>
-                <li class="dropdown-item"><a href="#">Content</a>
+                <li class="dropdown-item">
+                    <a href="#">Content</a>
                     <ul class="dropdown">
                         <li><a href="#">Content1</a></li>
                         <li><a href="#">Content2</a></li>
@@ -33,8 +35,8 @@
                     </ul>
                 </li>
 
-                <li class="dropdown-item"><a href="#">validation</a>
-                    
+                <li class="dropdown-item">
+                    <a href="#">Validation</a>
                     <ul class="dropdown">
                         <li><a href="#">Validation1</a></li>
                         <li><a href="#">Validation2</a></li>
@@ -49,19 +51,38 @@
             </ul>
         </nav>
 
-        <div class="profile-picture">
-            <img src="../res/profile.jpg" alt="Profile Picture" style="width: 50px; height: 50px; border-radius: 50%;">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <span class="moon"></span>
+                    <span class="sun"></span>
+                </div>
+            </label>
         </div>
 
+        <div class="profile-picture">
+            <img src="../res/profile.jpg" alt="Profile Picture">
+        </div>
     </header>
-    
+
+    <div class="hero">
+        <img src="../res/backg.jpg" alt="Background" class="background">
+    </div>
+
     <main>
-        content
+        <div class="content">
+            <h1>Header 1</h1>
+            <p>Paragraph text.</p>
+        </div>
     </main>
+
     <footer>
         <div class="footer-container">
-            <div class="footer-logo">
-                <img src="../res/logo.png" alt="Company Logo">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="../res/logo.svg" alt="Company Logo">
+                </div>
             </div>
             <div class="footer-links">
                 <div class="footer-column">
@@ -75,6 +96,7 @@
                         <li><a href="/src/content/content_ST6.html">Content 6</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
                     <h3>Validation</h3>
                     <ul>
@@ -84,11 +106,13 @@
                         <li><a href="#">Oshan's Validation</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p> <strong></strong></p>
-                    <p> <strong></strong></p>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +123 456 7890</p>
                 </div>
+
                 <div class="footer-column social">
                     <h3>Social</h3>
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -103,8 +127,6 @@
             <p>&copy; 2025 Apilage Company | All Rights Reserved</p>
         </div>
     </footer>
-
-    <!-- <script src="../src/js/splash.js"></script> -->
 </body>
 
 </html>
