@@ -1,0 +1,176 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Theme Transition Base */
+body,
+header,
+.content,
+.nav-list a,
+.footer-column ul li a,
+.footer-column.social a,
+.logo-container .logo,
+.nav-list .dropdown,
+footer {
+    transition:
+        background-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        border-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        box-shadow var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        filter var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
+}
+
+/* Add animation for box-shadow changes */
+header,
+.content,
+.nav-list .dropdown {
+    transition:
+        background-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        box-shadow var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+        opacity var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
+}
+
+/* Theme Switch Animation Classes */
+.theme-transition-active {
+    animation: themeChange var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
+}
+
+@keyframes themeChange {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Prevent animation flash on page load */
+.theme-transition-prevent {
+    transition: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content {
+    min-height: 400px;
+    padding: 2rem;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    opacity: 0.9;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.logo-container .logo {
+    width: 200px;
+    filter: var(--svg-color);
+    height: auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--button-bg);
+}
+
+.nav-list .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--accent-color);
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    min-width: 100px;
+}
+
+.nav-list .dropdown-item:hover .dropdown {
+    display: block;
+}
+
+.profile-picture img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
