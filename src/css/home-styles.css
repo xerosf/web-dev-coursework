@@ -96,12 +96,26 @@ main {
     width: 100%;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
 .content {
     min-height: 400px;
     padding: 2rem;
     background-color: var(--card-background);
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--shadow-color);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.content:hover {
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.01);
 }
 
 /* Header Styles */
@@ -111,7 +125,6 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     background-color: var(--accent-color);
-    opacity: 0.9;
     position: fixed;
     width: 100%;
     z-index: 1000;

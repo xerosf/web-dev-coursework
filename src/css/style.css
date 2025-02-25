@@ -6,8 +6,8 @@
     --background-color: #F2F1EB;
     --card-background: #EEE7DA;
     --text-color: #6D8B74;
-    --accent-color: #EEE7DA;
-    --button-bg: #000000;
+    --accent-color: rgba(238, 231, 218, 0.8);
+    --button-bg: #808080;
     --button-text: #000000;
     --button-border: #000000;
     --svg-color: invert(50%) sepia(11%) saturate(671%) hue-rotate(82deg) brightness(100%) contrast(90%);
@@ -28,6 +28,7 @@
     --card-background: #353535;
     --text-color: #AFC8AD;
     --accent-color: #222222;
+    --accent-color: rgba(34, 34, 34, 0.8);
     --button-bg: #ffffff;
     --button-text: #ffffff;
     --button-border: #ffffff;
@@ -58,7 +59,7 @@ body {
 }
 
 .slider {
-    background-color: #ccc;
+    background-color: var(--button-bg);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -69,7 +70,7 @@ body {
 }
 
 .slider:before {
-    background-color: #fff;
+    background-color: var(--background-color);
     bottom: 4px;
     content: "";
     height: 26px;
@@ -88,7 +89,7 @@ body {
 }
 
 input:checked + .slider {
-    background-color: #66bb6a;
+    background-color: var(--primary-color);
 }
 
 input:checked + .slider:before {
