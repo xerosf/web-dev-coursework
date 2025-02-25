@@ -61,8 +61,6 @@ Design and develop a website focused on **one** UN Sustainable Development Goal 
 
 ```
 src/
-├── style.css # Global CSS (Lison)
-├── splash.html # Sansith
 ├── home.html # Lison
 ├── volunteer.html # Sansith
 ├── table.html # Lison
@@ -70,13 +68,35 @@ src/
 ├── feedback.html # Emika
 ├── sitemap.html # Oshan
 ├── team.html # Emika
-├── content_ST1.html # Sansith
-├── content_ST2.html # Lison
-├── content_ST3.html # Emika
-├── content_ST4.html # Oshan
-├── pageEditor_ST1.html # Sansith
-├── ... (other editor/validation pages)
-res/ # Images, icons, etc.
+├── css/
+│   ├── style.css  # Lison (Global CSS)
+│   ├── home-styles.css # Lison
+│   ├── profile.css # Oshan
+│   ├── splash-styles.css # Sansith
+│   ├── volunteer-styles.css # Sansith
+│   ├── validation_ST4-styles.css # Oshan
+├── js/
+│   ├── theme.js # JavaScript for theme handling
+│   ├── script.js # JavaScript for script handling
+├── content/
+│   ├── content_ST1.html # Sansith
+│   ├── content_ST2.html # Lison
+│   ├── content_ST3.html # Emika
+│   ├── content_ST4.html # Oshan
+├── pagesEditor/
+│   ├── pageEditor_ST1.html # Sansith
+│   ├── pageEditor_ST2.html # Lison
+│   ├── pageEditor_ST3.html # Emika
+│   ├── pageEditor_ST4.html # Oshan
+├── validation/
+│   ├── validation_ST1.html # Sansith
+│   ├── validation_ST2.html # Lison
+│   ├── validation_ST3.html # Emika
+│   ├── validation_ST4.html # Oshan
+├── template.html # Header and footer template # Lison
+├── index.html # Splash Screen  # Sansith
+├── res/ 
+├──# Images, icons, etc.
 ```
 
 ---
@@ -97,7 +117,7 @@ Use GitHub Issues to:
 
 ---
 ## Header, Footer Usage
-To include the header and the footer in your pages, add this to your HTML file:
+To include the header and the footer in your pages, use this HTMl template:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -105,8 +125,12 @@ To include the header and the footer in your pages, add this to your HTML file:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Climate Action</title>
+    <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/theme.js" defer></script>
 </head>
 
 <body>
