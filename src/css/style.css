@@ -7,7 +7,7 @@
     --card-background: #EEE7DA;
     --text-color: #6D8B74;
     --accent-color: rgba(238, 231, 218, 0.8);
-    --button-bg: #808080;
+    --button-bg: #6D8B74;
     --button-text: #000000;
     --button-border: #000000;
     --svg-color: invert(50%) sepia(11%) saturate(671%) hue-rotate(82deg) brightness(100%) contrast(90%);
@@ -29,7 +29,7 @@
     --text-color: #AFC8AD;
     --accent-color: #222222;
     --accent-color: rgba(34, 34, 34, 0.8);
-    --button-bg: #ffffff;
+    --button-bg: #AFC8AD;
     --button-text: #ffffff;
     --button-border: #ffffff;
     --svg-color: invert(87%) sepia(20%) saturate(254%) hue-rotate(68deg) brightness(88%) contrast(85%);
