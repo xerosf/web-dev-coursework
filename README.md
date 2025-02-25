@@ -61,41 +61,44 @@ Design and develop a website focused on **one** UN Sustainable Development Goal 
 
 ```
 src/
-├── home.html # Lison
-├── volunteer.html # Sansith
-├── table.html # Lison
-├── profile.html # Oshan
-├── feedback.html # Emika
-├── sitemap.html # Oshan
-├── team.html # Emika
+├── home.html
+├── volunteer.html
+├── table.html
+├── profile.html
+├── feedback.html
+├── sitemap.html
+├── team.html
 ├── css/
-│   ├── style.css  # Lison (Global CSS)
-│   ├── home-styles.css # Lison
-│   ├── profile.css # Oshan
-│   ├── splash-styles.css # Sansith
-│   ├── volunteer-styles.css # Sansith
-│   ├── validation_ST4-styles.css # Oshan
+│   ├── style.css  (Global CSS)
+│   ├── home-styles.css
+│   ├── profile.css
+│   ├── splash-styles.css
+│   ├── volunteer-styles.css
+│   ├── validation_ST4-styles.css
 ├── js/
-│   ├── theme.js # JavaScript for theme handling
-│   ├── script.js # JavaScript for script handling
+│   ├── theme.js # JavaScript for
+│   ├── script.js # JavaScript for
 ├── content/
-│   ├── content_ST1.html # Sansith
-│   ├── content_ST2.html # Lison
-│   ├── content_ST3.html # Emika
-│   ├── content_ST4.html # Oshan
+│   ├── content_ST1.html
+│   ├── content_ST2.html
+│   ├── content_ST3.html
+│   ├── content_ST4.html
 ├── pagesEditor/
-│   ├── pageEditor_ST1.html # Sansith
-│   ├── pageEditor_ST2.html # Lison
-│   ├── pageEditor_ST3.html # Emika
-│   ├── pageEditor_ST4.html # Oshan
+│   ├── pageEditor_ST1.html
+│   ├── pageEditor_ST2.html
+│   ├── pageEditor_ST3.html
+│   ├── pageEditor_ST4.html
 ├── validation/
-│   ├── validation_ST1.html # Sansith
-│   ├── validation_ST2.html # Lison
-│   ├── validation_ST3.html # Emika
-│   ├── validation_ST4.html # Oshan
-├── template.html # Header and footer template # Lison
-├── index.html # Splash Screen  # Sansith
-├── res/ 
+│   ├── validation_ST1.html
+│   ├── validation_ST2.html
+│   ├── validation_ST3.html
+│   ├── validation_ST4.html
+├── components/
+│   ├── footer.html
+│   ├── header.html
+│   ├── theme_switcher.html
+index.html # Splash Screen 
+res/ 
 ├──# Images, icons, etc.
 ```
 
