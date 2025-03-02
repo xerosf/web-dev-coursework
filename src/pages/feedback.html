@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Climate Action</title>
-    <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home-styles.css">
-    <link rel="stylesheet" href="../css/feedback-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="icon"
+      href="https://img.icons8.com/color/48/united-nations.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home-styles.css" />
+    <link rel="stylesheet" href="../css/feedback-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <script src="../js/theme.js"></script>
+  </head>
 
-</head>
-
-<body>
-    <div id="header-container">
-    </div>
-    <br><br><br><br>
+  <body>
+    <div id="header-container"></div>
+    <br /><br /><br /><br />
     <main>
       <h1>Feedback Page</h1>
       <p>
         Make sure to give us your feedback so we could improve ourselves for the
         future!
       </p>
-      <br> <br>
+      <br />
+      <br />
       <form>
         <div class="container">
           <div class="name">
             <label for="name" class="username">Name</label>
             <br />
-            <input id="name" type="text" placeholder="Enter your name here"  required />
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your name here"
+              required
+            />
           </div>
 
           <br />
@@ -43,6 +53,7 @@
               type="email"
               placeholder="yourname@gmail.com"
               required
+              
             />
           </div>
 
@@ -53,7 +64,7 @@
             <br />
             <input
               id="contactno"
-              type="number"
+              type="tel"
               minlength="10"
               maxlength="10"
               placeholder="0751234567"
@@ -66,16 +77,15 @@
           <div class="satisfaction">
             <p>How satisfied are you with our website?</p>
 
-            <span>
-              <input
-                type="radio"
-                id="very_satisfied"
-                name="satisfaction"
-                value="Very Satisfied"
-                required
-              />
-              <label for="very_satisfied">Very Satisfied</label>
-            </span>
+            <input
+              type="radio"
+              id="very_satisfied"
+              name="satisfaction"
+              value="Very Satisfied"
+              required
+            />
+            <label for="very_satisfied">Very Satisfied</label>
+            <br />
 
             <input
               type="radio"
@@ -84,6 +94,7 @@
               value="Neutral"
             />
             <label for="neutral">Neutral</label>
+            <br />
 
             <input
               type="radio"
@@ -107,6 +118,7 @@
               required
             />
             <label for="very_concerned">Very Concerned</label>
+            <br />
 
             <input
               type="radio"
@@ -115,6 +127,7 @@
               value="Somewhat Concerned"
             />
             <label for="somewhat_concerned">Somewhat Concerned</label>
+            <br />
 
             <input
               type="radio"
@@ -177,9 +190,9 @@
             <label for="carpooling">Carpooling / Using Public Transport</label>
           </div>
 
-          <br />
+          <br>
 
-          <div class="writtenfeedback">
+          <div id="writtenfeedback">
             <label for="write">Describe about your overall feedback</label>
             <br />
             <textarea
@@ -189,8 +202,23 @@
               cols="50"
             ></textarea>
           </div>
-          <br />
 
+          <br>
+          
+          <div class="attachment">
+            <label for="attachment">Upload Attachment (Screenshot or Document)</label>
+            <br />
+            <input type="file" id="attachment" name="attachment" accept=".jpg, .jpeg, .png, .pdf, .doc, .docx">
+          </div>
+
+          <br>
+
+          <div id="upload_datetime">
+            <label for="schedule_datetime">Schedule Date and Time to upload the Feedback</label>
+            <input type="datetime-local">
+          </div>
+
+          
           <div>
             <button type="submit">Submit Feedback</button>
           </div>
@@ -198,38 +226,36 @@
       </form>
     </main>
 
-
     <div id="footer-container"></div>
     <div id="theme-switcher"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load the header
-            fetch('../components/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load the header
+        fetch("../components/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading header:", error));
 
-            // Load the footer
-            fetch('../components/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
+        // Load the footer
+        fetch("../components/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footer:", error));
 
-            // Load the theme switcher
-            fetch('../components/theme_switcher.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('theme-switcher').innerHTML = data;
-                    // Initialize theme toggle AFTER header is loaded
-                    initThemeToggle();
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
+        // Load the theme switcher
+        fetch("../components/theme_switcher.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("theme-switcher").innerHTML = data;
+            // Initialize theme toggle AFTER header is loaded
+            initThemeToggle();
+          })
+          .catch((error) => console.error("Error loading header:", error));
+      });
     </script>
-</body>
-
+  </body>
 </html>
