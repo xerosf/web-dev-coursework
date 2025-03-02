@@ -44,6 +44,16 @@ body {
     border: none;
   }
 
-  #name, #mail, #contactno, #write {
+  button:hover, input:hover {
+    opacity: 50%;
+    transition: ease-in-out 1.5s;
+  }
+
+  input:hover, textarea:hover {
+    opacity: 150%;
+    transition: 1.5s;
+  }
+
+  #name, #mail, #contactno, #write, #attachment, #upload_datetime {
     width: 95%;
   }
