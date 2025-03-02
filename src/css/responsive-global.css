@@ -1,0 +1,155 @@
+/* Global Responsive Styles */
+
+/* Make sure all elements respect box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set responsive font sizing */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    /* Add padding to account for fixed header */
+    padding-top: 80px; /* Adjusted for header height */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Large screens (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+    
+    body {
+        padding-top: 75px; /* Adjusted for header height on this breakpoint */
+    }
+}
+
+/* Medium screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        padding-top: 110px; /* Adjusted for taller header with stacked elements */
+    }
+}
+
+/* Small screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    body {
+        padding-top: 105px; /* Adjusted for header height on this breakpoint */
+    }
+    
+    /* Increase tap target sizes for mobile */
+    button, 
+    input[type="button"], 
+    input[type="submit"], 
+    input[type="reset"],
+    a.button,
+    a.hero-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve spacing for mobile */
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0.8em;
+        margin-bottom: 0.5em;
+    }
+    
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+/* Prevent horizontal scrolling and ensure proper margins on all screen sizes */
+.container, 
+main, 
+.footer-container, 
+.content {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+/* Ensure the main content area grows to fill available space */
+main {
+    flex: 1 0 auto;
+}
+
+/* Make sure footer always stays at the bottom */
+footer {
+    margin-top: auto;
+}
+
+/* Improve accessibility for focus states */
+a:focus, 
+button:focus, 
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Ensure all interactive elements are properly accessible */
+@media (hover: none) {
+    .nav-list .dropdown-item:hover .dropdown {
+        display: none;
+    }
+
+    .nav-list .dropdown-item:active .dropdown,
+    .nav-list .dropdown-item:focus .dropdown,
+    .nav-list .dropdown-item:focus-within .dropdown {
+        display: block;
+    }
+}
+
+/* Reset any margins that might affect positioning */
+body > * {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Fix for any potential positioning issues with the header container */
+#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Ensure header's children are positioned correctly */
+#header-container > header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}

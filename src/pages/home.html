@@ -8,14 +8,26 @@
 			rel="icon"
 			href="https://img.icons8.com/color/48/united-nations.png"
 			type="image/x-icon" />
+		<!-- Base styles -->
 		<link rel="stylesheet" href="../../src/css/style.css" />
 		<link rel="stylesheet" href="../../src/css/home-styles.css" />
+
+		<!-- Responsive styles -->
+		<link rel="stylesheet" href="../../src/css/responsive-global.css" />
 		<link rel="stylesheet" href="../../src/css/responsive-home.css" />
+		<link rel="stylesheet" href="../../src/css/responsive-header.css" />
+		<link rel="stylesheet" href="../../src/css/responsive-footer.css" />
+		<link
+			rel="stylesheet"
+			href="../../src/css/responsive-theme-switcher.css" />
+
+		<!-- Font Awesome -->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 		<script src="../js/theme.js" defer></script>
+		<script src="../js/header-position.js" defer></script>
 	</head>
 
 	<body>
@@ -108,6 +120,10 @@
 					.then((data) => {
 						document.getElementById('header-container').innerHTML =
 							data;
+						// Once the header is loaded, adjust body padding
+						if (typeof adjustBodyPadding === 'function') {
+							adjustBodyPadding();
+						}
 					})
 					.catch((error) =>
 						console.error('Error loading header:', error)
@@ -129,11 +145,13 @@
 					.then((data) => {
 						document.getElementById('theme-switcher').innerHTML =
 							data;
-						// Initialize theme toggle AFTER header is loaded
-						initThemeToggle();
+						// Initialize theme toggle AFTER theme switcher is loaded
+						if (typeof initThemeToggle === 'function') {
+							initThemeToggle();
+						}
 					})
 					.catch((error) =>
-						console.error('Error loading header:', error)
+						console.error('Error loading theme switcher:', error)
 					);
 			});
 		</script>
