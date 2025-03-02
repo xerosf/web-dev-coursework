@@ -1,0 +1,152 @@
+/* Responsive Theme Switcher Styles */
+
+/* Base theme switcher styles */
+.theme-switch-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transform: none;
+    top: auto;
+    left: auto;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    width: 60px;
+    position: relative;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--button-bg);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: var(--background-color);
+    bottom: 4px;
+    content: '';
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider .sun,
+.slider .moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    z-index: 1;
+}
+
+.slider .sun {
+    right: 10px;
+}
+
+.slider .moon {
+    left: 10px;
+}
+
+/* Large screens (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    .theme-switch-wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Medium screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .theme-switch-wrapper {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .theme-switch {
+        height: 30px;
+        width: 54px;
+    }
+    
+    .slider:before {
+        height: 22px;
+        width: 22px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(24px);
+    }
+    
+    .slider .sun,
+    .slider .moon {
+        font-size: 14px;
+    }
+}
+
+/* Small screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .theme-switch-wrapper {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .theme-switch {
+        height: 28px;
+        width: 50px;
+    }
+    
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        bottom: 4px;
+        left: 4px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+    
+    .slider .sun {
+        right: 8px;
+    }
+    
+    .slider .moon {
+        left: 8px;
+    }
+    
+    .slider .sun,
+    .slider .moon {
+        font-size: 12px;
+    }
+}
