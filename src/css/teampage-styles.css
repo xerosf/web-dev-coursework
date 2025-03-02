@@ -37,7 +37,7 @@ img {
 
 .team-member:hover .member-details {
     display: block;
-    transition: ease-in-out 1s;
+    transition: ease-in-out 2s;
 }
 
 .team-member:hover  img {
