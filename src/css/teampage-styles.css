@@ -1,0 +1,46 @@
+body {
+    font-size: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    padding: 25px;
+}
+img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    border: 5px solid #6d8b74 ;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.team-member {
+    position: relative;
+}
+
+.member-details {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background-color: #353535;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+.team-member:hover .member-details {
+    display: block;
+    transition: ease-in-out 1s;
+}
+
+.team-member:hover  img {
+    opacity: 50%;
+    transition: ease-in-out 1s;
+}
