@@ -55,10 +55,18 @@ nav {
     padding: 0.5rem 1rem;
     display: block;
     transition: color 0.3s ease;
+    /* Remove outline on focus while maintaining accessibility */
+    outline: none;
 }
 
 .nav-list a:hover {
     color: var(--button-bg);
+}
+
+/* Add a custom focus style that doesn't include an outline */
+.nav-list a:focus {
+    color: var(--button-bg);
+    /* You can add other focus styles here if needed */
 }
 
 .nav-list .dropdown {
