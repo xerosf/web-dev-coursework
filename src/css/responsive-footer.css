@@ -46,10 +46,22 @@ footer {
     color: var(--button-bg);
 }
 
+/* Social icons section */
+.footer-column.social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column.social .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .footer-column.social a {
     color: var(--primary-color);
     font-size: 1.5rem;
-    margin-right: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -101,6 +113,8 @@ footer {
     
     .footer-column {
         margin-bottom: 1.5rem;
+        /* Center all footer column content */
+        text-align: center;
     }
     
     .footer-column h3 {
@@ -116,6 +130,19 @@ footer {
         width: 150px;
         margin: 0 auto;
         display: block;
+    }
+    
+    /* Center social icons in the column */
+    .footer-column.social {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-column.social .social-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
     }
 }
 
@@ -148,14 +175,23 @@ footer {
         margin-bottom: 0.4rem;
     }
     
+    /* Keep social icons in a horizontal row and centered */
     .footer-column.social {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     
+    .footer-column.social .social-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+        justify-content: center;
+    }
+    
+    /* Remove the bottom margin from social links */
     .footer-column.social a {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
         font-size: 1.3rem;
     }
     
