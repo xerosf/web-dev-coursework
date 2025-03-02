@@ -4,10 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Welcome - Climate Change</title>
-		<link
-			rel="icon"
-			href="https://img.icons8.com/color/48/united-nations.png"
-			type="image/x-icon" />
+		<link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon" />
 
 		<link rel="stylesheet" href="./src/css/style.css" />
 		<link rel="stylesheet" href="./src/css/splash-styles.css" />
@@ -15,6 +12,7 @@
 
 	<body>
 		<div class="splash-container">
+			<img class="splash-bg" src="./res/backg.jpg" alt="Splash Background" />
 			<div class="content-wrapper">
 				<div class="logo-section">
 					<img src="./res/sdg-logo.svg" alt="Logo" class="sdg-logo" />
@@ -44,26 +42,22 @@
 
 			<div class="environmental-facts">
 				<div class="fact">
-					<p>
-						"Every action counts in the fight against climate
-						change."
-					</p>
+					<p>"Every action counts in the fight against climate change."</p>
 				</div>
 			</div>
 		</div>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', function () {
+			document.addEventListener("DOMContentLoaded", function () {
 				setTimeout(function () {
-					window.location.href = './src/pages/home.html';
-				}, 4000);
+					window.location.href = "./src/pages/home.html";
+				}, 400000);
 
-				let loadingText = document.querySelector('.loading-text');
+				let loadingText = document.querySelector(".loading-text");
 				let dots = 0;
 				setInterval(function () {
 					dots = (dots + 1) % 4;
-					loadingText.textContent =
-						'Loading your experience' + '.'.repeat(dots);
+					loadingText.textContent = "Loading your experience" + ".".repeat(dots);
 				}, 500);
 			});
 		</script>

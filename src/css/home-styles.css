@@ -15,34 +15,25 @@ header,
 .logo-container .logo,
 .nav-list .dropdown,
 footer {
-	transition: background-color var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease),
-		color var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease),
-		border-color var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease),
-		box-shadow var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease),
-		filter var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease);
+	transition: background-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+		color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+		border-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+		box-shadow var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+		filter var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
 }
 
 /* Add animation for box-shadow changes */
 header,
 .content,
 .nav-list .dropdown {
-	transition: background-color var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease),
-		box-shadow var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease),
-		opacity var(--theme-transition-duration, 0.3s)
-			var(--theme-transition-timing, ease);
+	transition: background-color var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+		box-shadow var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease),
+		opacity var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
 }
 
 /* Theme Switch Animation Classes */
 .theme-transition-active {
-	animation: themeChange var(--theme-transition-duration, 0.3s)
-		var(--theme-transition-timing, ease);
+	animation: themeChange var(--theme-transition-duration, 0.3s) var(--theme-transition-timing, ease);
 }
 
 @keyframes themeChange {
@@ -89,7 +80,6 @@ body {
 .hero .background {
 	width: 100%;
 	height: 100%;
-	opacity: 70%;
 	object-fit: cover;
 	object-position: center;
 }
