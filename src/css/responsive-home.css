@@ -1,0 +1,213 @@
+/* Responsive Home Page Styles */
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 10;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    max-width: 800px;
+    width: 90%;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.hero-btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--button-bg);
+    transform: translateY(-3px);
+}
+
+/* Featured Section Styles */
+.featured-section {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.featured-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.featured-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.featured-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px var(--shadow-color);
+}
+
+.featured-card i {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.featured-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Main Content Adjustments */
+main {
+    padding: 4rem 2rem;
+}
+
+.content {
+    margin-bottom: 3rem;
+}
+
+.content h1, .content h2 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.content p {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* Responsive Design Breakpoints */
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding: 5rem 2rem;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-btn {
+        padding: 0.6rem 1.2rem;
+    }
+    
+    main {
+        padding: 3rem 1.5rem;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+    .hero {
+        height: 50vh;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content {
+        width: 95%;
+    }
+    
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    .content {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+    
+    .theme-switch-wrapper {
+        left: 85%;
+    }
+}
+
+/* Fix for theme switch position on mobile */
+@media (max-width: 480px) {
+    .theme-switch-wrapper {
+        top: 93%;
+        left: 80%;
+    }
+}
