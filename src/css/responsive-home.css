@@ -144,6 +144,10 @@ main {
 
 /* Large screens (max-width: 1200px) */
 @media screen and (max-width: 1200px) {
+    .hero {
+        margin-top: px; /* Match the body padding-top for this breakpoint */
+    }
+
     .hero-title {
         font-size: 3.2rem;
     }
@@ -169,6 +173,7 @@ main {
 /* Medium screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
     .hero {
+        margin-top: -5px;
         height: 60vh;
     }
     
@@ -211,6 +216,7 @@ main {
 /* Small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
     .hero {
+        margin-top: -5px;
         height: 50vh;
     }
     
