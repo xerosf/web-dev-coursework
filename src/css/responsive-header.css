@@ -55,7 +55,6 @@ nav {
     padding: 0.5rem 1rem;
     display: block;
     transition: color 0.3s ease;
-    /* Remove outline on focus while maintaining accessibility */
     outline: none;
 }
 
@@ -63,10 +62,8 @@ nav {
     color: var(--button-bg);
 }
 
-/* Add a custom focus style that doesn't include an outline */
 .nav-list a:focus {
     color: var(--button-bg);
-    /* You can add other focus styles here if needed */
 }
 
 .nav-list .dropdown {
@@ -100,11 +97,29 @@ nav {
     object-fit: cover;
 }
 
-/* Large screens (max-width: 1200px) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
 @media screen and (max-width: 1200px) {
     header {
         padding: 0.8rem 1.5rem;
-        top: 0; /* Maintain top position */
+        top: 0;
     }
     
     .logo-container .logo {
@@ -121,55 +136,86 @@ nav {
     }
 }
 
-/* Medium screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
     header {
-        flex-wrap: wrap;
         padding: 0.6rem 1rem;
-        top: 0; /* Maintain top position */
+        top: 0;
+        flex-wrap: nowrap;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
     }
     
     .logo-container {
-        flex: 1;
+        flex: 0 0 auto;
         justify-content: flex-start;
     }
     
-    .profile-picture {
-        flex: 1;
+    .header-right {
+        flex: 0 0 auto;
+        display: flex;
         justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .hamburger-menu {
+        display: block;
     }
     
     nav {
-        order: 3;
-        width: 100%;
-        margin-top: 0.8rem;
-        justify-content: center;
-    }
-    
-    .nav-list {
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-    }
-    
-    .nav-list li {
-        position: relative;
-    }
-    
-    .nav-list .dropdown {
         position: absolute;
         top: 100%;
         left: 0;
-        width: auto;
-        min-width: 150px;
+        width: 100%;
+        background-color: var(--accent-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 6px var(--shadow-color);
+    }
+    
+    nav.active {
+        max-height: 300px;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        gap: 0;
+    }
+    
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-list a {
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .nav-list .dropdown {
+        position: static;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: none;
+    }
+    
+    .nav-list .dropdown-item.active .dropdown {
+        max-height: 200px;
+        display: block;
     }
 }
 
-/* Small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
     header {
         padding: 0.5rem;
-        top: 0; /* Maintain top position */
+        top: 0; 
     }
     
     .logo-container .logo {
@@ -179,30 +225,5 @@ nav {
     .profile-picture img {
         width: 40px;
         height: 40px;
-    }
-    
-    .nav-list {
-        gap: 0.7rem;
-        font-size: 0.9rem;
-    }
-    
-    .nav-list a {
-        padding: 0.3rem 0.6rem;
-    }
-    
-    /* Make dropdown menu more accessible on small screens */
-    .nav-list .dropdown {
-        min-width: 150px;
-    }
-    
-    /* Ensure dropdown doesn't flow outside screen */
-    .nav-list .dropdown-item:last-child .dropdown {
-        right: 0;
-        left: auto;
-    }
-    
-    /* Additional styling for better mobile appearance */
-    .nav-list li {
-        margin-bottom: 0.3rem;
     }
 }

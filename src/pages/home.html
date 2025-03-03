@@ -16,6 +16,9 @@
 		<link rel="stylesheet" href="../../src/css/responsive-global.css" />
 		<link rel="stylesheet" href="../../src/css/responsive-home.css" />
 		<link rel="stylesheet" href="../../src/css/responsive-header.css" />
+		<link
+			rel="stylesheet"
+			href="../../src/css/hamburger-menu-animation.css" />
 		<link rel="stylesheet" href="../../src/css/responsive-footer.css" />
 		<link
 			rel="stylesheet"
@@ -28,6 +31,7 @@
 
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/header-position.js" defer></script>
+		<script src="../js/hamburger-menu.js" defer></script>
 	</head>
 
 	<body>
@@ -111,15 +115,16 @@
 		<div id="theme-switcher"></div>
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
-				// Load the header
 				fetch('../components/header.html')
 					.then((response) => response.text())
 					.then((data) => {
 						document.getElementById('header-container').innerHTML =
 							data;
-						// Once the header is loaded, adjust body padding
 						if (typeof adjustBodyPadding === 'function') {
 							adjustBodyPadding();
+						}
+						if (typeof initHamburgerMenu === 'function') {
+							initHamburgerMenu();
 						}
 					})
 					.catch((error) =>
@@ -142,7 +147,6 @@
 					.then((data) => {
 						document.getElementById('theme-switcher').innerHTML =
 							data;
-						// Initialize theme toggle AFTER theme switcher is loaded
 						if (typeof initThemeToggle === 'function') {
 							initThemeToggle();
 						}
