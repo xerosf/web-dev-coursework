@@ -7,8 +7,8 @@ h1 {
     font-size: 30px;
     padding: 25px;
 }
-img {
-    width: 250px;
+.container img {
+    width: 270px;
     border-radius: 10px;
 }
 
@@ -16,7 +16,6 @@ img {
     display: flex;
     gap: 25px;
     justify-content: center;
-    border: 5px solid #6d8b74 ;
     padding: 50px;
     border-radius: 15px;
 }
@@ -28,11 +27,12 @@ img {
 .member-details {
     display: none;
     position: absolute;
-    bottom: 0;
+    bottom: 10;
     background-color: #353535;
     color: white;
     width: 100%;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .team-member:hover .member-details {
@@ -42,5 +42,6 @@ img {
 
 .team-member:hover  img {
     opacity: 50%;
+    transform: scale(1.05);
     transition: ease-in-out 1s;
 }
