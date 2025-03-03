@@ -11,16 +11,17 @@ main,footer{
     margin-right: 26%;
     
 }
-.section1,.section2{
+.section1{
     border-radius: 2rem;
     
 
 }
 /* section 2 (profile-pic) */
 .section2{
+    border-radius: 1rem;
     position: fixed;
-    top: 20px;
-    bottom: 20px;
+    top: 30px;
+    bottom: 5px;
     width: 25%;
     right: 20px;
     background-color: #F1E3D3;
@@ -29,13 +30,18 @@ main,footer{
     padding: 1rem 1rem;
     align-items: center;
     row-gap: 1rem;
+    overflow-y: auto;
     
+}
+.section2::-webkit-scrollbar {
+    width: 0px;  /* Hides the scrollbar */
+    background: transparent; /* Makes the background transparent */
 }
 .details-wrapper{
     background-color:black;   
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 1rem .5rem;    
     font-weight: 500;
     border-radius: 1rem;
 }
@@ -138,6 +144,15 @@ main,footer{
     display: flex;
     
 }
+
+.frustrations ul {
+    list-style-type: disc;
+
+}
+
+.frustrations li {
+    padding-bottom: .5rem;
+}
 .svg-wrapper {
     display: flex;
     align-items: center;
@@ -148,16 +163,21 @@ main,footer{
 }
 .exp-details {
     margin: 0.5rem;
-}
-
-ul {
-    list-style-type: none;
 
 }
-
-li {
-    padding-bottom: .5rem;
+.exp-details dt{
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem .5rem;
+    
 }
+.exp-details dd{
+    margin: 0px;
+    margin-left: .5rem;
+    
+}
+
+
 
 .goals-un-volunteering-wrapper{
     display: flex;
@@ -167,9 +187,6 @@ li {
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-.goals{
-    flex: 1;
 }
 .un-support{
     flex: 1;
