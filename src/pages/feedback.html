@@ -39,8 +39,10 @@
               id="name"
               type="text"
               placeholder="Enter your name here"
+              pattern="[a-z]"
               required
             />
+            <span class="error-msg">Please enter a valid name</span>
           </div>
 
           <br />
@@ -53,8 +55,8 @@
               type="email"
               placeholder="yourname@gmail.com"
               required
-              
             />
+            <span class="error-msg">Please enter a valid Email</span>
           </div>
 
           <br />
@@ -65,11 +67,11 @@
             <input
               id="contactno"
               type="tel"
-              minlength="10"
-              maxlength="10"
+              pattern="[0-9]{10,}"
               placeholder="0751234567"
               required
             />
+            <span class="error-msg">Please enter a valid contact number</span>
           </div>
 
           <br />
@@ -190,7 +192,7 @@
             <label for="carpooling">Carpooling / Using Public Transport</label>
           </div>
 
-          <br>
+          <br />
 
           <div id="writtenfeedback">
             <label for="write">Describe about your overall feedback</label>
@@ -203,22 +205,30 @@
             ></textarea>
           </div>
 
-          <br>
-          
+          <br />
+
           <div class="attachment">
-            <label for="attachment">Upload Attachment (Screenshot or Document)</label>
+            <label for="attachment"
+              >Upload Attachment (Screenshot or Document)</label
+            >
             <br />
-            <input type="file" id="attachment" name="attachment" accept=".jpg, .jpeg, .png, .pdf, .doc, .docx">
+            <input
+              type="file"
+              id="attachment"
+              name="attachment"
+              accept=".jpg, .jpeg, .png, .pdf, .doc, .docx"
+            />
           </div>
 
-          <br>
+          <br />
 
           <div id="upload_datetime">
-            <label for="schedule_datetime">Schedule Date and Time to upload the Feedback</label>
-            <input type="datetime-local">
+            <label for="schedule_datetime"
+              >Schedule Date and Time to upload the Feedback</label
+            >
+            <input type="datetime-local" />
           </div>
 
-          
           <div>
             <button type="submit">Submit Feedback</button>
           </div>

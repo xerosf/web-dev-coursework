@@ -37,6 +37,24 @@ body {
     background-color: rgb(228, 228, 228);
   }
 
+  input:invalid {
+    border: 2px solid red;
+  }
+
+  input:valid {
+    border: 2px solid #6d8b74;
+  }
+
+  input:invalid + .error-msg {
+    display: block;
+    color: red;
+    font-size: 10px;
+  }
+
+  .error-msg {
+    display: none;
+  }
+
   button {
     width: 100%;
     padding: 10px;
