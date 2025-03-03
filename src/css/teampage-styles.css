@@ -7,8 +7,13 @@ h1 {
     font-size: 30px;
     padding: 25px;
 }
+
+#information {
+    font-size: large;
+    text-align: center;
+}
 .container img {
-    width: 270px;
+    width: 250px;
     border-radius: 10px;
 }
 
@@ -37,11 +42,17 @@ h1 {
 
 .team-member:hover .member-details {
     display: block;
-    transition: ease-in-out 2s;
+    transition: 2s;
+    transform: scale(1.05);
 }
 
 .team-member:hover  img {
     opacity: 50%;
     transform: scale(1.05);
-    transition: ease-in-out 1s;
+    transition: 1s;
+}
+
+#thanku {
+    font-size: 30px;
+    text-align: center;
 }
