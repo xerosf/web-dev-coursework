@@ -8,8 +8,10 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 70vh;
+    height: 100vh; /* Changed from 70vh to full viewport height */
     overflow: hidden;
+    margin-top: -80px; /* Negative margin to counteract body padding */
+    z-index: 0; /* Ensure it's below the header */
 }
 
 .hero .background {
@@ -145,7 +147,8 @@ main {
 /* Large screens (max-width: 1200px) */
 @media screen and (max-width: 1200px) {
     .hero {
-        margin-top: px; /* Match the body padding-top for this breakpoint */
+        margin-top: -75px; /* Match the body padding-top for this breakpoint */
+        height: 100vh;
     }
 
     .hero-title {
@@ -173,8 +176,8 @@ main {
 /* Medium screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
     .hero {
-        margin-top: -5px;
-        height: 60vh;
+        margin-top: -110px; /* Match the body padding-top for this breakpoint */
+        height: 100vh;
     }
     
     .hero-title {
@@ -216,8 +219,8 @@ main {
 /* Small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
     .hero {
-        margin-top: -5px;
-        height: 50vh;
+        margin-top: -105px; /* Match the body padding-top for this breakpoint */
+        height: 100vh;
     }
     
     .hero-title {
