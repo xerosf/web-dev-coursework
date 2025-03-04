@@ -1,0 +1,87 @@
+<header>
+	<div class="logo-container">
+		<div class="logo">
+			<img src="/res/logo.svg" alt="Company Logo" />
+		</div>
+	</div>
+
+	<nav>
+		<ul class="nav-list">
+			<li><a href="/src/pages/home.html">Home</a></li>
+			<li class="dropdown-item">
+				<a href="#">Content</a>
+				<ul class="dropdown">
+					<li><a href="../content/content_ST1.html">Content1</a></li>
+					<li><a href="../content/content_ST2.html">Content2</a></li>
+					<li><a href="../content/content_ST3.html">Content3</a></li>
+					<li><a href="../content/content_ST4.html">Content4</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown-item">
+				<a href="#">Validation</a>
+				<ul class="dropdown">
+					<li>
+						<a href="../validation/validation_ST1.html"
+							>Validation1</a
+						>
+					</li>
+					<li>
+						<a href="../validation/validation_ST2.html"
+							>Validation2</a
+						>
+					</li>
+					<li>
+						<a href="../validation/validation_ST3.html"
+							>Validation3</a
+						>
+					</li>
+					<li>
+						<a href="../validation/validation_ST4.html"
+							>Validation4</a
+						>
+					</li>
+				</ul>
+			</li>
+
+			<li><a href="#">Feedback</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
+	</nav>
+
+	<div class="header-right">
+		<div class="hamburger-menu">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+		<div class="profile-picture">
+			<img src="/res/profile.jpg" alt="Profile Picture" />
+		</div>
+	</div>
+</header>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const hamburgerMenu = document.querySelector('.hamburger-menu');
+		const nav = document.querySelector('nav');
+		const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+		// Toggle navigation when hamburger is clicked
+		hamburgerMenu.addEventListener('click', function () {
+			nav.classList.toggle('active');
+			hamburgerMenu.classList.toggle('active');
+		});
+
+		dropdownItems.forEach((item) => {
+			const link = item.querySelector('a');
+
+			link.addEventListener('click', function (e) {
+				if (window.innerWidth <= 768) {
+					e.preventDefault();
+					item.classList.toggle('active');
+				}
+			});
+		});
+	});
+</script>

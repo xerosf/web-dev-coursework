@@ -1,0 +1,78 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .container {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    padding: 30px;
+    text-align: left;
+  }
+
+
+  input,
+  textarea {
+    width: auto;
+    font-family: 'Helvetica';
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    opacity: 50%;
+    background-color: rgb(228, 228, 228);
+  }
+
+  input:invalid {
+    border: 2px solid red;
+  }
+
+  input:valid {
+    border: 2px solid #6d8b74;
+  }
+
+  input:invalid + .error-msg {
+    display: block;
+    color: red;
+    font-size: 10px;
+  }
+
+  .error-msg {
+    display: none;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #6d8b74;
+    border: none;
+  }
+
+  button:hover, input:hover {
+    opacity: 50%;
+    transition: ease-in-out 1.5s;
+  }
+
+  input:hover, textarea:hover {
+    opacity: 150%;
+    transition: 1.5s;
+  }
+
+  #name, #mail, #contactno, #write, #attachment, #upload_datetime {
+    width: 95%;
+  }

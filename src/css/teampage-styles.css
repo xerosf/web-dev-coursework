@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+  font-size: 45px;
+  padding: 25px;
+}
+
+#information {
+  font-size: large;
+  text-align: center;
+}
+
+.container img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.team-member {
+  position: relative;
+  padding: 10px;
+}
+
+.member-details {
+  display: none;
+  font-size: 12px;
+  position: absolute;
+  bottom: 10;
+  background-color: #353535;
+  color: white;
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.team-member:hover .member-details {
+  display: block;
+  transition: 2s;
+  transform: scale(1.05);
+}
+
+.team-member:hover img {
+  opacity: 50%;
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+#thanku {
+  font-size: 30px;
+  text-align: center;
+}

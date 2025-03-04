@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Action</title>
+    <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home-styles.css">
+    <link rel="stylesheet" href="../css/teampage-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/theme.js"></script>
+
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <br><br><br>
+    <main>
+        <h1>About</h1>
+        <p id="information">Team G Of Group 19 - Team Members</p>
+        <div class="container">
+            <div class="team-member">
+                <img src="../../res/malli.jpg" alt="Sansith Image">
+                <div class="member-details">
+                    <h3>Sansith Fernando</h3>
+                    <p><b>Role : </b>Team Leader/Student 1</p>
+                    <p><b>Contributions : </b>Splash Screen, <br> Volunteer Page and Content Page</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="../../res/malli.jpg" alt="Lison Image">
+                <div class="member-details">
+                    <h3>Lison Mendis</h3>
+                    <p><b>Role : </b>Student 2</p>
+                    <p><b>Contributions : </b>Global CSS template, <br> Home Page, Table Page and Content Page</p>
+                </div>
+                
+            </div>
+
+            <div class="team-member">
+                <img src="../../res/malli.jpg" alt="Lison Image">
+                <div class="member-details">
+                    <h3>Emika Yaddehige</h3>
+                    <p><b>Role : </b>Student 3</p>
+                    <p><b>Contributions : </b>Feedback Page,<br>Team Page and Content Page</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="../../res/malli.jpg" alt="Lison Image">
+                
+                <div class="member-details">
+                    <h3>Oshan Kodagoda</h3>
+                    <p><b>Role : </b>Student 4</p>
+                    <p><b>Contributions : </b>User Profile Page,<br> Sitemap (SVG) and Content Page</p>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <p id="thanku"><b>Thank You!</b></p>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="theme-switcher"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load the header
+            fetch('../components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the footer
+            fetch('../components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+
+            // Load the theme switcher
+            fetch('../components/theme_switcher.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('theme-switcher').innerHTML = data;
+                    // Initialize theme toggle AFTER header is loaded
+                    initThemeToggle();
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
+    </script>
+</body>
+
+</html>

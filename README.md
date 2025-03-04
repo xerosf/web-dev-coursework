@@ -57,50 +57,6 @@ Design and develop a website focused on **one** UN Sustainable Development Goal 
 
 ---
 
-## 🛠️ Repository Structure
-
-```
-src/
-├── home.html # Lison
-├── volunteer.html # Sansith
-├── table.html # Lison
-├── profile.html # Oshan
-├── feedback.html # Emika
-├── sitemap.html # Oshan
-├── team.html # Emika
-├── css/
-│   ├── style.css  # Lison (Global CSS)
-│   ├── home-styles.css # Lison
-│   ├── profile.css # Oshan
-│   ├── splash-styles.css # Sansith
-│   ├── volunteer-styles.css # Sansith
-│   ├── validation_ST4-styles.css # Oshan
-├── js/
-│   ├── theme.js # JavaScript for theme handling
-│   ├── script.js # JavaScript for script handling
-├── content/
-│   ├── content_ST1.html # Sansith
-│   ├── content_ST2.html # Lison
-│   ├── content_ST3.html # Emika
-│   ├── content_ST4.html # Oshan
-├── pagesEditor/
-│   ├── pageEditor_ST1.html # Sansith
-│   ├── pageEditor_ST2.html # Lison
-│   ├── pageEditor_ST3.html # Emika
-│   ├── pageEditor_ST4.html # Oshan
-├── validation/
-│   ├── validation_ST1.html # Sansith
-│   ├── validation_ST2.html # Lison
-│   ├── validation_ST3.html # Emika
-│   ├── validation_ST4.html # Oshan
-├── template.html # Header and footer template # Lison
-├── index.html # Splash Screen  # Sansith
-├── res/ 
-├──# Images, icons, etc.
-```
-
----
-
 ## 📋 Issues & Progress Tracking
 Use GitHub Issues to:
 - Report bugs or design inconsistencies  
@@ -119,6 +75,8 @@ Use GitHub Issues to:
 ## Header, Footer Usage
 To include the header and the footer in your pages, use this HTMl template:
 ```html
+<!-- Remove 'The Stuff' -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,15 +88,43 @@ To include the header and the footer in your pages, use this HTMl template:
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="../js/theme.js" defer></script>
+    <script src="../js/theme.js"></script>
+
 </head>
 
 <body>
-    <div id="header"></div>
+    <div id="header-container"></div>
+    <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+    <div id="footer-container"></div>
+    <div id="theme-switcher"></div>
     <script>
-        fetch("../template.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("header").innerHTML = data);
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load the header
+            fetch('../components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            // Load the footer
+            fetch('../components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+
+            // Load the theme switcher
+            fetch('../components/theme_switcher.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('theme-switcher').innerHTML = data;
+                    // Initialize theme toggle AFTER header is loaded
+                    initThemeToggle();
+                })
+                .catch(error => console.error('Error loading header:', error));
+        });
     </script>
 </body>
 

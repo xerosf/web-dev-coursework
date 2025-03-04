@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Welcome - Climate Change</title>
+		<link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Climate Change</title>
-    <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
+		<link rel="stylesheet" href="./src/css/style.css" />
+		<link rel="stylesheet" href="./src/css/splash-styles.css" />
+		<link rel="stylesheet" href="./src/css/responsive-splash.css" />
+	</head>
 
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/splash-styles.css">
-</head>
+	<body>
+		<div class="splash-container">
+			<img class="splash-bg" src="./res/backg.jpg" alt="Splash Background" />
+			<div class="content-wrapper">
+				<div class="logo-section">
+					<img src="./res/sdg-logo.svg" alt="Logo" class="sdg-logo" />
+				</div>
 
-<body>
-    <div class="splash-container">
-        <div class="content-wrapper">
-            <div class="logo-section">
-                <img src="./res/logo.png" alt="Logo" class="splash-logo">
-            </div>
+				<div class="welcome-text">
+					<h1>Climate Action</h1>
+					<p>Empowering Change for a Sustainable Future</p>
+				</div>
 
-            <div class="welcome-text">
-                <h1>Welcome to Climate Change Initiative</h1>
-                <p>Empowering Change for a Sustainable Future</p>
-            </div>
+				<div class="info-section">
+					<div class="current-info">
+						<p class="user-welcome">Welcome, to our page!</p>
+					</div>
+					<hr class="divider" />
+					<div class="team-info">
+						<p class="members-list">Team Members</p>
+						<ul>
+							<li>Sansith Fernando</li>
+							<li>Lison Mendis</li>
+							<li>Emika Sandina</li>
+							<li>Oshan Kodagoda</li>
+						</ul>
+					</div>
+				</div>
 
-            <div class="info-section">
-                <div class="current-info">
-                    <p class="datetime">2025-02-24 20:42:18 UTC</p>
-                    <p class="user-welcome">Welcome, xerosf!</p>
-                </div>
-            </div>
+				<div class="loading-section">
+					<div class="loading-spinner"></div>
+					<p class="loading-text">Loading your experience...</p>
+				</div>
 
-            <div class="loading-section">
-                <div class="loading-spinner"></div>
-                <p class="loading-text">Loading your experience...</p>
-            </div>
-        </div>
+				<!-- <img
+					src="./res/splash-logo.svg"
+					alt="Logo"
+					class="splash-logo" /> -->
+			</div>
+		</div>
 
-        <div class="environmental-facts">
-            <div class="fact">
-                <p>"Every action counts in the fight against climate change."</p>
-            </div>
-        </div>
-    </div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				setTimeout(function () {
+					window.location.href = "./src/pages/home.html";
+				}, 4000);
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                window.location.href = './src/home.html';
-            }, 5000);
-
-            let loadingText = document.querySelector('.loading-text');
-            let dots = 0;
-            setInterval(function () {
-                dots = (dots + 1) % 4;
-                loadingText.textContent = 'Loading your experience' + '.'.repeat(dots);
-            }, 500);
-        });
-    </script>
-</body>
-
+				let loadingText = document.querySelector(".loading-text");
+				let dots = 0;
+				setInterval(function () {
+					dots = (dots + 1) % 4;
+					loadingText.textContent = "Loading your experience" + ".".repeat(dots);
+				}, 500);
+			});
+		</script>
+	</body>
 </html>
