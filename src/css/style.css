@@ -67,7 +67,6 @@ body {
     line-height: 1.6;
     margin: 0;
     /* Add padding to account for fixed header */
-    padding-top: 80px; /* Adjusted for header height */
 }
 
 img {
@@ -88,13 +87,10 @@ main,
     overflow-x: hidden;
 }
 
-main {
-    flex: 1 0 auto;
-}
 
-footer {
+/* footer {
     margin-top: auto;
-}
+} */
 
 /* Header Styling */
 #header-container {
@@ -140,12 +136,6 @@ textarea:focus {
     .nav-list .dropdown-item:focus-within .dropdown {
         display: block;
     }
-}
-
-/* Reset any margins */
-body > * {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 /* Media Queries for Responsive Design */

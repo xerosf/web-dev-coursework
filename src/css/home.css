@@ -79,7 +79,6 @@ body {
     width: 100%;
     height: 100vh; /* Changed from 70vh to full viewport height */
     overflow: hidden;
-    margin-top: -80px; /* Negative margin to counteract body padding */
     z-index: 0; /* Ensure it's below the header */
 }
 
@@ -142,6 +141,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    width: 100%;
 }
 
 .content {
@@ -164,6 +164,7 @@ main {
 .featured-section {
     margin-top: 3rem;
     text-align: center;
+    width: 100%;
 }
 
 .featured-section h2 {
@@ -176,6 +177,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    width: 100%;
 }
 
 .featured-card {
@@ -369,7 +371,7 @@ footer {
     
     main {
         padding: 4rem 1.5rem;
-        max-width: 1000px;
+        max-width: 100%;
     }
     
     .featured-cards {
@@ -454,7 +456,7 @@ footer {
 /* Small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
     .hero {
-        margin-top: -105px; /* Match the body padding-top for this breakpoint */
+        margin-top: -105px;
         height: 100vh;
     }
     
