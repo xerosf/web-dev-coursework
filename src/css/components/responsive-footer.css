@@ -19,6 +19,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+
 }
 
 .footer-column h3 {

@@ -1,145 +1,204 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+@import url('./home.css');
+@import url('./components/responsive-header.css');
+@import url('./components/responsive-footer.css');
+@import url('./components/responsive-theme-switcher.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* CSS Variables */
 :root {
-	--primary-color: #5f7161;
-	--background-color: #f2f1eb;
-	--card-background: #eee7da;
-	--text-color: #6d8b74;
-	--accent-color: rgba(238, 231, 218, 0.8);
-	--button-bg: #6d8b74;
-	--button-text: #000000;
-	--button-border: #000000;
-	--svg-color: invert(50%) sepia(11%) saturate(671%) hue-rotate(82deg)
-		brightness(100%) contrast(90%);
-	--shadow-color: rgba(59, 59, 59, 0.1);
+    --primary-color: #5f7161;
+    --background-color: #f2f1eb;
+    --card-background: #eee7da;
+    --text-color: #6d8b74;
+    --accent-color: rgba(238, 231, 218, 0.8);
+    --button-bg: #6d8b74;
+    --button-text: #000000;
+    --button-border: #000000;
+    --svg-color: invert(50%) sepia(11%) saturate(671%) hue-rotate(82deg) brightness(100%) contrast(90%);
+    --shadow-color: rgba(59, 59, 59, 0.1);
 
-	/* Theme transition controls */
-	--theme-transition-duration: 0.3s;
-	--theme-transition-timing: ease;
+    /* Theme transition controls */
+    --theme-transition-duration: 0.3s;
+    --theme-transition-timing: ease;
 
-	/* Optional: Different timing for specific elements */
-	--theme-transition-duration-fast: 0.2s;
-	--theme-transition-duration-slow: 0.5s;
+    /* Optional: Different timing for specific elements */
+    --theme-transition-duration-fast: 0.2s;
+    --theme-transition-duration-slow: 0.5s;
 }
 
 [data-theme='dark'] {
-	--primary-color: #88ab8e;
-	--background-color: #1e1e1e;
-	--card-background: #353535;
-	--text-color: #afc8ad;
-	--accent-color: #222222;
-	--accent-color: rgba(34, 34, 34, 0.8);
-	--button-bg: #afc8ad;
-	--button-text: #ffffff;
-	--button-border: #ffffff;
-	--svg-color: invert(87%) sepia(20%) saturate(254%) hue-rotate(68deg)
-		brightness(88%) contrast(85%);
-	--shadow-color: rgba(59, 59, 59, 0.1);
+    --primary-color: #88ab8e;
+    --background-color: #1e1e1e;
+    --card-background: #353535;
+    --text-color: #afc8ad;
+    --accent-color: rgba(34, 34, 34, 0.8);
+    --button-bg: #afc8ad;
+    --button-text: #ffffff;
+    --button-border: #ffffff;
+    --svg-color: invert(87%) sepia(20%) saturate(254%) hue-rotate(68deg) brightness(88%) contrast(85%);
+    --shadow-color: rgba(59, 59, 59, 0.1);
+}
+
+/* Global Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-	font-family: 'Poppins', serif;
-	font-weight: 400;
-	font-style: normal;
+    font-family: 'Poppins', serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    /* Add padding to account for fixed header */
+    padding-top: 80px; /* Adjusted for header height */
 }
 
-/* Theme switch styling */
-.theme-switch-wrapper {
-	display: flex;
-	align-items: center;
-	margin-left: 10px;
-	/* Adjust spacing from profile circle */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.theme-switch {
-	display: inline-block;
-	height: 34px;
-	width: 60px;
-	position: relative;
+/* Layout Containers */
+.container, 
+main, 
+.footer-container, 
+.content {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
 }
 
-.theme-switch input {
-	display: none;
+main {
+    flex: 1 0 auto;
 }
 
-.slider {
-	background-color: var(--button-bg);
-	bottom: 0;
-	cursor: pointer;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: 0.4s;
+footer {
+    margin-top: auto;
 }
 
-.slider:before {
-	background-color: var(--background-color);
-	bottom: 4px;
-	content: '';
-	height: 26px;
-	left: 4px;
-	position: absolute;
-	transition: 0.4s;
-	width: 26px;
+/* Header Styling */
+#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.slider.round {
-	border-radius: 34px;
+#header-container > header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
 }
 
-.slider.round:before {
-	border-radius: 50%;
-}
-
-input:checked + .slider {
-	background-color: var(--primary-color);
-}
-
-input:checked + .slider:before {
-	transform: translateX(26px);
-}
-
-.theme-switch-wrapper {
-	position: fixed;
-	top: 96%;
-	left: 95%;
-	transform: translate(-50%, -50%);
-}
-
-.slider .sun,
-.slider .moon {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 16px;
-	z-index: 1;
-}
-
-.slider .sun {
-	right: 10px;
-}
-
-.slider .moon {
-	left: 10px;
-}
-
-/* Transition styles */
-.theme-transition {
-	transition: all 0.3s ease-in-out;
-}
-
-.theme-transition-disable * {
-	transition: none !important;
-}
-
-/* Apply theme colors to elements */
-body {
-	background-color: var(--bg-color);
-	color: var(--font-color);
+/* Link Styling */
+a:focus, 
+button:focus, 
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
 .contact-link {
-	color: var(--text-color);
-	text-decoration: none;
+    color: var(--text-color);
+    text-decoration: none;
+	font-weight: normal;	
+}
+
+
+/* Nav Dropdown Accessibility */
+@media (hover: none) {
+    .nav-list .dropdown-item:hover .dropdown {
+        display: none;
+    }
+
+    .nav-list .dropdown-item:active .dropdown,
+    .nav-list .dropdown-item:focus .dropdown,
+    .nav-list .dropdown-item:focus-within .dropdown {
+        display: block;
+    }
+}
+
+/* Reset any margins */
+body > * {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Media Queries for Responsive Design */
+/* Large screens (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+    
+    body {
+        padding-top: 75px; /* Adjusted for header height on this breakpoint */
+    }
+}
+
+/* Medium screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    body {
+        padding-top: 110px; /* Adjusted for taller header with stacked elements */
+    }
+}
+
+/* Small screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    body {
+        padding-top: 105px; /* Adjusted for header height on this breakpoint */
+    }
+    
+    /* Increase tap target sizes for mobile */
+    button, 
+    input[type="button"], 
+    input[type="submit"], 
+    input[type="reset"],
+    a.button,
+    a.hero-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Improve spacing for mobile */
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 0.8em;
+        margin-bottom: 0.5em;
+    }
+    
+    p {
+        margin-bottom: 1em;
+    }
 }
