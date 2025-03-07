@@ -1,54 +1,143 @@
-<!-- Remove 'The Stuff' -->
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Climate Action</title>
-    <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="../js/theme.js"></script>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/color/48/united-nations.png"
+      type="image/x-icon"
+    />
+    <!-- Base styles -->
+    <link rel="stylesheet" href="../../src/css/style.css" />
+    <link rel="stylesheet" href="../../src/css/home-styles.css" />
 
-</head>
+    <!-- Responsive styles -->
+    <link rel="stylesheet" href="../../src/css/responsive-global.css" />
+    <link rel="stylesheet" href="../../src/css/responsive-home.css" />
+    <link rel="stylesheet" href="../../src/css/responsive-header.css" />
+    <link rel="stylesheet" href="../../src/css/responsive-footer.css" />
+    <link rel="stylesheet" href="../../src/css/responsive-theme-switcher.css" />
+    <link rel="stylesheet" href="../../src/css/content-ST3-styles.css" />
 
-<body>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script src="../js/theme.js" defer></script>
+    <script src="../js/header-position.js" defer></script>
+  </head>
+  <br /><br />
+  <body>
     <div id="header-container"></div>
-    <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
+    <main id="main-content">
+      <div class="content">
+        <h1>Sustainable Development Goals (SDGs) - Overview</h1>
+        <p>
+          The Sustainable Development Goals (SDGs) are 17 global objectives
+          adopted by the United Nations in 2015 to address various global
+          challenges such as poverty, inequality, and environmental degradation.
+          These goals would assist for a sustainable future by 2030.
+        </p>
+
+        <br />
+
+        <p>
+          The SDGs provide a universal call to action, urging governments,
+          businesses, and individuals to work together toward a better world.
+          They emphasize the need for economic growth, social inclusion, and
+          environmental sustainability. Achieving these goals requires
+          collective efforts, innovative solutions, and global partnerships to
+          create a more equitable and resilient future for all.
+        </p>
+      </div>
+
+      <div class="content">
+        <h1>About SDG 13 - Climate Action</h1>
+        <p>
+          SDG 13 - Climate Action calls for urgent action to combat climate
+          change and its impacts. It emphasizes the need for countries to
+          integrate climate policies, reduce greenhouse gas emissions, and
+          strengthen resilience against environmental disasters.
+        </p>
+
+        <br />
+
+        <p>
+          Climate change is not just an environmental issue, it affects
+          economies, public health, food security, and global stability. Without
+          immediate action, rising global temperatures will continue to cause
+          sea-level rise, extreme weather events, biodiversity loss, and
+          resource scarcity, disproportionately affecting vulnerable
+          communities.
+        </p>
+      </div>
+
+      <div class="featured-section">
+        <h2>Why Climate Change is important?</h2>
+        <div class="featured-cards">
+          <div class="featured-card">
+            <i class="fas fa-tree fa-3x"></i>
+            <h3>Protects Biodiversity and EcoSystems</h3>
+            <p>Protects biodiversity by preventing deforestation and habitat loss.</p>
+          </div>
+
+          <div class="featured-card">
+            <i class="fas fa-thermometer-half fa-3x"></i>
+            <h3>Prevents Global Warming</h3>
+            <p> Reduces greenhouse gases to stop rising temperatures and extreme weather.</p>
+          </div>
+
+          <div class="featured-card">
+            <i class="fas fa-cloud fa-3x"></i>
+            <h3>Reduces Extreme Weather Impacts</h3>
+            <p>Lowers the risk of hurricanes, wildfires, and floods that harm communities.</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
     <div id="footer-container"></div>
     <div id="theme-switcher"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load the header
-            fetch('../components/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load the header
+        fetch("../components/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+            // Once the header is loaded, adjust body padding
+            if (typeof adjustBodyPadding === "function") {
+              adjustBodyPadding();
+            }
+          })
+          .catch((error) => console.error("Error loading header:", error));
 
-            // Load the footer
-            fetch('../components/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-
-            // Load the theme switcher
-            fetch('../components/theme_switcher.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('theme-switcher').innerHTML = data;
-                    // Initialize theme toggle AFTER header is loaded
-                    initThemeToggle();
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
+        // Load the footer
+        fetch("../components/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footer:", error));
+        // Load the theme switcher
+        fetch("../components/theme_switcher.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("theme-switcher").innerHTML = data;
+            // Initialize theme toggle AFTER theme switcher is loaded
+            if (typeof initThemeToggle === "function") {
+              initThemeToggle();
+            }
+          })
+          .catch((error) =>
+            console.error("Error loading theme switcher:", error)
+          );
+      });
     </script>
-</body>
-
+  </body>
 </html>
