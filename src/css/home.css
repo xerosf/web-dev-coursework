@@ -101,31 +101,13 @@ body {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 0rem;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-}
-
-.hero-btn {
-    display: inline-block;
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    padding: 0.75rem 1.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.hero-btn:hover {
-    background-color: transparent;
-    border: 2px solid var(--button-bg);
-    transform: translateY(-3px);
 }
 
 /* Main Content */
