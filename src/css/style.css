@@ -144,10 +144,6 @@ textarea:focus {
     html {
         font-size: 15px;
     }
-    
-    body {
-        padding-top: 75px; /* Adjusted for header height on this breakpoint */
-    }
 }
 
 /* Medium screens (max-width: 768px) */
@@ -155,20 +151,12 @@ textarea:focus {
     html {
         font-size: 14px;
     }
-    
-    body {
-        padding-top: 110px; /* Adjusted for taller header with stacked elements */
-    }
 }
 
 /* Small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
     html {
         font-size: 13px;
-    }
-    
-    body {
-        padding-top: 105px; /* Adjusted for header height on this breakpoint */
     }
     
     /* Increase tap target sizes for mobile */
