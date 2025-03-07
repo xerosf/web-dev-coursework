@@ -76,6 +76,18 @@
 
           <br />
 
+          <div class="home-address">
+            <label for="homeaddress" class="user_address">Home Address</label>
+            <br />
+            <input
+              id="homeaddress"
+              type="text"
+              placeholder="Enter your home address here"
+              required
+            />
+            <span class="error-msg">Please enter a valid Home Address</span>
+          </div>
+
           <div class="satisfaction">
             <p>How satisfied are you with our website?</p>
 
@@ -226,8 +238,24 @@
             <label for="schedule_datetime"
               >Schedule Date and Time to upload the Feedback</label
             >
-            <input type="datetime-local" />
+            <input type="datetime-local" id="schedule_datetime" />
           </div>
+
+          <br />
+
+          <div id="future_updates">
+            <label for="updates"
+              >How do you want to be updated with the latest updates?</label
+            >
+            <br />
+            <select>
+              <option>Not interested</option>
+              <option>E-mail</option>
+              <option>Messages</option>
+            </select>
+          </div>
+
+          <br />
 
           <div>
             <button type="submit">Submit Feedback</button>
