@@ -1,7 +1,9 @@
 <header>
 	<div class="logo-container">
 		<div class="logo">
-			<img src="../../res/logo.svg" />
+			<a href="../pages/home.html">
+				<img src="../../res/logo.svg" alt="Logo" />
+			</a>
 		</div>
 	</div>
 
@@ -22,16 +24,24 @@
 				<a href="#">Validation</a>
 				<ul class="dropdown">
 					<li>
-						<a href="../validation/validation_ST1.html">Validation1</a>
+						<a href="../validation/validation_ST1.html"
+							>Validation1</a
+						>
 					</li>
 					<li>
-						<a href="../validation/validation_ST2.html">Validation2</a>
+						<a href="../validation/validation_ST2.html"
+							>Validation2</a
+						>
 					</li>
 					<li>
-						<a href="../validation/validation_ST3.html">Validation3</a>
+						<a href="../validation/validation_ST3.html"
+							>Validation3</a
+						>
 					</li>
 					<li>
-						<a href="../validation/validation_ST4.html">Validation4</a>
+						<a href="../validation/validation_ST4.html"
+							>Validation4</a
+						>
 					</li>
 				</ul>
 			</li>
@@ -54,24 +64,24 @@
 </header>
 
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		const hamburgerMenu = document.querySelector(".hamburger-menu");
-		const nav = document.querySelector("nav");
-		const dropdownItems = document.querySelectorAll(".dropdown-item");
+	document.addEventListener('DOMContentLoaded', function () {
+		const hamburgerMenu = document.querySelector('.hamburger-menu');
+		const nav = document.querySelector('nav');
+		const dropdownItems = document.querySelectorAll('.dropdown-item');
 
 		// Toggle navigation when hamburger is clicked
-		hamburgerMenu.addEventListener("click", function () {
-			nav.classList.toggle("active");
-			hamburgerMenu.classList.toggle("active");
+		hamburgerMenu.addEventListener('click', function () {
+			nav.classList.toggle('active');
+			hamburgerMenu.classList.toggle('active');
 		});
 
 		dropdownItems.forEach((item) => {
-			const link = item.querySelector("a");
+			const link = item.querySelector('a');
 
-			link.addEventListener("click", function (e) {
+			link.addEventListener('click', function (e) {
 				if (window.innerWidth <= 768) {
 					e.preventDefault();
-					item.classList.toggle("active");
+					item.classList.toggle('active');
 				}
 			});
 		});

@@ -91,16 +91,15 @@ nav {
 }
 
 .profile-picture img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .hamburger-menu {
     display: none;
-    cursor: pointer;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .hamburger-menu .bar {
@@ -113,7 +112,7 @@ nav {
 
 .header-right {
     display: flex;
-    align-items: center;
+    align-content: right;
 }
 
 @media screen and (max-width: 1200px) {
@@ -222,7 +221,7 @@ nav {
         width: 150px;
     }
     
-    .profile-picture img {
+    .profile-picture img {  
         width: 40px;
         height: 40px;
     }
