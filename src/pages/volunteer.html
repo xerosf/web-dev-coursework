@@ -1,61 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer - Climate Action</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/volunteer-styles.css">
-</head>
-<body>
-    <header>
-        <h1>Volunteer for Climate Action</h1>
-    </header>
-    
-    <main>
-        <section id="volunteer-programs">
-            <h2>Explore Volunteering Programs</h2>
-            <select id="sort-filter">
-                <option value="popular">Most Popular</option>
-                <option value="recent">Most Recent</option>
-                <option value="top-rated">Top Rated</option>
-            </select>
-            <div class="scroll-container">
-                <div class="volunteer-card"> <h3>Beach Cleanup</h3> <p>Join a coastal cleanup to reduce ocean pollution.</p> <button>Sign Up</button> </div>
-                <div class="volunteer-card"> <h3>Tree Planting</h3> <p>Help restore forests and improve biodiversity.</p> <button>Sign Up</button> </div>
-                <div class="volunteer-card"> <h3>Community Recycling</h3> <p>Educate and assist in local recycling efforts.</p> <button>Sign Up</button> </div>
-                <div class="volunteer-card"> <h3>Wildlife Conservation</h3> <p>Protect endangered species and their habitats.</p> <button>Sign Up</button> </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Climate Action</title>
+		<link
+			rel="icon"
+			href="https://img.icons8.com/color/48/united-nations.png"
+			type="image/x-icon" />
+
+		<!-- Base styles -->
+		<link rel="stylesheet" href="../../src/css/style.css"/>
+        <link rel="stylesheet" href="../css/volunteer-styles.css">
+
+		<link
+			rel="stylesheet"
+			href="../../src/css/hamburger-menu-animation.css" />
+
+		<!-- Font Awesome (Social media icons)-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+		<script src="../js/theme.js" defer></script>
+		<script src="../js/header-position.js" defer></script>
+		<script src="../js/hamburger-menu.js" defer></script>
+	</head>
+
+	<body>
+		<div id="header-container"></div>
+
+        <main>
+            <h2>Your Passion, Our Planet – Let's Reclaim the Earth Together</h1>
+            <p>Climate change is one of our generation's biggest challenges—but it's also an incredible opportunity to come together, spark change, and build a greener, healthier future. When you volunteer with us, you're not just donating your time; you're investing in the well-being of our planet and every living being on it.</p>
+            
+            <div class="benefits-section">
+				<h2>How You Can Make a Difference</h2>
+				<div class="benefits-cards">
+					<div class="benefits-card">
+						<i class="fa-solid fa-coins fa-3x"></i>
+						<h3>Low costs, High Impact</h3>
+						<p>
+							Our programs start at just $200.
+						</p>
+					</div>
+					<div class="benefits-card">
+						<i class="fa-solid fa-hand-holding-heart fa-3x"></i>
+						<h3>More Benefits For You</h3>
+						<p>
+							Accomodation, meals, and regional support included.
+						</p>
+					</div>
+					<div class="benefits-card">
+						<i class="fa-solid fa-headset fa-3x"></i>
+						<h3>Guidance Programs</h3>
+						<p>
+							Orientations, training, and 24/7 support.
+						</p>
+					</div>
+				</div>
+			</div>
+
+            <div class="image-container"><img src="../../res/planting-trees.jpg" alt=""></div>
+
+            <div class="benefits-section">
+				<h2>Ready to Make a Difference?</h2>
+                <p>Take the first step towards a better tomorrow. Sign up today and become the catalyst for change—because together, we can rewrite the story of our planet, one action at a time.</p>
+                <p>Let's ignite a movement. Join us now and fuel the change our world desperately needs!</p>
             </div>
-        </section>
+
+            <div class="programs-container">
+                <div class="program-cards">
+                    <div class="program-card" id="card-1"></div>
+                    <div class="program-card" id="card-1"></div>
+                    <div class="program-card" id="card-1"></div>
+                </div>
+            </div>
         
-        <section id="reviews">
-            <h2>User Ratings and Reviews</h2>
-            <p>9.4/10 Exceptional - Based on 200 reviews</p>
-            <div class="review-card">
-                <h3>Excellent Experience!</h3>
-                <p>A wonderful opportunity to contribute to the planet. <a href="#">See More</a></p>
-                <p><strong>By:</strong> Alex J. - Feb 20, 2025</p>
-            </div>
-            <div class="review-card">
-                <h3>Highly Recommend</h3>
-                <p>Volunteering was both fulfilling and fun! <a href="#">See More</a></p>
-                <p><strong>By:</strong> Emma R. - Jan 15, 2025</p>
-            </div>
-        </section>
-        
-        <section id="feedback">
-            <h2>Submit Your Feedback</h2>
-            <textarea placeholder="Write your review here..."></textarea>
-            <div class="rating">
-                ⭐⭐⭐⭐⭐
-            </div>
-            <button class="primary">Submit Feedback</button>
-            <button class="secondary">Cancel</button>
-        </section>
-    </main>
-    
-    <footer>
-        <p><a href="pageEditor_ST1.html">Student 1 Page Editor</a></p>
-    </footer>
-</body>
+        </main>
+
+		<div id="footer-container"></div>
+		<div id="theme-switcher"></div>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				fetch('../components/header.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('header-container').innerHTML =
+							data;
+						if (typeof adjustBodyPadding === 'function') {
+							adjustBodyPadding();
+						}
+						if (typeof initHamburgerMenu === 'function') {
+							initHamburgerMenu();
+						}
+					})
+					.catch((error) =>
+						console.error('Error loading header:', error)
+					);
+
+				// Load the footer
+				fetch('../components/footer.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('footer-container').innerHTML =
+							data;
+					})
+					.catch((error) =>
+						console.error('Error loading footer:', error)
+					);
+				// Load the theme switcher
+				fetch('../components/theme_switcher.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('theme-switcher').innerHTML =
+							data;
+						if (typeof initThemeToggle === 'function') {
+							initThemeToggle();
+						}
+					})
+					.catch((error) =>
+						console.error('Error loading theme switcher:', error)
+					);
+			});
+		</script>
+	</body>
 </html>
