@@ -1,41 +1,35 @@
 * {
 	box-sizing: border-box;
 }
-body {
-	background-color: black;
-	color: white;
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
-main,
-footer {
-	padding: 1rem;
-	margin-right: 26%;
+main,footer{
+    width: 70%;    
+
 }
 .section1{
     border-radius: 2rem;
     
 
 }
-/* section 2 (profile-pic) */
-.section2{
-    border-radius: 1rem;
-    position: fixed;
-    top: 30px;
-    bottom: 5px;
-    width: 25%;
-    right: 20px;
+
+
+.profile-header{
+    border-radius: 1rem;    
     background-color: #F1E3D3;
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
     align-items: center;
     row-gap: 1rem;
-    overflow-y: auto;
+    
     
 }
-.section2::-webkit-scrollbar {
-    width: 0px;  /* Hides the scrollbar */
-    background: transparent; /* Makes the background transparent */
-}
+
 .details-wrapper{
     background-color:black;   
     font-size: 2.5rem;
@@ -66,42 +60,68 @@ footer {
 	min-width: 60%;
 }
 
-.skills-frustration-wrapper {
-	display: flex;
-	gap: 1rem;
+.skills-frustration-wrapper{    
+    display: flex;
+    gap: 1rem;
+    
+
 }
 /* Skills card */
 .skills,
 .frustrations,
 .exp,
 .goals,
-.contact-me-card,
-.volunteering,
-.un-support {
-	background-color: #f1e3d3;
-	border-radius: 1rem;
-	padding: 1rem 0.5rem;
-	margin: 0.5rem 0rem;
-	color: black;
+.contact-me-card,.volunteering,.un-support {
+    background-color: #F1E3D3;
+    position: relative;
+    border-radius: 1rem;
+    padding: 1rem 0.5rem ;
+    margin: 0.5rem 0rem;
+    color: black;
+
 }
 
-.skills {
-	display: flex;
-	flex-direction: column;
-	row-gap: 0.5rem;
-	flex: 1.75;
+.more-div{    
+    text-align: center;
+    padding: 2rem;    
+    background-color: wheat;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    display: none;
 }
-.frustrations {
-	flex: 1;
+.skills:hover,
+.frustrations:hover,
+.exp:hover,
+.goals:hover,
+.contact-me-card:hover,.volunteering:hover,.un-support:hover .more-div{
+    display: block;
+} 
+.skills {
+    
+    flex: 1;
+    
+    
+}
+.all-skills{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    padding-top: 1rem;
+    height: 100%;
 }
 
 .skill-wrapper {
-	position: relative;
-	background-color: #690b22;
-	padding: 0.5rem 1rem;
-	width: 70%;
-	border-radius: 1rem;
-	margin-bottom: 1rem;
+    position: relative;
+    background-color: #690B22;
+    padding: 0.5rem 1rem;
+    width: 90%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+
 }
 
 .skill,
@@ -134,68 +154,93 @@ footer {
 	margin-left: 1rem;
 }
 /* frustrations wrapper */
-.frustrations-wrapper {
-    display: flex;
+.frustrations{
+    width: 65%;
+    
     
 }
 
+.frustrations-wrapper{
+    height: 23rem ;    
+    overflow-y: auto;
+}
+
 .frustrations ul {
-    list-style-type: disc;
+    list-style-type: none;
+    width: 100%;
+    padding: 0px;
+    
+    
 
 }
 
 .frustrations li {
-    padding-bottom: .5rem;
+    background-color: wheat;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    
 }
-.svg-wrapper {
-	display: flex;
-	align-items: center;
-	column-gap: 0.5rem;
-	font-size: 1.5rem;
-	font-weight: 500;
+
+
+.heading-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: wheat;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    column-gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    
 }
+
+
+
 .exp-details {
+    background-color: wheat;
+    border-radius: 0.75rem;
+    padding: 1rem;
     margin: 0.5rem;
 
 }
-.exp-details dt{
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 1rem .5rem;
-    
-}
-.exp-details dd{
-    margin: 0px;
-    margin-left: .5rem;
-    
-}
 
 
+.goals-volunteering-wrapper{
+    display: flex;
+    column-gap: 1rem;
+    min-height: 30rem;
+}
 
-.goals-un-volunteering-wrapper {
-	display: flex;
-	column-gap: 1rem;
-}
-.goals-un-wrapper {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-}
 .un-support{
     flex: 1;
 }
 /* volunteering table */
-.vol-table {
-	border: 0.25rem solid black;
+.volunteering{
+    flex: 1.75;
 }
-.vol-table th,
-.vol-table td {
-	padding: 0.25rem;
-	border: 0.25rem solid black;
+.vol-table {
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid black;
+    border-collapse:collapse ;
+}
+.vol-table th,.vol-table td{
+    padding: 0.25rem;
+    text-align: center;
+    
+    border: 0.25rem solid black;
+    
 }
 .work-time {
 	text-align: center;
 	background-color: rgba(173, 216, 230, 0.5);
+}
+.vol-time{
+    background-color: rgba(255, 192, 203,0.5);
+    
 }
 
 /* Contact Me  */
@@ -211,6 +256,17 @@ footer {
 	padding: 1rem;
 	border-radius: 0.5rem;
 	border: none;
+}
+
+.exp:hover,
+.frustrations:hover,
+.goals-un-wrapper:hover,
+.volunteering:hover,
+.skills:hover {
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.01);
+    
 }
 
 .send-but {
