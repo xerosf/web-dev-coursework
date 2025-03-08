@@ -37,7 +37,7 @@
     --accent-color: rgba(34, 34, 34, 0.8);
     --button-bg: #afc8ad;
     --button-text: #ffffff;
-    --button-border: #ffffff;
+    --button-border: #606060;
     --svg-color: invert(87%) sepia(20%) saturate(254%) hue-rotate(68deg) brightness(88%) contrast(85%);
     --shadow-color: rgba(59, 59, 59, 0.1);
 }
