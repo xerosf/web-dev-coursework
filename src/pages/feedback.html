@@ -16,6 +16,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+        <!-- Font Awesome -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
     <script src="../js/theme.js"></script>
   </head>
 
@@ -23,7 +28,7 @@
     <div id="header-container"></div>
     <br /><br /><br />
     <main>
-      <h1>Feedback Page</h1>
+      <h1><i class="fas fa-comment-dots"></i> Feedback Page</h1>
       <p>
         Make sure to give us your feedback so we could improve ourselves for the
         future!
@@ -32,228 +37,237 @@
       <br />
       <form>
         <div class="container">
-          <div class="name">
-            <label for="name" class="username">Name</label>
+          <fieldset>
+            <legend><i class="fas fa-address-card"></i> Personal Information</legend>
+            <div class="name">
+              <label for="name" class="username"><i class="fas fa-user "></i> Name</label>
+              <br />
+              <input
+                id="name"
+                type="text"
+                placeholder="Enter your name here"
+                pattern="[A-Za-z ]{2,}"
+                required
+              />
+              <span class="error-msg">Please enter a valid name</span>
+            </div>
+  
             <br />
-            <input
-              id="name"
-              type="text"
-              placeholder="Enter your name here"
-              pattern="[A-Za-z ]{2,}"
-              required
-            />
-            <span class="error-msg">Please enter a valid name</span>
-          </div>
-
-          <br />
-
-          <div class="email">
-            <label for="mail" class="user_email">Email Address</label>
+  
+            <div class="email">
+              <label for="mail" class="user_email"> <i class="fas fa-envelope"></i> Email Address</label>
+              <br />
+              <input
+                id="mail"
+                type="email"
+                placeholder="yourname@gmail.com"
+                required
+              />
+              <span class="error-msg">Please enter a valid Email</span>
+            </div>
+  
             <br />
-            <input
-              id="mail"
-              type="email"
-              placeholder="yourname@gmail.com"
-              required
-            />
-            <span class="error-msg">Please enter a valid Email</span>
-          </div>
-
-          <br />
-
-          <div class="contact">
-            <label for="contactno" class="user_contact">Contact Number</label>
+  
+            <div class="contact">
+              <label for="contactno" class="user_contact"><i class="fas fa-phone"></i> Contact Number</label>
+              <br />
+              <input
+                id="contactno"
+                type="tel"
+                pattern="[0-9]{10,}"
+                placeholder="0751234567"
+                required
+              />
+              <span class="error-msg">Please enter a valid contact number</span>
+            </div>
+  
             <br />
-            <input
-              id="contactno"
-              type="tel"
-              pattern="[0-9]{10,}"
-              placeholder="0751234567"
-              required
-            />
-            <span class="error-msg">Please enter a valid contact number</span>
-          </div>
+  
+            <div class="home-address">
+              <label for="homeaddress" class="user_address"><i class="fas fa-home"></i> Home Address</label>
+              <br />
+              <input
+                id="homeaddress"
+                type="text"
+                placeholder="Enter your home address here"
+                required
+              />
+              <span class="error-msg">Please enter a valid Home Address</span>
+            </div>
+          </fieldset>
 
-          <br />
+          <br>
 
-          <div class="home-address">
-            <label for="homeaddress" class="user_address">Home Address</label>
+          <fieldset>
+            <legend><i class="fas fa-comment-dots"></i> Feedback Questions</legend>
+            <div class="satisfaction">
+              <p><i class="fas fa-smile"></i> How satisfied are you with our website?</p>
+  
+              <input
+                type="radio"
+                id="very_satisfied"
+                name="satisfaction"
+                value="Very Satisfied"
+                required
+              />
+              <label for="very_satisfied">Very Satisfied</label>
+              <br />
+  
+              <input
+                type="radio"
+                id="neutral"
+                name="satisfaction"
+                value="Neutral"
+              />
+              <label for="neutral">Neutral</label>
+              <br />
+  
+              <input
+                type="radio"
+                id="dissatisfied"
+                name="satisfaction"
+                value="Dissatisfied"
+              />
+              <label for="dissatisfied">Dissatisfied</label>
+            </div>
+  
             <br />
-            <input
-              id="homeaddress"
-              type="text"
-              placeholder="Enter your home address here"
-              required
-            />
-            <span class="error-msg">Please enter a valid Home Address</span>
-          </div>
+  
+            <div class="concern">
+              <p><i class="fas fa-cloud-sun"></i> How concerned are you about climate change?</p>
+  
+              <input
+                type="radio"
+                id="very_concerned"
+                name="concern"
+                value="Very Concerned"
+                required
+              />
+              <label for="very_concerned">Very Concerned</label>
+              <br />
+  
+              <input
+                type="radio"
+                id="somewhat_concerned"
+                name="concern"
+                value="Somewhat Concerned"
+              />
+              <label for="somewhat_concerned">Somewhat Concerned</label>
+              <br />
+  
+              <input
+                type="radio"
+                id="not_concerned"
+                name="concern"
+                value="Not Concerned"
+              />
+              <label for="not_concerned">Not Concerned</label>
+            </div>
 
-          <div class="satisfaction">
-            <p>How satisfied are you with our website?</p>
+            <br>
 
-            <input
-              type="radio"
-              id="very_satisfied"
-              name="satisfaction"
-              value="Very Satisfied"
-              required
-            />
-            <label for="very_satisfied">Very Satisfied</label>
+            <div class="actions">
+              <p><i class="fas fa-recycle"></i>
+                What actions do you take to help the environment? (Select all that
+                apply)
+              </p>
+  
+              <input
+                type="checkbox"
+                id="recycling"
+                name="actions"
+                value="Recycling"
+              />
+              <label for="recycling">Recycling</label>
+              <br />
+              <input
+                type="checkbox"
+                id="reducing_waste"
+                name="actions"
+                value="Reducing Waste"
+              />
+              <label for="reducing_waste">Reducing Waste</label>
+              <br />
+  
+              <input
+                type="checkbox"
+                id="using_renewable_energy"
+                name="actions"
+                value="Using Renewable Energy"
+              />
+              <label for="using_renewable_energy">Using Renewable Energy</label>
+              <br />
+  
+              <input
+                type="checkbox"
+                id="planting_trees"
+                name="actions"
+                value="Planting Trees"
+              />
+              <label for="planting_trees">Planting Trees</label>
+              <br />
+  
+              <input
+                type="checkbox"
+                id="carpooling"
+                name="actions"
+                value="Carpooling"
+              />
+              <label for="carpooling">Carpooling / Using Public Transport</label>
+            </div>
+  
+            <br />
+  
+            <div id="writtenfeedback">
+              <label for="write"><i class="fas fa-scroll"></i> Describe about your overall feedback</label>
+              <br />
+              <textarea
+                id="write"
+                placeholder="Describe about your feedback"
+                rows="8"
+                cols="50"
+              ></textarea>
+            </div>
+
             <br />
 
-            <input
-              type="radio"
-              id="neutral"
-              name="satisfaction"
-              value="Neutral"
-            />
-            <label for="neutral">Neutral</label>
-            <br />
+            <div id="future_updates">
+              <label for="updates"
+                ><i class="fas fa-bell"></i> How do you want to be updated with the latest updates?</label
+              >
+              <br />
+              <select>
+                <option>Not interested</option>
+                <option>E-mail</option>
+                <option>Messages</option>
+              </select>
+            </div>
 
-            <input
-              type="radio"
-              id="dissatisfied"
-              name="satisfaction"
-              value="Dissatisfied"
-            />
-            <label for="dissatisfied">Dissatisfied</label>
-          </div>
-
-          <br />
-
-          <div class="concern">
-            <p>How concerned are you about climate change?</p>
-
-            <input
-              type="radio"
-              id="very_concerned"
-              name="concern"
-              value="Very Concerned"
-              required
-            />
-            <label for="very_concerned">Very Concerned</label>
-            <br />
-
-            <input
-              type="radio"
-              id="somewhat_concerned"
-              name="concern"
-              value="Somewhat Concerned"
-            />
-            <label for="somewhat_concerned">Somewhat Concerned</label>
-            <br />
-
-            <input
-              type="radio"
-              id="not_concerned"
-              name="concern"
-              value="Not Concerned"
-            />
-            <label for="not_concerned">Not Concerned</label>
-          </div>
-
-          <br />
-
-          <div class="actions">
-            <p>
-              What actions do you take to help the environment? (Select all that
-              apply)
-            </p>
-
-            <input
-              type="checkbox"
-              id="recycling"
-              name="actions"
-              value="Recycling"
-            />
-            <label for="recycling">Recycling</label>
-            <br />
-            <input
-              type="checkbox"
-              id="reducing_waste"
-              name="actions"
-              value="Reducing Waste"
-            />
-            <label for="reducing_waste">Reducing Waste</label>
-            <br />
-
-            <input
-              type="checkbox"
-              id="using_renewable_energy"
-              name="actions"
-              value="Using Renewable Energy"
-            />
-            <label for="using_renewable_energy">Using Renewable Energy</label>
-            <br />
-
-            <input
-              type="checkbox"
-              id="planting_trees"
-              name="actions"
-              value="Planting Trees"
-            />
-            <label for="planting_trees">Planting Trees</label>
-            <br />
-
-            <input
-              type="checkbox"
-              id="carpooling"
-              name="actions"
-              value="Carpooling"
-            />
-            <label for="carpooling">Carpooling / Using Public Transport</label>
-          </div>
-
-          <br />
-
-          <div id="writtenfeedback">
-            <label for="write">Describe about your overall feedback</label>
-            <br />
-            <textarea
-              id="write"
-              placeholder="Describe about your feedback"
-              rows="8"
-              cols="50"
-            ></textarea>
-          </div>
-
-          <br />
-
-          <div class="attachment">
-            <label for="attachment"
-              >Upload Attachment (Screenshot or Document)</label
-            >
-            <br />
-            <input
-              type="file"
-              id="attachment"
-              name="attachment"
-              accept=".jpg, .jpeg, .png, .pdf, .doc, .docx"
-            />
-          </div>
+            <br>
+            <div class="attachment">
+              <label for="attachment"
+                ><i class="fas fa-folder-open"></i> Upload Attachment to Support As Your Feedback (Screenshot or Document)</label
+              >
+              <br />
+              <input
+                type="file"
+                id="attachment"
+                name="attachment"
+                accept=".jpg, .jpeg, .png, .pdf, .doc, .docx"
+              />
+            </div>
+          </fieldset>
 
           <br />
 
           <div id="upload_datetime">
             <label for="schedule_datetime"
-              >Schedule Date and Time to upload the Feedback</label
+              ><i class="fas fa-clock"></i> Schedule Date and Time to upload the Feedback</label
             >
             <input type="datetime-local" id="schedule_datetime" />
           </div>
 
-          <br />
 
-          <div id="future_updates">
-            <label for="updates"
-              >How do you want to be updated with the latest updates?</label
-            >
-            <br />
-            <select>
-              <option>Not interested</option>
-              <option>E-mail</option>
-              <option>Messages</option>
-            </select>
-          </div>
 
           <br />
 

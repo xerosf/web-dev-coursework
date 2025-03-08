@@ -10,7 +10,7 @@ h1 {
 }
 
 .container img {
-  width: 250px;
+  width: 280px;
   border-radius: 10px;
 }
 
@@ -19,7 +19,7 @@ h1 {
   height: 500px;
   gap: 15px;
   justify-content: center;
-  padding: 50px;
+  padding: 25px;
   border-radius: 15px;
 }
 
