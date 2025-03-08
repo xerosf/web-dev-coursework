@@ -1,4 +1,9 @@
 <header>
+	<div class="hamburger-menu">
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+	</div>
 	<div class="logo-container">
 		<div class="logo">
 			<a href="../pages/home.html">
@@ -17,32 +22,6 @@
 					<li><a href="../pages/table.html">Chart</a></li>
 				</ul>
 			</li>
-
-			<li class="dropdown-item">
-				<a href="#">Validation</a>
-				<ul class="dropdown">
-					<li>
-						<a href="../validation/validation_ST1.html"
-							>Validation1</a
-						>
-					</li>
-					<li>
-						<a href="../validation/validation_ST2.html"
-							>Validation2</a
-						>
-					</li>
-					<li>
-						<a href="../validation/validation_ST3.html"
-							>Validation3</a
-						>
-					</li>
-					<li>
-						<a href="../validation/validation_ST4.html"
-							>Validation4</a
-						>
-					</li>
-				</ul>
-			</li>
 			<li>
 				<a href="../content/content_ST1.html">Sustainable Energy</a>
 			</li>
@@ -52,11 +31,6 @@
 	</nav>
 
 	<div class="header-right">
-		<div class="hamburger-menu">
-			<div class="bar"></div>
-			<div class="bar"></div>
-			<div class="bar"></div>
-		</div>
 		<div class="profile-picture">
 			<a href="../pages/profile.html">
 				<img src="../../res/profile.jpg" alt="Profile Picture" />
@@ -71,7 +45,6 @@
 		const nav = document.querySelector('nav');
 		const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-		// Toggle navigation when hamburger is clicked
 		hamburgerMenu.addEventListener('click', function () {
 			nav.classList.toggle('active');
 			hamburgerMenu.classList.toggle('active');
