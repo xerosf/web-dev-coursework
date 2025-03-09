@@ -66,13 +66,16 @@ h1 {
   }
 
   .team-member {
+    text-align: center;
     flex: none;
     width: 90%;
   }
 
   .member-details {
-    font-size: 10px;
-    width: 80%;
-    bottom: 5px;
+    margin: auto;
+    font-size: 13px;
+    width: 94%;
+    bottom: 0;
+    padding: 1px;
   }
 }

@@ -112,12 +112,9 @@ select {
     padding: 15px;
   }
 
-  input,
-  textarea,
-  select {
-    width: 100%;
+  fieldset label {
+    font-size: 15px;
   }
-
   button {
     font-size: 0.9rem;
     padding: 12px;
