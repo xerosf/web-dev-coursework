@@ -5,8 +5,6 @@
 @import url('./components/responsive-footer.css');
 @import url('./components/responsive-theme-switcher.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 /* CSS Variables */
 :root {
     --primary-color: #5f7161;
@@ -42,7 +40,6 @@
     --shadow-color: rgba(59, 59, 59, 0.1);
 }
 
-/* Global Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -66,7 +63,6 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
-    /* Add padding to account for fixed header */
 }
 
 img {
@@ -74,7 +70,6 @@ img {
     height: auto;
 }
 
-/* Layout Containers */
 .container, 
 main, 
 .footer-container, 
@@ -87,12 +82,6 @@ main,
     overflow-x: hidden;
 }
 
-
-/* footer {
-    margin-top: auto;
-} */
-
-/* Header Styling */
 #header-container {
     position: fixed;
     top: 0;
@@ -108,24 +97,12 @@ main,
     position: fixed;
 }
 
-/* Link Styling */
-a:focus, 
-button:focus, 
-input:focus, 
-select:focus, 
-textarea:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
 .contact-link {
     color: var(--text-color);
     text-decoration: none;
 	font-weight: normal;	
 }
 
-
-/* Nav Dropdown Accessibility */
 @media (hover: none) {
     .nav-list .dropdown-item:hover .dropdown {
         display: none;
@@ -138,20 +115,17 @@ textarea:focus {
     }
 }
 
-/* Media Queries for Responsive Design */
-/* Large screens (max-width: 1200px) */
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
     html {
         font-size: 15px;
     }
 }
 
-/* Medium screens (max-width: 768px) */
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
     }
-}
+} */
 
 /* Small screens (max-width: 480px) */
 @media screen and (max-width: 480px) {
