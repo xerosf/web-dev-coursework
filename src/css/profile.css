@@ -1,13 +1,10 @@
-* {
-	box-sizing: border-box;
-}
 body{
     background-color: black;
     color: white;
     display: flex;
     justify-content: center;
 }
-main,footer{
+main{
     width: 70%;    
 
 }
@@ -17,17 +14,38 @@ main,footer{
 
 }
 
+.profile-banner{
+    background-image: url("../../res/planting-trees.jpg");
+    background-size: cover;
+    background-color: red;
+    margin: 0px;
+    padding: 0.25rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    
+}
 
 .profile-header{
-    border-radius: 1rem;    
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     background-color: #F1E3D3;
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
     align-items: center;
     row-gap: 1rem;
-    
-    
+
+}
+
+
+
+.profile-img{
+    margin: 0rem 0.5rem;
+	width: 20%;
+}
+.profile-img img{
+    border-radius: 50%;     
+    box-shadow: 5px 5px 10px gray;
 }
 
 .details-wrapper{
@@ -44,10 +62,6 @@ main,footer{
 	padding-left: 0.35rem;
 }
 
-.profile-pic img {
-	border-radius: 3rem;
-	width: 100%;
-}
 .short-bio {
 	background-color: darksalmon;
 	padding: 1rem 1rem;
@@ -93,18 +107,19 @@ main,footer{
     border-bottom-left-radius: 1rem;
     display: none;
 }
-.skills:hover,
-.frustrations:hover,
-.exp:hover,
-.goals:hover,
-.contact-me-card:hover,.volunteering:hover,.un-support:hover .more-div{
+
+.un-support:hover .more-div{
     display: block;
+    
 } 
+.skills:hover .more-div{
+    display: block;
+    
+}
 .skills {
     
     flex: 1;
-    
-    
+
 }
 .all-skills{
     display: flex;
@@ -192,12 +207,10 @@ main,footer{
     padding: 1rem;
     margin-bottom: 1rem;
     column-gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 200 ;
     
 }
-
-
 
 .exp-details {
     background-color: wheat;
@@ -213,7 +226,18 @@ main,footer{
     column-gap: 1rem;
     min-height: 30rem;
 }
+.un-goal{
+    display: flex;
+    align-items: center;
+    background-color: wheat;
+    padding: 1rem;
+    margin-bottom: 1rem;
 
+}
+.un-goal img{
+    width: 2.5rem;
+    margin-right: 1rem;
+}
 .un-support{
     flex: 1;
 }
@@ -223,7 +247,6 @@ main,footer{
 }
 .vol-table {
     width: 100%;
-    height: 100%;
     border: 0.25rem solid black;
     border-collapse:collapse ;
 }
@@ -241,6 +264,17 @@ main,footer{
 .vol-time{
     background-color: rgba(255, 192, 203,0.5);
     
+}
+
+
+.svg-div{
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
 
 /* Contact Me  */
@@ -262,7 +296,7 @@ main,footer{
 .frustrations:hover,
 .goals-un-wrapper:hover,
 .volunteering:hover,
-.skills:hover {
+.skills:hover,.contact-me-card:hover,.un-support:hover {
     box-shadow: 0 4px 8px var(--shadow-color);
     transition: all 0.3s ease-in-out;
     transform: scale(1.01);
@@ -280,6 +314,5 @@ main,footer{
 	margin-top: 0.5rem;
 }
 
-/* footer
-footer {
-} */
+
+
