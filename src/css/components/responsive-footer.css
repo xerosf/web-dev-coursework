@@ -1,25 +1,24 @@
 /* Responsive Footer Styles */
-
+@import url(/src/css/volunteer-styles.css);
 /* Base footer styles */
 footer {
     background-color: var(--accent-color);
     color: var(--primary-color);
-    padding: 2rem 0;
+    padding-top: 2rem 0;
+    padding-bottom: 0.1rem;
     margin-top: auto;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    max-width: 1400px;
+    padding: 0 0rem;
 }
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-
 }
 
 .footer-column h3 {
@@ -80,7 +79,6 @@ footer {
 /* Large screens (max-width: 1200px) */
 @media screen and (max-width: 1200px) {
     .footer-container {
-        max-width: 1000px;
         padding: 0 1.5rem;
     }
     
