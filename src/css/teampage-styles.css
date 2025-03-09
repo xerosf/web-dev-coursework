@@ -1,6 +1,6 @@
 h1 {
   text-align: center;
-  font-size: 4vw;
+  font-size: 2vw;
   padding: 2vw;
 }
 
@@ -9,12 +9,11 @@ h1 {
   text-align: center;
 }
 
-.container img {
-  width: 280px;
+.image_container img {
   border-radius: 10px;
 }
 
-.container {
+.image_container {
   display: flex;
   height: 500px;
   gap: 15px;
@@ -70,7 +69,7 @@ h1 {
 
 /* Responsive Design for mobile devices */
 @media (max-width: 768px) {
-  .container {
+  .image_container {
     flex-direction: column;
     gap: 300px;
     align-items: center;
@@ -83,7 +82,7 @@ h1 {
     width: 90%;
   }
 
-  .container .team-member .member-details {
+  .image_container .team-member .member-details {
     transition: 1s;
     margin: auto;
     font-size: 13px;
