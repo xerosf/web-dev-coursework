@@ -101,6 +101,44 @@ select {
   background-color: rgb(228, 228, 228);
 }
 
+.rating-scale {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border: 1px solid #6d8b74;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.rating-scale input {
+  display: none; 
+}
+
+.rating-scale label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #6d8b74;
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.rating-scale input:checked + label {
+  background-color: #6d8b74; 
+  color: white;
+  transform: scale(1.1);
+}
+
+.rating-scale label:hover {
+  background-color: #6d8b74;
+  color: antiquewhite;
+}
+
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .container {
@@ -112,14 +150,17 @@ select {
     padding: 15px;
   }
 
-  input,
-  textarea,
-  select {
-    width: 100%;
+  fieldset label {
+    font-size: 15px;
   }
-
   button {
     font-size: 0.9rem;
     padding: 12px;
+  }
+
+  .rating-scale label {
+    font-size: 13px;
+    width: 40px;
+    height: 20px;
   }
 }
