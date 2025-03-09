@@ -13,7 +13,12 @@
     transition: ease-in-out 1s;
     opacity: 40%;
 }
-
-.title {
-    text-align: center;
+h1 {
+    font-size: 3vm;
+    color: var(--primary-color);
 }
+p {
+    font-size: 2vm;
+    color: var(--text-color);
+}
+
