@@ -1,0 +1,252 @@
+body {
+    padding-top: 50px;
+}
+
+.table-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #125a33;
+}
+
+.table-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo-icon {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--secondary-color);
+    position: relative;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: var(--hover-color);
+    transition: background-color 0.3s ease;
+}
+
+.icon-header {
+    display: flex;
+    align-items: center;
+}
+
+.icon-header img {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.icon-header:hover img {
+    transform: scale(1.1);
+}
+
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 10;
+    min-width: 200px;
+    max-width: 300px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.status-icon {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.met {
+    color: var(--met-color);
+}
+
+.progress {
+    color: var(--progress-color);
+}
+
+.behind {
+    color: var(--behind-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.highlight {
+    background-color: var(--highlight-color);
+    font-weight: bold;
+}
+
+.country-cell {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.country-flag {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 20px;
+    }
+
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-top: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    table,
+    thead,
+    tbody {
+        display: block;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: flex;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+        position: relative;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    td .td-content {
+        flex: 2;
+    }
+
+    .data-footer {
+        text-align: center;
+        padding: 15px;
+    }
+}

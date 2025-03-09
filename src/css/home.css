@@ -332,6 +332,9 @@ main {
 	line-height: 1.8;
 }
 
+.big-page-card {
+	text-decoration: none;
+}
 /* Header Styles */
 header {
 	display: flex;
