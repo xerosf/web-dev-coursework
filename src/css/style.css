@@ -7,14 +7,14 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #5f7161;
+    --primary-color: #7d9b84;
     --background-color: #f2f1eb;
     --card-background: #eee7da;
-    --text-color: #6d8b74;
+    --text-color: #58805c;
     --accent-color: rgba(238, 231, 218, 0.8);
     --button-bg: #6d8b74;
-    --button-text: #000000;
-    --button-border: #000000;
+    --button-text: #f2f1eb;
+    --button-border: #374138;
     --svg-color: invert(50%) sepia(11%) saturate(671%) hue-rotate(82deg) brightness(100%) contrast(90%);
     --shadow-color: rgba(59, 59, 59, 0.1);
 
@@ -28,10 +28,10 @@
 }
 
 [data-theme='dark'] {
-    --primary-color: #88ab8e;
+    --primary-color: #6ab578;
     --background-color: #1e1e1e;
     --card-background: #353535;
-    --text-color: #afc8ad;
+    --text-color: #91c291;
     --accent-color: rgba(34, 34, 34, 0.8);
     --button-bg: #afc8ad;
     --button-text: #ffffff;
