@@ -132,14 +132,14 @@ label {
     font-weight: 600;
 }
 
-/* Custom dropdown styling */
-.custom-dropdown {
+/* Custom sort-list styling */
+.custom-sort-list {
     position: relative;
     display: inline-block;
     width: 180px;
 }
 
-.dropdown-toggle {
+.sort-list-toggle {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,16 +154,16 @@ label {
     transition: all 0.3s ease;
 }
 
-.dropdown-toggle:hover {
+.sort-list-toggle:hover {
     background-color: var(--background-color);
     border-color: #ccc;
 }
 
-.dropdown-toggle i {
+.sort-list-toggle i {
     margin-left: 10px;
 }
 
-.dropdown-menu {
+.sort-list-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -177,11 +177,11 @@ label {
     display: none;
 }
 
-.custom-dropdown:hover .dropdown-menu {
+.custom-sort-list:hover .sort-list-menu {
     display: block;
 }
 
-.dropdown-item {
+.sort-list-item {
     display: block;
     padding: 10px 15px;
     color: var(--text-color);
@@ -189,11 +189,11 @@ label {
     transition: background-color 0.3s;
 }
 
-.dropdown-item:hover {
+.sort-list-item:hover {
     background-color: var(--card-background);
 }
 
-.dropdown-item.active {
+.sort-list-item.active {
     background-color: var(--card-background);
     color: var(--primary-color);
     font-weight: 600;
@@ -282,6 +282,7 @@ label {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    margin-top: 3rem;
 }
 
 .overall-rating {
@@ -354,7 +355,7 @@ label {
 
 /* Submitting a Review */
 .submit-review {
-    margin-top: 2rem;
+    margin-top: 4rem;
     padding: 25px;
     text-align: center;
 }
@@ -441,4 +442,100 @@ label {
 .submit-review button:hover {
     color: var(--accent-color);
     background-color: var(--primary-color);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .program-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .program-card {
+        min-width: 320px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .reviews-section {
+        flex-direction: column;
+    }
+    
+    .overall-rating, 
+    .recent-reviews-container {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    .recent-reviews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .review-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .image-container img {
+        height: 300px;
+    }
+    
+    .program-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .program-card {
+        min-width: 100%;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .recent-reviews {
+        grid-template-columns: 1fr;
+    }
+    
+    .submit-review textarea {
+        width: 90%;
+    }
+    
+    .sorting-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .overall-rating h2 {
+        font-size: 3rem;
+    }
+    
+    .rating-scale {
+        flex-wrap: wrap;
+    }
+    
+    .image-container img {
+        height: 200px;
+    }
 }
