@@ -1,0 +1,10 @@
+.title{
+    text-align: center;
+}        
+.image-container{
+    background-color: green;
+    background-image: url("../../res/Global+climate+strike+2023.jpg");
+    background-size: cover;
+    padding: 25%;
+    border-radius: 0.5rem;
+}
