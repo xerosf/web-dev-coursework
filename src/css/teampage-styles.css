@@ -49,7 +49,7 @@ h1 {
 .team-member:hover img {
   opacity: 50%;
   transform: scale(1.05);
-  transition: 1s;
+  transition: 1.2s;
 }
 
 #thanku {
