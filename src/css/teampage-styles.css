@@ -76,16 +76,18 @@ h1 {
   }
 
   .team-member {
-    text-align: center;
+    justify-content: center;
     flex: none;
     width: 90%;
   }
 
-  .member-details {
+  .container .team-member .member-details {
+    transition: 1s;
     margin: auto;
     font-size: 13px;
-    width: 94%;
+    width: 100%;
+    height: 100%;
     bottom: 0;
-    padding: 1px;
   }
+
 }
