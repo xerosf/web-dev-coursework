@@ -1,0 +1,25 @@
+body{
+    padding-top: 50px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.image-container img {
+    max-width: 40%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 100%;
+    background-color: #000; /* Change the color as needed */
+    margin: 0 20px; /* Adjust the spacing as needed */
+}

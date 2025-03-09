@@ -1,5 +1,3 @@
-<!-- Remove 'The Stuff' -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,29 +8,138 @@
 			rel="icon"
 			href="https://img.icons8.com/color/48/united-nations.png"
 			type="image/x-icon" />
+
+		<!-- Base styles -->
 		<link rel="stylesheet" href="../css/style.css" />
-		<link rel="stylesheet" href="../css/home-styles.css" />
+
+		<!-- Page Specific styles -->
+		<link rel="stylesheet" href="../css/content_ST1.css" />
+
+		<link
+			rel="stylesheet"
+			href="../css/hamburger-menu-animation.css" />
+
+		<!-- Font Awesome (Social media icons)-->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-		<script src="../js/theme.js"></script>
+
+		<script src="../js/theme.js" defer></script>
+		<script src="../js/header-position.js" defer></script>
+		<script src="../js/hamburger-menu.js" defer></script>
 	</head>
 
 	<body>
 		<div id="header-container"></div>
-		<p>
-			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-		</p>
+
+		<main id="main-content">
+			<div class="content">
+				<h1><i class="fas fa-leaf"></i> Sustainable Energy</h1>
+				<p>
+					Sustainable energy encompasses renewable energy sources like 
+					solar, wind, hydro, and geothermal, which are naturally 
+					replenishing and produce minimal environmental impact. 
+					Unlike fossil fuels, which are finite and contribute 
+					significantly to climate change, sustainable energy options 
+					are crucial for reducing greenhouse gas emissions, mitigating 
+					global warming, and minimizing air and water pollution.
+				</p>
+				<br>
+				<p>
+					As the world faces growing energy demands, transitioning to 
+					sustainable energy is essential for both environmental and 
+					economic well-being. By investing in clean energy, we can 
+					secure a more resilient energy future, reduce dependency on 
+					imported fuels, and create job opportunities in green 
+					technologies. Sustainable energy not only addresses 
+					immediate environmental concerns but also offers long-term 
+					benefits for public health, energy security, and global stability.
+				</p>
+			</div>
+			
+			<div class="image-container">
+				<img
+					src="../../res/sussy-energy.jpg"
+					alt="Sustainable Energy"
+				/>
+				<div class="vertical-line"></div>
+				<img
+					src="../../res/sussy-energy-lmfao.webp"
+					alt="Sustainable Energy Infographic"
+				/>
+			</div>
+
+			<div class="featured-section">
+				<h2>Featured Initiatives</h2>
+				<div class="featured-cards">
+					<div class="featured-card">
+						<i class="fas fa-usd fa-3x"></i>
+						<h3>Renewable Energy Incentives</h3>
+						<p>
+							Many countries are offering tax credits, subsidies, and incentives to 
+							encourage the development and installation of renewable energy systems 
+							like solar panels and wind turbines.
+						</p>
+					</div>
+					<div class="featured-card">
+						<i class="fas fa-university fa-3x"></i>
+						<h3>International Agreements and Frameworks</h3>
+						<p>
+							Global agreements such as the Paris Agreement aim to limit global 
+							temperature rise by reducing greenhouse gas emissions.
+						</p>
+					</div>
+					<div class="featured-card">
+						<i class="fas fa-industry fa-3x"></i>
+						<h3>Private Sector and Corporate Commitments</h3>
+						<p>
+							Many companies are setting ambitious sustainability goals, pledging 
+							to reduce their carbon footprints and transition to 100% renewable energy.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<br><br><br>
+			<div class="card-container">
+				<div class="content">
+					<i class="fas fa-bolt fa-3x"></i><h2>Energy Transition and Green New Deals</h2>
+					<p>
+						Various nations have launched "Green New Deal" initiatives or similar programs 
+						that focus on integrating sustainable energy across sectors. These plans often 
+						include investments in renewable energy infrastructure, modernizing the grid, 
+						and fostering the development of green technologies to create sustainable jobs 
+						and reduce carbon emissions.
+					</p>
+				</div>
+				<div class="content">
+					<i class="fas fa-users fa-3x"></i><h2>Community-Based Renewable Energy Projects</h2>
+					<p>
+						Local initiatives are increasingly driving renewable energy solutions. These 
+						projects involve communities working together to harness clean energy through 
+						solar farms, wind installations, or microgrids. These community-driven 
+						initiatives are important for empowering local areas, reducing energy poverty, 
+						and providing affordable energy access.
+					</p>
+				</div>
+			</div>
+
+		</main>
 		<div id="footer-container"></div>
 		<div id="theme-switcher"></div>
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
-				// Load the header
 				fetch('../components/header.html')
 					.then((response) => response.text())
 					.then((data) => {
 						document.getElementById('header-container').innerHTML =
 							data;
+						if (typeof adjustBodyPadding === 'function') {
+							adjustBodyPadding();
+						}
+						if (typeof initHamburgerMenu === 'function') {
+							initHamburgerMenu();
+						}
 					})
 					.catch((error) =>
 						console.error('Error loading header:', error)
@@ -48,18 +155,18 @@
 					.catch((error) =>
 						console.error('Error loading footer:', error)
 					);
-
 				// Load the theme switcher
 				fetch('../components/theme_switcher.html')
 					.then((response) => response.text())
 					.then((data) => {
 						document.getElementById('theme-switcher').innerHTML =
 							data;
-						// Initialize theme toggle AFTER header is loaded
-						initThemeToggle();
+						if (typeof initThemeToggle === 'function') {
+							initThemeToggle();
+						}
 					})
 					.catch((error) =>
-						console.error('Error loading header:', error)
+						console.error('Error loading theme switcher:', error)
 					);
 			});
 		</script>
