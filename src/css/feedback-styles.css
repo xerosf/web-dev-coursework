@@ -22,7 +22,7 @@ label {
 }
 
 fieldset {
-  border:1px solid #6d8b74;
+  border:1px solid var(--primary-color);
   border-radius: 10px;
   padding: 20px;
 }
@@ -48,7 +48,7 @@ input:invalid {
 }
 
 input:valid {
-  border: 2px solid #6d8b74;
+  border: 2px solid var(--primary-color);
 }
 
 input:invalid + .error-msg {
@@ -65,7 +65,7 @@ button {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  background-color: #6d8b74;
+  background-color: var(--primary-color);
   border: none;
 }
 
@@ -120,7 +120,7 @@ select {
   justify-content: center;
   width: 30px;
   height: 30px;
-  border: 1px solid #6d8b74;
+  border: 1px solid var(--primary-color);
   border-radius: 50%;
   font-size: 15px;
   font-weight: bold;
