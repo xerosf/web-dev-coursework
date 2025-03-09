@@ -16,3 +16,9 @@ body {
 	margin-top: 3rem;
 	margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+	.image-container {
+		width: 90%;
+	}
+}
