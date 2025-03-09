@@ -30,22 +30,30 @@ p {
     transition: all 0.3s ease-in-out;
 }
 
-.btn-col-1 {
+.btn-container a.btn-col-1,
+.btn-container a.btn-col-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-container a.btn-col-1 {
     color: var(--text-color);
     background-color: var(--accent-color);
 }
 
-.btn-col-2 {
+.btn-container a.btn-col-2 {
     color: var(--background-color);
     background-color: var(--primary-color);
 }
 
-.btn-col-1:hover {
+.btn-container a.btn-col-1:hover {
     color: var(--background-color);
     background-color: var(--primary-color);
 }
 
-.btn-col-2:hover {
+.btn-container a.btn-col-2:hover {
     color: var(--primary-color);
     background-color: var(--accent-color);
 }

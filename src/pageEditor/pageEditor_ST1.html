@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<title>Climate Action</title>
+
+		<link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon"/>
+
+		<!-- Base styles -->
+		<link rel="stylesheet" href="../../src/css/style.css"/>
+        <link rel="stylesheet" href="../css/pageEditor/pageEditor_ST1-styles.css">
+
+		<link rel="stylesheet" href="../../src/css/hamburger-menu-animation.css"/>
+
+		<!-- Font Awesome (Social media icons)-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+		<script src="../js/theme.js" defer></script>
+		<script src="../js/hamburger-menu.js" defer></script>
+	</head>
+
+	<body>
+		<div id="header-container"></div>
+        
+        <section class="stud">
+            <h2>Sansith Fernando - Student 01</h2>
+        </section>
+    
+        <div class="container">
+            <!-- Main content area -->
+            <main>
+                <section class="section-container">
+                    <h2 id="splash">Splash Page</h2>
+                    <h3>Technical Description</h3>
+                    <p>The splash screen serves as the entry point to our climate action website, designed to create an engaging first impression while the main content loads. I implemented this page using several key HTML and CSS techniques:</p>
+                    
+                    <h4>HTML Structure and Components:</h4>
+                    <ul>
+                        <li><strong>Container Structure:</strong> I used nested <code>div</code> elements to create a hierarchical layout, with the main <code>splash-container</code> housing all content and providing full viewport coverage.</li>
+                        <li><strong>Background Image Implementation:</strong> Instead of using CSS background properties, I implemented the background as an <code>img</code> element with the <code>splash-bg</code> class and positioned it absolutely to allow for better accessibility and filter application.</li>
+                        <li><strong>Content Organization:</strong> The <code>content-wrapper</code> div contains logically grouped sections (logo, welcome text, team information, and loading indicator) to maintain semantic structure.</li>
+                        <li><strong>Team Member List:</strong> Used an unordered list (<code>ul</code>) with list items (<code>li</code>) to properly structure team member information, enhancing both semantics and screen reader compatibility.</li>
+                    </ul>
+                    
+                    <h4>CSS Techniques and Styling:</h4>
+                    <ul>
+                        <li><strong>Responsive Design:</strong> Implemented multiple media queries to ensure optimal display across different device sizes (mobile, tablet, and laptop), with flexible content sizing and layout adjustments.</li>
+                        <li><strong>Visual Enhancements:</strong> Applied subtle animations including <code>fadeIn</code>, <code>slideUp</code>, and <code>spin</code> keyframe animations to create a dynamic loading experience without overwhelming the user.</li>
+                        <li><strong>Accessibility-Focused Styling:</strong> Used high contrast colors defined via CSS variables, appropriate text sizing, and visual separation between content sections to improve readability.</li>
+                        <li><strong>Glassmorphism Effect:</strong> Created a semi-transparent overlay with backdrop filter for the content wrapper, providing visual depth while maintaining readability of content.</li>
+                        <li><strong>Dark Mode Support:</strong> Included a specific media query for <code>prefers-color-scheme: dark</code> that automatically adjusts colors for users with dark mode enabled.</li>
+                    </ul>
+                    
+                    <h4>JavaScript Functionality:</h4>
+                    <ul>
+                        <li><strong>Timed Redirection:</strong> Implemented a <code>setTimeout</code> function that redirects users to the home page after 4 seconds, giving them time to view the splash screen.</li>
+                        <li><strong>Dynamic Loading Indicator:</strong> Created an animated loading text using <code>setInterval</code> that cycles through displaying 1-3 dots after "Loading your experience" to provide visual feedback during the waiting period.</li>
+                    </ul>
+                    
+                    <h3>Accessibility</h3>
+                    <p>I prioritized accessibility throughout the splash screen implementation:</p>
+                    <ul>
+                        <li><strong>Alternative Text:</strong> All images include descriptive <code>alt</code> attributes, including "Splash Background" for the background image and "Logo" for the SDG logo.</li>
+                        <li><strong>Semantic HTML:</strong> Used appropriate heading levels (<code>h1</code>) for the main title "Climate Action" and structured content logically for screen readers.</li>
+                        <li><strong>Responsive Design:</strong> Ensured the page is fully responsive across devices with appropriate text sizing and layout adjustments.</li>
+                        <li><strong>Visual Indicators:</strong> The loading spinner and dynamic text provide both visual and textual cues about the loading process.</li>
+                        <li><strong>Color Contrast:</strong> Maintained high contrast between text and background colors using CSS variables to ensure readability for visually impaired users.</li>
+                        <li><strong>Dark Mode Support:</strong> Implemented automatic adjustments for users who prefer dark mode, reducing eye strain in low-light conditions.</li>
+                    </ul>
+                    
+                    <h3>Link to the validation page</h3>
+                    <p><a href="../validation/validation_ST1.html#splash-validation" target="_blank">View splash screen validation results</a> to see the HTML and CSS validation outcomes for this page.</p>
+                    
+                    <h3>Link to the page</h3>
+                    <p><a href="../../index.html" target="_blank">View the splash screen</a> to experience the implemented page functionality.</p>
+                </section>
+    
+                <section class="section-container">
+                    <h2 id="volunteer">Volunteer Page</h2>
+                    <h3>Technical Description</h3>
+                    <p>The volunteer page serves as a crucial engagement point for our climate action website, designed to inform and motivate potential volunteers while showcasing available programs. I implemented this page using several key HTML and CSS techniques:</p>
+                    
+                    <h4>HTML Structure and Components:</h4>
+                    <ul>
+                        <li><strong>Semantic Markup:</strong> I utilized semantic HTML5 elements including <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;form&gt;</code> to create a logically structured document that enhances accessibility and SEO.</li>
+                        <li><strong>Card-Based Layout:</strong> Implemented multiple card components using <code>&lt;article&gt;</code> elements within container <code>&lt;div&gt;</code>s to present program options and reviews in a consistent, visually appealing format.</li>
+                        <li><strong>Form Implementation:</strong> Created an interactive feedback form with <code>&lt;fieldset&gt;</code>, <code>&lt;label&gt;</code>, and various input types to collect user reviews, including a custom rating scale using radio buttons.</li>
+                        <li><strong>Icon Integration:</strong> Incorporated Font Awesome icons using the <code>&lt;i&gt;</code> element with appropriate classes to enhance visual communication and provide meaningful visual cues.</li>
+                        <li><strong>Dynamic Dropdown:</strong> Built a custom sorting dropdown menu with toggle functionality that reveals options upon hover, improving user experience without requiring JavaScript for basic functionality.</li>
+                    </ul>
+                    
+                    <h4>CSS Techniques and Styling:</h4>
+                    <ul>
+                        <li><strong>CSS Grid Layout:</strong> Implemented responsive grid layouts using <code>display: grid</code> with <code>grid-template-columns</code> and <code>minmax()</code> functions for program cards, review cards, and benefits sections that automatically adjust based on screen size.</li>
+                        <li><strong>Flex-Based Components:</strong> Used <code>display: flex</code> for alignment and spacing in numerous components including the navigation, button containers, and rating scale to ensure proper alignment and spacing.</li>
+                        <li><strong>Interactive Elements:</strong> Applied hover effects using <code>transform: translateY()</code> and <code>box-shadow</code> changes to create subtle animations when users interact with cards, enhancing engagement without being distracting.</li>
+                        <li><strong>CSS Variables:</strong> Leveraged CSS variables (custom properties) for colors and common values to maintain a consistent theme throughout the page while facilitating easy updates and theme switching.</li>
+                        <li><strong>Comprehensive Media Queries:</strong> Implemented detailed breakpoints at 1200px, 992px, 768px, and 480px to ensure optimal viewing across devices, adjusting grid layouts, font sizes, and component arrangements accordingly.</li>
+                        <li><strong>Custom Form Styling:</strong> Created visually appealing form elements with custom-styled radio buttons using the CSS technique of hiding the default inputs and styling their associated labels.</li>
+                    </ul>
+                    
+                    <h4>Special Features:</h4>
+                    <ul>
+                        <li><strong>Card Hover Effects:</strong> Implemented subtle elevation effects using <code>transform</code> and enhanced <code>box-shadow</code> properties when users hover over program or review cards, creating a tactile, interactive feel.</li>
+                        <li><strong>Custom Rating Interface:</strong> Designed an intuitive rating system with emoticon icons that scale and change color when selected, providing visual feedback and improving user engagement.</li>
+                        <li><strong>Text Truncation:</strong> Used <code>-webkit-line-clamp</code> and related properties to elegantly truncate text in card excerpts, maintaining consistent card heights while indicating additional content with ellipses.</li>
+                        <li><strong>Interactive Buttons:</strong> Created button styles with color inversion on hover, maintaining the color scheme while providing clear visual feedback for interactive elements.</li>
+                    </ul>
+                    
+                    <h3>Accessibility</h3>
+                    <p>I implemented several accessibility features throughout the volunteer page:</p>
+                    <ul>
+                        <li><strong>Semantic HTML Structure:</strong> Used proper heading hierarchy (h1-h3) and semantic elements to ensure screen readers can navigate the content logically.</li>
+                        <li><strong>Form Accessibility:</strong> Implemented properly associated <code>&lt;label&gt;</code> elements with form controls, ensuring screen reader users understand the purpose of each input.</li>
+                        <li><strong>Alt Text for Images:</strong> Added descriptive alt attributes for program images, country flags, and decorative elements to provide context for visually impaired users.</li>
+                        <li><strong>Color Contrast:</strong> Used CSS variables to maintain sufficient contrast between text and background colors, ensuring readability for users with visual impairments.</li>
+                        <li><strong>Responsive Design:</strong> Created a fully responsive layout that adapts to different screen sizes and orientations, making the content accessible across various devices.</li>
+                        <li><strong>Focus Indicators:</strong> Maintained visible focus states for interactive elements to assist keyboard navigation users.</li>
+                        <li><strong>Icon Support:</strong> Complemented icons with text labels to ensure their meaning is clear to all users, regardless of visual ability.</li>
+                    </ul>
+                    
+                    <h3>Link to the validation page</h3>
+                    <p><a href="../validation/validation_ST1.html#volunteering-validation" target="_blank">View volunteer page validation results</a> to see the HTML and CSS validation outcomes for this page.</p>
+                    
+                    <h3>Link to the page</h3>
+                    <p><a href="../pages/volunteer.html" target="_blank">View the volunteer page</a> to experience the implemented page functionality.</p>
+                </section>
+    
+                <section class="section-container">
+                    <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                    <p>The sustainable energy content page serves as an informational resource about renewable energy within our climate action website. I designed this page to effectively communicate key concepts while maintaining visual engagement. Here's how I implemented it using HTML and CSS techniques:</p>
+                    
+                    <h4>HTML Structure and Components:</h4>
+                    <ul>
+                        <li><strong>Semantic Structure:</strong> I used the <code>&lt;main&gt;</code> element with a unique ID (<code>id="main-content"</code>) to clearly define the primary content area, improving accessibility and SEO by properly identifying the page's core content.</li>
+                        <li><strong>Content Sectioning:</strong> Divided the page into logical sections using <code>&lt;div&gt;</code> elements with descriptive class names (<code>content</code>, <code>image-container</code>, <code>featured-section</code>, <code>card-container</code>) to organize content thematically.</li>
+                        <li><strong>Heading Hierarchy:</strong> Implemented a proper heading structure with <code>&lt;h1&gt;</code> for the main title and <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> for subsections, creating a logical document outline for both visual hierarchy and screen readers.</li>
+                        <li><strong>Icon Integration:</strong> Incorporated Font Awesome icons using the <code>&lt;i&gt;</code> element with appropriate classes (e.g., <code>fas fa-leaf</code>, <code>fas fa-bolt</code>) to enhance visual communication and provide thematic indicators for different content sections.</li>
+                        <li><strong>Image Implementation:</strong> Placed images within a container using the <code>&lt;img&gt;</code> element with descriptive <code>alt</code> attributes, ensuring accessibility while providing visual content to support the text information.</li>
+                    </ul>
+                    
+                    <h4>CSS Techniques and Styling:</h4>
+                    <ul>
+                        <li><strong>Flexible Layout:</strong> Used <code>display: flex</code> for the image container to create a side-by-side arrangement of images with a vertical divider, enabling efficient use of horizontal space while maintaining visual balance.</li>
+                        <li><strong>Image Optimization:</strong> Applied <code>object-fit: cover</code> to images to ensure they maintain their aspect ratio while filling their allocated space, preventing distortion regardless of image dimensions.</li>
+                        <li><strong>Responsive Constraints:</strong> Set <code>max-width: 40%</code> for images to ensure they don't dominate the layout on larger screens while maintaining readability of accompanying text content.</li>
+                        <li><strong>Visual Separation:</strong> Created a <code>vertical-line</code> element between images using a thin <code>background-color</code> with specific height and width properties to provide clear visual separation without taking excessive space.</li>
+                        <li><strong>Content Spacing:</strong> Applied margin and padding properties throughout the page to create breathing room between elements, improving readability and visual flow.</li>
+                        <li><strong>Border Radius:</strong> Used <code>border-radius: 8px</code> on images to soften their appearance and maintain consistency with the rounded design language used throughout the site.</li>
+                    </ul>
+                    
+                    <h4>Content Presentation:</h4>
+                    <ul>
+                        <li><strong>Card-Based Information:</strong> Implemented card layouts in the <code>featured-cards</code> and <code>card-container</code> sections to group related content visually, making information more digestible and scannable for users.</li>
+                        <li><strong>Visual Icons:</strong> Strategically placed icons within headings and cards to provide immediate visual cues about content topics, enhancing understanding before users read the detailed text.</li>
+                        <li><strong>Consistent Spacing:</strong> Used <code>&lt;br&gt;</code> elements and margin properties to create consistent spacing between text paragraphs and major sections, improving readability and content flow.</li>
+                        <li><strong>Header/Footer Integration:</strong> Implemented container divs (<code>id="header-container"</code> and <code>id="footer-container"</code>) that are populated via JavaScript includes, ensuring consistent navigation and footer elements across all site pages.</li>
+                        <li><strong>Theme Support:</strong> Added a theme switcher container that interfaces with the site's theming system, allowing users to toggle between light and dark modes for better readability according to their preference.</li>
+                    </ul>
+                    
+                    <h3>Accessibility</h3>
+                    <p>I prioritized accessibility throughout the sustainable energy page implementation:</p>
+                    <ul>
+                        <li><strong>Alternative Text:</strong> Provided descriptive alt attributes for all images, including "Sustainable Energy" and "Sustainable Energy Infographic" to ensure screen reader users understand the image content.</li>
+                        <li><strong>Semantic Structure:</strong> Used proper heading hierarchy and semantic HTML elements to create a logical document structure that can be easily navigated with assistive technologies.</li>
+                        <li><strong>Complementary Icons and Text:</strong> Paired icons with descriptive text rather than relying solely on visual elements, ensuring all users can understand the content regardless of visual ability.</li>
+                        <li><strong>Color Contrast:</strong> Maintained appropriate contrast between text and background colors using the site's CSS variables system, ensuring readability for users with visual impairments.</li>
+                        <li><strong>Responsive Design:</strong> Created a layout that adapts to different screen sizes, maintaining readability and functionality across devices, benefiting users with different viewing needs.</li>
+                        <li><strong>Clear Content Structure:</strong> Organized content in logical sections with appropriate headings and concise paragraphs, making the page easier to understand for all users, including those with cognitive disabilities.</li>
+                        <li><strong>Top Padding:</strong> Applied <code>padding-top: 50px</code> to the body to ensure content doesn't begin immediately under the fixed header, preventing content from being hidden or difficult to access.</li>
+                    </ul>
+                    
+                    <h3>Link to the validation page</h3>
+                    <p><a href="../validation/validation_ST1.html#sustainable-energy-validation" target="_blank">View content page validation results</a> to see the HTML and CSS validation outcomes for this page.</p>
+                    
+                    <h3>Link to the page</h3>
+                    <p><a href="content.html" target="_blank">View the sustainable energy content page</a> to experience the implemented page functionality.</p>
+                </section>
+    
+                <section class="section-container">
+                    <h2 id="challenge">Challenges and Lessons Learned</h2>
+                    <h3>Implementation Challenges</h3>
+                    <p>During the development of these pages, I encountered several technical challenges that required creative problem-solving:</p>
+                    
+                    <h4>1. Responsive Layout Management</h4>
+                    <p>Creating truly responsive layouts that worked seamlessly across all device sizes proved challenging, particularly for the volunteer page with its complex card-based grid system. Initially, the cards would overlap or break at certain viewport widths, creating visual inconsistencies.</p>
+                    <p><strong>Solution:</strong> I implemented a comprehensive media query strategy with carefully selected breakpoints (1200px, 992px, 768px, and 480px) and used CSS Grid's <code>minmax()</code> function to create flexible card dimensions. This allowed elements to reflow naturally without fixed widths breaking the layout.</p>
+                    
+                    <h4>2. Cross-Browser Compatibility</h4>
+                    <p>Ensuring consistent rendering across browsers was difficult, especially for modern CSS features like <code>-webkit-line-clamp</code> used for text truncation in card descriptions and custom dropdown styling in the volunteer page.</p>
+                    <p><strong>Solution:</strong> I implemented progressive enhancement approaches, providing fallback styling for browsers that didn't support certain features. For text truncation, I added both standard and webkit-specific properties along with appropriate overflow handling.</p>
+                    
+                    <h4>3. Animation Performance</h4>
+                    <p>The splash screen's loading animations initially caused performance issues on lower-end mobile devices, creating a sluggish user experience during the crucial first impression.</p>
+                    <p><strong>Solution:</strong> I optimized animations by using CSS transform properties instead of margin/position changes to leverage GPU acceleration. Additionally, I simplified some animations and ensured they were triggered appropriately to minimize resource usage.</p>
+                    
+                    <h3>Lessons Learned</h3>
+                    <ul>
+                        <li><strong>Mobile-First Design:</strong> Starting with mobile layouts first proved more effective than retrofitting desktop designs for smaller screens. This approach forced me to prioritize content and functionality early in the design process.</li>
+                        <li><strong>CSS Variables Efficiency:</strong> Using CSS variables (custom properties) significantly streamlined theme management and made global styling changes much more maintainable. This became particularly valuable when implementing dark mode support.</li>
+                        <li><strong>Semantic HTML Importance:</strong> Consistently using semantic HTML elements not only improved accessibility but also made styling more logical and debugging easier. The structure provided natural organization that carried through to the final presentation.</li>
+                        <li><strong>Performance Testing:</strong> Regular testing on different devices revealed performance issues early, allowing for timely optimizations. This was especially important for animation-heavy elements like the splash screen.</li>
+                    </ul>
+                </section>
+                
+                <section class="section-container">
+                    <h2 id="compliance">Compliance</h2>
+                    <p>All pages I created adhere to Janet regulations governing web page publication through careful implementation of the following compliance measures:</p>
+                    
+                    <h3>Accessibility Compliance</h3>
+                    <p>I ensured compliance with WCAG 2.1 Level AA standards, which Janet regulations incorporate as a baseline requirement:</p>
+                    <ul>
+                        <li><strong>Alternative Text:</strong> All images across the splash, volunteer, and content pages include descriptive alt attributes to ensure screen reader compatibility.</li>
+                        <li><strong>Semantic HTML:</strong> Properly structured HTML with appropriate heading hierarchies (h1-h3) creates a logical document outline that assistive technologies can navigate effectively.</li>
+                        <li><strong>Color Contrast:</strong> Text elements maintain sufficient contrast ratios with their backgrounds using consistent CSS variables, meeting WCAG AA requirements for readability.</li>
+                        <li><strong>Keyboard Navigation:</strong> All interactive elements are accessible via keyboard, with visible focus states maintained for improved navigation.</li>
+                    </ul>
+                    
+                    <h3>Data Protection Compliance</h3>
+                    <p>In accordance with Janet's data protection requirements:</p>
+                    <ul>
+                        <li><strong>Minimal Data Collection:</strong> The feedback form on the volunteer page collects only necessary information without requesting personally identifiable data beyond what's needed for the specific purpose.</li>
+                        <li><strong>Transparent Purpose:</strong> Form submissions clearly indicate their purpose through descriptive labels and submission button text.</li>
+                    </ul>
+                    
+                    <h3>Security Compliance</h3>
+                    <p>I implemented several security measures aligned with Janet's web security guidelines:</p>
+                    <ul>
+                        <li><strong>Resource Integrity:</strong> External resources are properly referenced and would be implemented with integrity attributes in a production environment to prevent malicious code injection.</li>
+                        <li><strong>Input Validation:</strong> Form fields include appropriate attributes to validate input types, helping prevent malformed data submission (though full server-side validation would be implemented in production).</li>
+                    </ul>
+                    
+                    <h3>Content and Copyright Compliance</h3>
+                    <ul>
+                        <li><strong>Proper Attribution:</strong> All external resources including images and icons are appropriately attributed in the References section.</li>
+                        <li><strong>Original Content:</strong> Written content for the sustainable energy and volunteer pages was created specifically for this project to avoid copyright concerns.</li>
+                    </ul>
+                    
+                    <p>These compliance measures were integrated throughout the development process rather than added as an afterthought, ensuring that all pages meet Janet's regulatory requirements while still delivering an engaging user experience.</p>
+                </section>
+                
+                <section class="section-container">
+                    <h2 id="ref">References</h2>
+                    <ul class="ref">
+                        <li>Duckett, J. (2011). <i>HTML and CSS: Design and Build Websites.</i> John Wiley & Sons. Indianapolis.</li>
+                        <li>Font Awesome (2025). <i>Font Awesome Icons.</i> Available at: <a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a> (Last accessed: 9 March 2025).</li>
+                        <li>MDN Web Docs (2025). <i>CSS Grid Layout.</i> Mozilla. Available at: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout</a> (Last accessed: 7 March 2025).</li>
+                        <li>MDN Web Docs (2025). <i>CSS Flexible Box Layout.</i> Mozilla. Available at: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout</a> (Last accessed: 7 March 2025).</li>
+                        <li>W3C (2023). <i>Web Content Accessibility Guidelines (WCAG) 2.1.</i> Available at: <a href="https://www.w3.org/TR/WCAG21/" target="_blank">https://www.w3.org/TR/WCAG21/</a> (Last accessed: 5 March 2025).</li>
+                        <li>Unsplash (2025). <i>Unsplash - Beautiful Free Images.</i> Available at: <a href="https://unsplash.com/" target="_blank">https://unsplash.com/</a> (Last accessed: 6 March 2025).</li>
+                        <li>Pexels (2025). <i>Free Stock Photos.</i> Available at: <a href="https://www.pexels.com/" target="_blank">https://www.pexels.com/</a> (Last accessed: 6 March 2025).</li>
+                        <li>Frain, B. (2019). <i>Responsive Web Design with HTML5 and CSS: Develop future-proof responsive websites using the latest HTML5 and CSS techniques.</i> 3rd Edition. Packt Publishing.</li>
+                        <li>Coyier, C. (2025). <i>CSS-Tricks.</i> Available at: <a href="https://css-tricks.com/" target="_blank">https://css-tricks.com/</a> (Last accessed: 8 March 2025).</li>
+                        <li>Can I Use (2025). <i>Browser support tables for modern web technologies.</i> Available at: <a href="https://caniuse.com/" target="_blank">https://caniuse.com/</a> (Last accessed: 8 March 2025).</li>
+                    </ul>
+                </section>
+    
+                <button id="back-to-top" aria-label="Scroll back to top"><i class="fas fa-arrow-up"></i></button>
+            </main>
+        </div>
+
+		<div id="footer-container"></div>
+
+		<div id="theme-switcher"></div>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				fetch('../components/header.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('header-container').innerHTML =
+							data;
+						if (typeof adjustBodyPadding === 'function') {
+							adjustBodyPadding();
+						}
+						if (typeof initHamburgerMenu === 'function') {
+							initHamburgerMenu();
+						}
+					})
+					.catch((error) =>
+						console.error('Error loading header:', error)
+					);
+
+				// Load the footer
+				fetch('../components/footer.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('footer-container').innerHTML =
+							data;
+					})
+					.catch((error) =>
+						console.error('Error loading footer:', error)
+					);
+				// Load the theme switcher
+				fetch('../components/theme_switcher.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('theme-switcher').innerHTML =
+							data;
+						if (typeof initThemeToggle === 'function') {
+							initThemeToggle();
+						}
+					})
+					.catch((error) =>
+						console.error('Error loading theme switcher:', error)
+					);
+			});
+            document.addEventListener('DOMContentLoaded', function() {
+                const backToTopButton = document.getElementById('back-to-top');
+                
+                // Show button when user scrolls down 300px from the top
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 300) {
+                        backToTopButton.classList.add('visible');
+                    } else {
+                        backToTopButton.classList.remove('visible');
+                    }
+                });
+                
+                // Smooth scroll to top when button is clicked
+                backToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+		</script>
+	</body>
+</html>

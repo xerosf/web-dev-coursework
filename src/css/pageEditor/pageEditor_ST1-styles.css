@@ -1,0 +1,219 @@
+/* Base Styles (Your existing styles) */
+.stud {
+    margin-top: 20vh;
+}
+
+.stud h2 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.section-container {
+    min-height: 400px;
+    padding: 2rem;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin: 1rem;
+    text-align: left;
+}
+
+.section-container h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-container h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-container p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.section-container a {
+    color: rgb(213, 255, 192);
+    text-decoration: none;
+}
+
+.section-container a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* Enhanced and Additional Styles */
+/* Section Containers Enhancement */
+.section-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.section-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+/* Heading Styles Enhancement */
+.section-container h2 {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-container h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.section-container h3 {
+    border-bottom: 1px solid var(--shadow-color);
+    padding-bottom: 0.5rem;
+}
+
+.section-container h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* List Styles Enhancement */
+.section-container ul {
+    padding-left: 1.5rem;
+    list-style-type: none;
+}
+
+.section-container ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.section-container ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Code Highlighting */
+.section-container code {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* References Section */
+.ref {
+    padding-left: 2rem;
+    text-indent: -2rem;
+}
+
+.ref li {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Links Enhancement */
+.section-container a {
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.section-container a:hover {
+    color: var(--accent-color);
+}
+
+.section-container a::after {
+    content: '↗';
+    position: relative;
+    top: -0.5rem;
+    margin-left: 0.3rem;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.section-container a:hover::after {
+    opacity: 1;
+}
+
+/* Strong Text Enhancement */
+.section-container strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Technical Description Focus Areas */
+h4 + ul {
+    border-left: 2px solid var(--shadow-color);
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+}
+
+/* Challenges Section Enhancement */
+#challenge + h3 {
+    margin-top: 1.5rem;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 3px 10px var(--shadow-color);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
