@@ -1,2 +1,13 @@
+#greenearth_img {
+    border-radius: 15px;
+    opacity: 80%;
+    border: 2px solid #6d8b74;
+    text-align: center;
+}
 
+#greenearth_img:hover {
+    transform: scale(1.01);
+    transition: ease-in-out 1s;
+    opacity: 40%;
+}
 
