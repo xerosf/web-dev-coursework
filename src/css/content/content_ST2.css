@@ -27,8 +27,57 @@ img:hover {
 	box-shadow: 0 4px 8px var(--shadow-color);
 }
 
+/* New styles for the targets grid */
+.targets-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.target-item {
+	background: var(--button-border);
+	padding: 1.5rem;
+	border-radius: 8px;
+	text-align: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.target-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.target-item i {
+	font-size: 2rem;
+	color: var(--accent-color);
+	margin-bottom: 1rem;
+}
+
+.target-item p {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+.target-item strong {
+	display: block;
+	margin-bottom: 0.5rem;
+	color: var(--heading-color);
+}
+
 @media screen and (max-width: 768px) {
 	.image-container {
 		width: 90%;
+	}
+	
+	.targets-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.targets-grid {
+		grid-template-columns: 1fr;
 	}
 }

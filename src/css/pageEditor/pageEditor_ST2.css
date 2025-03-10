@@ -1,6 +1,9 @@
 body {
 	padding-top: 65px;
 }
+h2 {
+	padding-top: 1rem;
+}
 .editor-content {
 	padding: 2rem;
 	background-color: var(--card-background);

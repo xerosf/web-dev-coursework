@@ -1,330 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lison's Page Editor</title>
-		<link
-			rel="icon"
-			href="https://img.icons8.com/color/48/united-nations.png"
-			type="image/x-icon" />
 
-		<!-- Base styles -->
-		<link rel="stylesheet" href="../../src/css/style.css" />
-		<link
-			rel="stylesheet"
-			href="../../src/css//pageEditor/pageEditor_ST2.css" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Lison's Page Editor</title>
+	<link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon" />
 
-		<link
-			rel="stylesheet"
-			href="../../src/css/hamburger-menu-animation.css" />
+	<!-- Base styles -->
+	<link rel="stylesheet" href="../../src/css/style.css" />
+	<link rel="stylesheet" href="../../src/css//pageEditor/pageEditor_ST2.css" />
 
-		<!-- Font Awesome icons -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<link rel="stylesheet" href="../../src/css/hamburger-menu-animation.css" />
 
-		<script src="../js/theme.js" defer></script>
-		<script src="../js/hamburger-menu.js" defer></script>
-		<script src="../js/back-to-top.js" defer></script>
-	</head>
+	<!-- Font Awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-	<body>
-		<div id="header-container"></div>
+	<script src="../js/theme.js" defer></script>
+	<script src="../js/hamburger-menu.js" defer></script>
+	<script src="../js/back-to-top.js" defer></script>
+</head>
 
-		<main id="main-content">
-			<div class="editor-content">
-				<div class="editor-intro">
-					<h1>Lison's Page Editor</h1>
-					<p>Student 2</p>
+<body>
+	<div id="header-container"></div>
+
+	<main id="main-content">
+		<div class="editor-content">
+			<div class="editor-intro">
+				<h1>Lison's Page Editor</h1>
+				<p>Student 2</p>
+			</div>
+
+			<section id="content-overview" class="editor-section">
+				<h2>Content Overview</h2>
+				<h3>About Me and My Role</h3>
+				<p>
+					My name is Lison. My primary responsibilities included
+					creating responsive components, developing the global
+					CSS framework for our Climate Action website, creating
+					the home page and implementing specific content pages.
+				</p>
+
+				<h3>Completed Tasks/Pages</h3>
+				<ul class="task-list">
+					<li>
+						Global CSS Framework (Template Page with Header and
+						Footer)
+					</li>
+					<li>
+						Responsive Components (Header, Footer, Theme
+						Switcher, back-to-top)
+					</li>
+					<li>Home Page (home.html)</li>
+					<li>Targets Page (content_ST2.html)</li>
+					<li>Table Page (table.html)</li>
+				</ul>
+
+				<div class="page-preview">
+					<div class="preview-card">
+						<h4>Home Page</h4>
+						<p>
+							Introduces the Climate Action site and redirects
+							links to other pages
+						</p>
+						<a href="../pages/home.html" target="_blank" class="btn">View Page</a>
+						<a href="../validation/validation_ST2.html#home-validation" target="_blank" class="btn">View
+							Validation</a>
+					</div>
+					<div class="preview-card">
+						<h4>Targets Page</h4>
+						<p>
+							Detailed information about SDG 13 climate action
+							targets
+						</p>
+						<a href="../content/content_ST2.html" target="_blank" class="btn">View Page</a>
+						<a href="../validation/validation_ST2.html#content-validation" target="_blank" class="btn">View
+							Validation</a>
+					</div>
+					<div class="preview-card">
+						<h4>Table Page</h4>
+						<p>
+							A responsive table containing our targets with
+							many more features
+						</p>
+						<a href="../pages/table.html" target="_blank" class="btn">View Page</a>
+						<a href="../validation/validation_ST2.html#table-validation" target="_blank" class="btn">View
+							Validation</a>
+					</div>
+					<div class="preview-card">
+						<h4>Responsive Components</h4>
+						<p>Header, Footer , Theme Switcher & back-to-top</p>
+						<a href="../pages/template.html" target="_blank" class="btn">View Components</a>
+					</div>
 				</div>
+			</section>
 
-				<section id="content-overview" class="editor-section">
-					<h2>Content Overview</h2>
-					<h3>About Me and My Role</h3>
+			<section id="technical-description" class="editor-section">
+				<h2>Technical Description</h2>
+
+				<h3>Responsive Components</h3>
+				<p>
+					One of my major contributions was developing responsive
+					components that ensure our website functions flawlessly
+					across all device sizes. These components include the
+					header, footer, and theme switcher. Below I'll explain
+					the techniques used for each component:
+				</p>
+
+				<div class="implementation-highlight">
+					<h4>Responsive Header</h4>
 					<p>
-						My name is Lison. My primary responsibilities included
-						creating responsive components, developing the global
-						CSS framework for our Climate Action website, creating
-						the home page and implementing specific content pages.
+						The header was implemented with a focus on
+						responsive design using CSS Grid and Flexbox. For
+						the mobile view, I used a hamburger menu that
+						dynamically transforms into an "X" when clicked,
+						providing a modern and intuitive navigation
+						experience.
 					</p>
 
-					<h3>Completed Tasks/Pages</h3>
-					<ul class="task-list">
+					<div class="tech-list">
+						<span class="tech-tag">CSS Grid</span>
+						<span class="tech-tag">Flexbox</span>
+						<span class="tech-tag">CSS Transitions</span>
+						<span class="tech-tag">Media Queries</span>
+						<span class="tech-tag">JavaScript Events</span>
+					</div>
+
+					<p>Key HTML and CSS techniques used:</p>
+					<ul>
 						<li>
-							Global CSS Framework (Template Page with Header and
-							Footer)
+							<strong>Position: fixed</strong> - Ensures the
+							header stays at the top of the viewport while
+							scrolling
 						</li>
 						<li>
-							Responsive Components (Header, Footer, Theme
-							Switcher, back-to-top)
+							<strong>Backdrop Filter</strong> - Creates a
+							frosted glass effect for modern UI aesthetics
 						</li>
-						<li>Home Page (home.html)</li>
-						<li>Targets Page (content_ST2.html)</li>
-						<li>Table Page (table.html)</li>
+						<li>
+							<strong>CSS Grid Template Columns</strong> -
+							Restructures the layout at mobile breakpoints
+						</li>
+						<li>
+							<strong>Transform & Transition</strong> - Used
+							for smooth animation of the hamburger menu
+						</li>
+						<li>
+							<strong>JavaScript Toggle</strong> - Controls
+							the display of dropdown menus and mobile
+							navigation
+						</li>
 					</ul>
 
-					<div class="page-preview">
-						<div class="preview-card">
-							<h4>Home Page</h4>
-							<p>
-								Introduces the Climate Action site and redirects
-								links to other pages
-							</p>
-							<a
-								href="../pages/home.html"
-								target="_blank"
-								class="btn"
-								>View Page</a
-							>
-							<a
-								href="../validation/validation_ST2.html#home-validation"
-								target="_blank"
-								class="btn"
-								>View Validation</a
-							>
-						</div>
-						<div class="preview-card">
-							<h4>Targets Page</h4>
-							<p>
-								Detailed information about SDG 13 climate action
-								targets
-							</p>
-							<a
-								href="../content/content_ST2.html"
-								target="_blank"
-								class="btn"
-								>View Page</a
-							>
-							<a
-								href="../validation/validation_ST2.html#content-validation"
-								target="_blank"
-								class="btn"
-								>View Validation</a
-							>
-						</div>
-						<div class="preview-card">
-							<h4>Table Page</h4>
-							<p>
-								A responsive table containing our targets with
-								many more features
-							</p>
-							<a
-								href="../pages/table.html"
-								target="_blank"
-								class="btn"
-								>View Page</a
-							>
-							<a
-								href="../validation/validation_ST2.html#table-validation"
-								target="_blank"
-								class="btn"
-								>View Validation</a
-							>
-						</div>
-						<div class="preview-card">
-							<h4>Responsive Components</h4>
-							<p>Header, Footer , Theme Switcher & back-to-top</p>
-							<a
-								href="../pages/template.html"
-								target="_blank"
-								class="btn"
-								>View Components</a
-							>
-						</div>
-					</div>
-				</section>
-
-				<section id="technical-description" class="editor-section">
-					<h2>Technical Description</h2>
-
-					<h3>Responsive Components</h3>
 					<p>
-						One of my major contributions was developing responsive
-						components that ensure our website functions flawlessly
-						across all device sizes. These components include the
-						header, footer, and theme switcher. Below I'll explain
-						the techniques used for each component:
+						For larger screens, the header displays a horizontal
+						navigation menu. At the 768px breakpoint, it
+						transforms into a mobile-friendly layout with a
+						hamburger menu that triggers a dropdown navigation
+						panel:
+					</p>
+				</div>
+
+				<div class="implementation-highlight">
+					<h4>Responsive Footer</h4>
+					<p>
+						The footer was designed with a multi-column grid
+						layout that adapts to different screen sizes. On
+						mobile, it transforms into a stacked layout with
+						columned content for better readability and
+						interaction.
 					</p>
 
+					<div class="tech-list">
+						<span class="tech-tag">CSS Grid</span>
+						<span class="tech-tag">Auto-fit</span>
+						<span class="tech-tag">Minmax Function</span>
+						<span class="tech-tag">Media Queries</span>
+					</div>
+
+					<p>Key HTML and CSS techniques used:</p>
+					<ul>
+						<li>
+							<strong>Grid Template Columns</strong> - Uses
+							<code>repeat(auto-fit, minmax(150px, 1fr))</code>
+							for responsive column behavior
+						</li>
+						<li>
+							<strong>Flexbox</strong> - Aligns social icons
+							and buttons within the footer
+						</li>
+						<li>
+							<strong>Media Queries</strong> - Changes grid
+							layout from multi-column to two columns at 768px
+							breakpoint
+						</li>
+						<li>
+							<strong>Text Alignment</strong> - Shifts from
+							left-aligned to center-aligned on mobile for
+							better readability
+						</li>
+					</ul>
+
+					<p>
+						The following CSS creates a responsive grid that
+						automatically adjusts the number of columns based on
+						available space:
+					</p>
+				</div>
+
+				<div class="implementation-highlight">
+					<h4>Theme Switcher</h4>
+					<p>
+						I implemented a dynamic theme switcher that allows
+						users to toggle between light and dark modes. This
+						component uses JavaScript to save the user's
+						preference in localStorage and CSS custom properties
+						(variables) for theming.
+					</p>
+
+					<div class="tech-list">
+						<span class="tech-tag">CSS Variables</span>
+						<span class="tech-tag">localStorage API</span>
+						<span class="tech-tag">Event Listeners</span>
+						<span class="tech-tag">CSS Transitions</span>
+					</div>
+
+					<p>Key techniques used:</p>
+					<ul>
+						<li>
+							<strong>CSS Custom Properties</strong> - Defined
+							theme colors as variables that can be swapped
+						</li>
+						<li>
+							<strong>HTML data-theme Attribute</strong> -
+							Used to control which theme is currently active
+						</li>
+						<li>
+							<strong>localStorage</strong> - Persists user's
+							theme preference across page visits
+						</li>
+						<li>
+							<strong>Event Listeners</strong> - Detects
+							changes to the theme toggle switch
+						</li>
+						<li>
+							<strong>Transition Prevention</strong> - Added
+							logic to prevent transition flicker on page load
+						</li>
+					</ul>
+
+					<p>
+						The theme switcher JavaScript handles theme
+						persistence and smooth transitions:
+					</p>
+				</div>
+				<a href="../pages/template.html" target="_blank" class="btn">View Components</a>
+
+				<h3>Home Page (home.html)</h3>
+				<p>
+					The Home page serves as the central hub for our Climate Action website. It
+					was designed to provide an engaging, visually appealing introduction to our mission while offering
+					intuitive navigation to all site sections. </p>
+				<div class="implementation-highlight">
+					<h4>Home Page</h4>
+					<p> The home page features a full-viewport hero section with a responsive design that adapts to
+						various screen sizes. I implemented several modern web techniques to create an engaging and
+						intuitive user experience:
+					</p>
 					<div class="implementation-highlight">
-						<h4>Responsive Header</h4>
+						<h4>Home Page</h4>
 						<p>
-							The header was implemented with a focus on
-							responsive design using CSS Grid and Flexbox. For
-							the mobile view, I used a hamburger menu that
-							dynamically transforms into an "X" when clicked,
-							providing a modern and intuitive navigation
-							experience.
+							The home page serves as the primary entry point to
+							our Climate Action website, featuring a
+							full-viewport hero section with a responsive layout
+							that adapts to various screen sizes. I implemented
+							several modern web techniques to create an engaging
+							and intuitive user experience:
 						</p>
 
 						<div class="tech-list">
 							<span class="tech-tag">CSS Grid</span>
 							<span class="tech-tag">Flexbox</span>
-							<span class="tech-tag">CSS Transitions</span>
-							<span class="tech-tag">Media Queries</span>
-							<span class="tech-tag">JavaScript Events</span>
+							<span class="tech-tag">Intersection Observer API</span>
+							<span class="tech-tag">CSS Animations</span>
+							<span class="tech-tag">Responsive Images</span>
 						</div>
 
 						<p>Key HTML and CSS techniques used:</p>
 						<ul>
 							<li>
-								<strong>Position: fixed</strong> - Ensures the
-								header stays at the top of the viewport while
-								scrolling
+								<strong>Full Viewport Hero Section</strong> -
+								Created an immersive entry point with a
+								full-screen background image and centered
+								content
 							</li>
 							<li>
-								<strong>Backdrop Filter</strong> - Creates a
-								frosted glass effect for modern UI aesthetics
+								<strong>CSS Grid Card Layout</strong> -
+								Implemented a responsive grid system for the
+								page cards that automatically adjusts based on
+								viewport width
 							</li>
 							<li>
-								<strong>CSS Grid Template Columns</strong> -
-								Restructures the layout at mobile breakpoints
+								<strong>Scroll Animation</strong> - Applied
+								progressive reveal animations for cards when
+								scrolling on mobile devices using the
+								Intersection Observer API
 							</li>
 							<li>
-								<strong>Transform & Transition</strong> - Used
-								for smooth animation of the hamburger menu
+								<strong>Hover Effects</strong> - Added subtle
+								interactive effects to enhance user engagement
+								and provide visual feedback
 							</li>
 							<li>
-								<strong>JavaScript Toggle</strong> - Controls
-								the display of dropdown menus and mobile
-								navigation
+								<strong>Dynamic Component Loading</strong> -
+								Used JavaScript Fetch API to load shared
+								components (header, footer, theme switcher,
+								back-to-top button)
 							</li>
 						</ul>
 
 						<p>
-							For larger screens, the header displays a horizontal
-							navigation menu. At the 768px breakpoint, it
-							transforms into a mobile-friendly layout with a
-							hamburger menu that triggers a dropdown navigation
-							panel:
+							The home page features a responsive card layout
+							system that showcases different sections of the
+							website. On larger screens, these cards display in a
+							multi-column grid, while on mobile devices, they
+							stack vertically with scroll animations:
 						</p>
 						<div class="code-snippet">
-							@media screen and (max-width: 768px) { header {
-							display: grid; grid-template-columns: 1fr 1fr 1fr;
-							align-items: center; } .hamburger-menu { display:
-							block; } nav { position: absolute; top: 100%; left:
-							0; width: 100%; max-height: 0; overflow: hidden;
-							transition: max-height 0.3s ease; } }
-						</div>
-					</div>
-
-					<div class="implementation-highlight">
-						<h4>Responsive Footer</h4>
-						<p>
-							The footer was designed with a multi-column grid
-							layout that adapts to different screen sizes. On
-							mobile, it transforms into a stacked layout with
-							columned content for better readability and
-							interaction.
-						</p>
-
-						<div class="tech-list">
-							<span class="tech-tag">CSS Grid</span>
-							<span class="tech-tag">Auto-fit</span>
-							<span class="tech-tag">Minmax Function</span>
-							<span class="tech-tag">Media Queries</span>
-						</div>
-
-						<p>Key HTML and CSS techniques used:</p>
-						<ul>
-							<li>
-								<strong>Grid Template Columns</strong> - Uses
-								<code
-									>repeat(auto-fit, minmax(150px, 1fr))</code
-								>
-								for responsive column behavior
-							</li>
-							<li>
-								<strong>Flexbox</strong> - Aligns social icons
-								and buttons within the footer
-							</li>
-							<li>
-								<strong>Media Queries</strong> - Changes grid
-								layout from multi-column to two columns at 768px
-								breakpoint
-							</li>
-							<li>
-								<strong>Text Alignment</strong> - Shifts from
-								left-aligned to center-aligned on mobile for
-								better readability
-							</li>
-						</ul>
-
-						<p>
-							The following CSS creates a responsive grid that
-							automatically adjusts the number of columns based on
-							available space:
-						</p>
-						<div class="code-snippet">
-							.footer-links { display: grid;
+							.page-cards-container { display: grid;
 							grid-template-columns: repeat(auto-fit,
-							minmax(150px, 1fr)); gap: 2rem; margin-top: 2rem; }
-							@media screen and (max-width: 768px) { .footer-links
-							{ grid-template-columns: repeat(2, 1fr); text-align:
-							center; } .footer-column.social { flex-direction:
-							column; align-items: center; } }
+							minmax(250px, 1fr)); gap: 2rem; margin: 0 1rem; }
+							@media screen and (max-width: 768px) {
+							.page-cards-container { grid-template-columns: 1fr;
+							gap: 1.5rem; } }
 						</div>
-					</div>
-
-					<div class="implementation-highlight">
-						<h4>Theme Switcher</h4>
-						<p>
-							I implemented a dynamic theme switcher that allows
-							users to toggle between light and dark modes. This
-							component uses JavaScript to save the user's
-							preference in localStorage and CSS custom properties
-							(variables) for theming.
-						</p>
-
-						<div class="tech-list">
-							<span class="tech-tag">CSS Variables</span>
-							<span class="tech-tag">localStorage API</span>
-							<span class="tech-tag">Event Listeners</span>
-							<span class="tech-tag">CSS Transitions</span>
-						</div>
-
-						<p>Key techniques used:</p>
-						<ul>
-							<li>
-								<strong>CSS Custom Properties</strong> - Defined
-								theme colors as variables that can be swapped
-							</li>
-							<li>
-								<strong>HTML data-theme Attribute</strong> -
-								Used to control which theme is currently active
-							</li>
-							<li>
-								<strong>localStorage</strong> - Persists user's
-								theme preference across page visits
-							</li>
-							<li>
-								<strong>Event Listeners</strong> - Detects
-								changes to the theme toggle switch
-							</li>
-							<li>
-								<strong>Transition Prevention</strong> - Added
-								logic to prevent transition flicker on page load
-							</li>
-						</ul>
 
 						<p>
-							The theme switcher JavaScript handles theme
-							persistence and smooth transitions:
+							For mobile devices, I implemented a scroll-triggered
+							animation system using the Intersection Observer API
+							that progressively reveals cards as users scroll
+							down the page:
 						</p>
-						<div class="code-snippet">
-							function switchTheme(e) { if (e.target.checked) {
-							document.documentElement.setAttribute('data-theme',
-							'dark'); localStorage.setItem('theme', 'dark'); }
-							else {
-							document.documentElement.setAttribute('data-theme',
-							'light'); localStorage.setItem('theme', 'light'); }
-							}
-						</div>
 					</div>
-					<a href="../pages/template.html" target="_blank" class="btn"
-						>View Components</a
-					>
+					<a href="../pages/home.html" target="_blank" class="btn">View Page</a>
+					<a href="../validation/validation_ST2.html#home-validation" target="_blank" class="btn">View
+						Validation</a>
 					<h3>Targets Page (content_ST2.html)</h3>
 					<p>
 						The Targets page focuses on presenting the key targets
@@ -376,39 +396,17 @@
 							responsive three-column layout that stacks on mobile
 							devices:
 						</p>
-						<div class="code-snippet">
-							.card-container { display: grid;
-							grid-template-columns: repeat(auto-fit,
-							minmax(300px, 1fr)); gap: 2rem; width: 100%; }
-							@media screen and (max-width: 768px) {
-							.card-container { grid-template-columns: 1fr;
-							margin: 0rem; gap: 0rem; } }
-						</div>
+
 
 						<p>
 							For images, I created a responsive container that
 							maintains proper display across devices:
 						</p>
-						<div class="code-snippet">
-							.image-container { width: 750px; height: auto;
-							margin-left: auto; margin-right: auto; margin-top:
-							3rem; margin-bottom: 1rem; } .image-container img {
-							object-fit: cover; border-radius: 10px;
-							margin-bottom: 2rem; }
-						</div>
+
 					</div>
-					<a
-						href="../content/content_ST2.html"
-						target="_blank"
-						class="btn"
-						>View Page</a
-					>
-					<a
-						href="../validation/validation_ST2.html#content-validation"
-						target="_blank"
-						class="btn"
-						>View Validation</a
-					>
+					<a href="../content/content_ST2.html" target="_blank" class="btn">View Page</a>
+					<a href="../validation/validation_ST2.html#content-validation" target="_blank" class="btn">View
+						Validation</a>
 
 					<h3>Table Page (table.html)</h3>
 					<p>
@@ -443,483 +441,302 @@
 						</ul>
 
 						<div class="tech-list">
-							<span class="tech-tag"
-								>HTML5 Semantic Structure</span
-							>
-							<span class="tech-tag"
-								>JavaScript Component Loading</span
-							>
+							<span class="tech-tag">HTML5 Semantic Structure</span>
+							<span class="tech-tag">JavaScript Component Loading</span>
 							<span class="tech-tag">CSS Variables</span>
 							<span class="tech-tag">Responsive Design</span>
 						</div>
 					</div>
-					<a href="../pages/table.html" target="_blank" class="btn"
-						>View Page</a
-					>
-					<a
-						href="../validation/validation_ST2.html#table-validation"
-						target="_blank"
-						class="btn"
-						>View Validation</a
-					>
-					<h3>Global CSS Framework</h3>
-					<p>
-						Perhaps the most significant contribution I made was
-						developing the global CSS framework that provides
-						consistent styling, responsive behavior, and theming
-						capabilities across the entire website.
-					</p>
+					<a href="../pages/table.html" target="_blank" class="btn">View Page</a>
+					<a href="../validation/validation_ST2.html#table-validation" target="_blank" class="btn">View
+						Validation</a>
+					<section id="accessibility" class="editor-section">
+						<h2>Accessibility</h2>
 
-					<div class="implementation-highlight">
-						<p>Key features of the framework include:</p>
+						<p>
+							Ensuring our website is accessible to all users was a
+							priority throughout development. I implemented several
+							accessibility features across the pages I created:
+						</p>
+
 						<ul>
 							<li>
-								<strong>CSS Variables</strong> - Used for
-								theming and consistent color application
+								<strong>Semantic HTML Structure:</strong> Used
+								appropriate elements like
+								<code>&lt;header&gt;</code>,
+								<code>&lt;footer&gt;</code>,
+								<code>&lt;nav&gt;</code>, and proper heading
+								hierarchy to improve screen reader navigation.
 							</li>
 							<li>
-								<strong>Mobile Media Queries</strong> - Ensures
-								proper display across all device sizes
+								<strong>Alternative Text:</strong> Added descriptive
+								alt text for all images to provide context for
+								screen reader users.
 							</li>
 							<li>
-								<strong>Consistent Component Design</strong> -
-								Creates visual harmony throughout the site
+								<strong>Responsive Design:</strong> Ensured content
+								is accessible across all device sizes, with text
+								that scales properly without breaking layouts.
 							</li>
 							<li>
-								<strong>CSS Transitions</strong> - Adds subtle
-								animations for improved user experience
+								<strong>Focus Management:</strong> Implemented
+								proper focus management for interactive components
+								like the mobile navigation menu.
 							</li>
 							<li>
-								<strong>Flexible Layouts</strong> - Uses CSS
-								Grid and Flexbox for adaptive layouts
+								<strong>ARIA Attributes:</strong> Used ARIA roles,
+								states, and properties where needed to enhance
+								accessibility of complex components.
 							</li>
 						</ul>
 
-						<div class="tech-list">
-							<span class="tech-tag">CSS Variables</span>
-							<span class="tech-tag">Media Queries</span>
-							<span class="tech-tag">Responsive Design</span>
-							<span class="tech-tag">CSS Animation</span>
+						<p>
+							For the Targets page specifically, I ensured that the
+							card-based layout remains accessible by maintaining
+							logical tab order and providing sufficient color
+							contrast for the icon elements. The responsive design
+							ensures that content remains accessible regardless of
+							screen size.
+						</p>
+					</section>
+
+					<section id="compliance" class="editor-section">
+						<h2>Compliance</h2>
+
+						<p>
+							All pages I've created comply with Janet regulations
+							governing web page publication. I've ensured compliance
+							in the following ways:
+						</p>
+
+						<ul>
+							<li>
+								<strong>Semantic Structure:</strong> Pages use
+								proper HTML5 semantic structure that provides clear
+								content hierarchy and improves SEO.
+							</li>
+							<li>
+								<strong>Responsive Design:</strong> All pages are
+								fully responsive and function across a wide range of
+								devices in compliance with mobile-first design
+								principles.
+							</li>
+							<li>
+								<strong>Accessibility Standards:</strong> Content
+								meets WCAG 2.1 AA accessibility standards including
+								proper color contrast, keyboard accessibility, and
+								screen reader compatibility.
+							</li>
+							<li>
+								<strong>Performance Optimization:</strong> Images
+								are optimized for web delivery, and CSS is
+								structured to minimize rendering time and optimize
+								critical path rendering.
+							</li>
+							<li>
+								<strong>Cross-browser Compatibility:</strong> All
+								pages have been tested across major browsers to
+								ensure consistency and compatibility.
+							</li>
+							<li>
+								<strong>Content Standards:</strong> Text content is
+								clear, accurate, and free from spelling and
+								grammatical errors.
+							</li>
+							<li>
+								<strong>Privacy Considerations:</strong> No tracking
+								or analytics scripts are implemented without proper
+								disclosure, respecting user privacy.
+							</li>
+						</ul>
+
+						<p>
+							I've also ensured that all pages properly reference
+							their sources and follow academic integrity guidelines
+							for content creation and citation.
+						</p>
+					</section>
+
+					<section id="references" class="editor-section">
+						<h2>References</h2>
+
+						<p>
+							The following resources were consulted during the
+							development of my contributions to the project:
+						</p>
+
+						<div class="reference-item" id="ref1">
+							<p>
+								<strong>[1]</strong> MDN Web Docs. (2023).
+								<em>CSS Grid Layout</em>. Mozilla Developer Network.
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
+									target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout</a>
+							</p>
 						</div>
 
-						<p>The CSS variables system for theming:</p>
-						<div class="code-snippet">
-							:root { --primary-color: #0078d4;
-							--primary-color-rgb: 0, 120, 212; --text-color:
-							#222; --background-color: #f9f9f9; --accent-color:
-							rgba(255, 255, 255, 0.8); --shadow-color: rgba(0, 0,
-							0, 0.1); --button-bg: #0078d4; --button-text:
-							#ffffff; --button-border: #0078d4;
-							--card-background: #ffffff; --svg-color:
-							brightness(0%); --code-background: #f5f5f5;
-							--code-text: #24292e; /* Animation variables */
-							--theme-transition-duration: 0.3s;
-							--theme-transition-timing: ease; }
-							[data-theme="dark"] { --primary-color: #4cc2ff;
-							--primary-color-rgb: 76, 194, 255; --text-color:
-							#e1e1e1; --background-color: #121212;
-							--accent-color: rgba(18, 18, 18, 0.8);
-							--shadow-color: rgba(0, 0, 0, 0.5); --button-bg:
-							#4cc2ff; --button-text: #121212; --button-border:
-							#4cc2ff; --card-background: #1e1e1e; --svg-color:
-							brightness(100%); --code-background: #2c2c2c;
-							--code-text: #e1e1e1; }
+						<div class="reference-item" id="ref2">
+							<p>
+								<strong>[2]</strong> MDN Web Docs. (2023).
+								<em>Using CSS custom properties (variables)</em>.
+								Mozilla Developer Network.
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+									target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties</a>
+							</p>
 						</div>
-					</div>
-				</section>
 
-				<section id="challenges" class="editor-section">
-					<h2>Challenges and Lessons Learned</h2>
+						<div class="reference-item" id="ref3">
+							<p>
+								<strong>[3]</strong> W3C. (2023).
+								<em>Web Content Accessibility Guidelines (WCAG)
+									2.1</em>. World Wide Web Consortium.
+								<a href="https://www.w3.org/TR/WCAG21/"
+									target="_blank">https://www.w3.org/TR/WCAG21/</a>
+							</p>
+						</div>
 
-					<h3>Responsive Navigation Challenges</h3>
-					<p>
-						One of the significant challenges I faced was
-						implementing a responsive navigation system that worked
-						seamlessly across all device sizes. The dropdown menus
-						were particularly challenging, as they needed to behave
-						differently on desktop (hover) versus mobile (click).
-					</p>
-					<p>
-						<strong>Solution:</strong> I resolved this by using
-						JavaScript to detect screen size and implementing
-						different event handlers based on the current viewport.
-						For mobile views, I used click events with toggle
-						functionality, while desktop used hover events. This
-						taught me the importance of considering different
-						interaction models across devices.
-					</p>
+						<div class="reference-item" id="ref4">
+							<p>
+								<strong>[4]</strong> Cascading Style Sheets Course
+								Materials. (2024).
+								<em>University of Westminster</em>. Web Design &
+								Development (4COSC011W).
+							</p>
+						</div>
 
-					<h3>Theme Switching Implementation</h3>
-					<p>
-						Implementing the theme switching functionality presented
-						challenges, particularly with preventing the "flash of
-						unstyled content" when a user with a saved dark theme
-						preference loads the page.
-					</p>
-					<p>
-						<strong>Solution:</strong> I solved this by applying the
-						theme immediately during page loading using inline
-						JavaScript that checks localStorage before the DOM fully
-						loads. This prevents the initial flash of the default
-						theme. I learned the importance of optimizing the
-						critical rendering path and how to properly use
-						localStorage for persistent preferences.
-					</p>
+						<div class="reference-item" id="ref5">
+							<p>
+								<strong>[5]</strong> Font Awesome. (2023).
+								<em>Font Awesome Icons Documentation</em>.
+								<a href="https://fontawesome.com/docs" target="_blank">https://fontawesome.com/docs</a>
+							</p>
+						</div>
 
-					<h3>Cross-browser Compatibility</h3>
-					<p>
-						Ensuring consistent appearance and behavior across
-						different browsers proved challenging, especially with
-						newer CSS features like backdrop-filter.
-					</p>
-					<p>
-						<strong>Solution:</strong> I implemented feature
-						detection and fallbacks for browsers that don't support
-						certain CSS properties. This experience taught me the
-						value of progressive enhancement and not relying too
-						heavily on cutting-edge features without proper
-						fallbacks.
-					</p>
+						<div class="reference-item" id="ref6">
+							<p>
+								<strong>[6]</strong> United Nations. (2023).
+								<em>Sustainable Development Goal 13: Climate
+									Action</em>. United Nations Department of Economic and Social
+								Affairs.
+								<a href="https://sdgs.un.org/goals/goal13"
+									target="_blank">https://sdgs.un.org/goals/goal13</a>
+							</p>
+						</div>
 
-					<h3>Component Loading and Integration</h3>
-					<p>
-						Designing a system for loading shared components
-						(header, footer, theme switcher) across multiple pages
-						while ensuring proper initialization of JavaScript
-						functionality was difficult.
-					</p>
-					<p>
-						<strong>Solution:</strong> I developed a component
-						loading system using the Fetch API that loads HTML
-						components and then initializes their associated
-						JavaScript. This taught me about asynchronous loading
-						patterns and the importance of proper event handling to
-						ensure components are fully loaded before scripts run.
-					</p>
-				</section>
+						<div class="reference-item" id="ref7">
+							<p>
+								<strong>[7]</strong> Fingal Community Facilities
+								Network. (2024).
+								<em>Fingal Climate Action Plan: Keen to be Green
+									2024 Update</em>.
+								<a href="https://fingalcommunityfacilitiesnetwork.ie/fingal-climate-action-plan-keen-to-be-green-2024-update/"
+									target="_blank">https://fingalcommunityfacilitiesnetwork.ie/fingal-climate-action-plan-keen-to-be-green-2024-update/</a>
+							</p>
+						</div>
 
-				<section id="accessibility" class="editor-section">
-					<h2>Accessibility</h2>
+						<div class="reference-item" id="ref8">
+							<p>
+								<strong>[8]</strong> Wikipedia. (2024).
+								<em>Sustainable Transport</em>.
+								<a href="https://en.wikipedia.org/wiki/Sustainable_transport#/media/File:Clean_mobility_instead_of_dirty_traffic.jpg"
+									target="_blank">https://en.wikipedia.org/wiki/Sustainable_transport#/media/File:Clean_mobility_instead_of_dirty_traffic.jpg</a>
+							</p>
+						</div>
 
-					<p>
-						Ensuring our website is accessible to all users was a
-						priority throughout development. I implemented several
-						accessibility features across the pages I created:
-					</p>
+						<div class="reference-item" id="ref9">
+							<p>
+								<strong>[9]</strong> Green.org. (2024).
+								<em>The Role of Solar Energy in Carbon Negative
+									Technologies</em>.
+								<a href="https://green.org/2024/01/30/the-role-of-solar-energy-in-carbon-negative-technologies/"
+									target="_blank">https://green.org/2024/01/30/the-role-of-solar-energy-in-carbon-negative-technologies/</a>
+							</p>
+						</div>
 
-					<ul>
-						<li>
-							<strong>Semantic HTML Structure:</strong> Used
-							appropriate elements like
-							<code>&lt;header&gt;</code>,
-							<code>&lt;footer&gt;</code>,
-							<code>&lt;nav&gt;</code>, and proper heading
-							hierarchy to improve screen reader navigation.
-						</li>
-						<li>
-							<strong>Alternative Text:</strong> Added descriptive
-							alt text for all images to provide context for
-							screen reader users.
-						</li>
-						<li>
-							<strong>Responsive Design:</strong> Ensured content
-							is accessible across all device sizes, with text
-							that scales properly without breaking layouts.
-						</li>
-						<li>
-							<strong>Focus Management:</strong> Implemented
-							proper focus management for interactive components
-							like the mobile navigation menu.
-						</li>
-						<li>
-							<strong>ARIA Attributes:</strong> Used ARIA roles,
-							states, and properties where needed to enhance
-							accessibility of complex components.
-						</li>
-					</ul>
+						<div class="reference-item" id="ref10">
+							<p>
+								<strong>[10]</strong> Google Developers. (2023).
+								<em>Web Fundamentals: Responsive Design</em>.
+								<a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive"
+									target="_blank">https://developers.google.com/web/fundamentals/design-and-ux/responsive</a>
+							</p>
+						</div>
+					</section>
+				</div>
+	</main>
 
-					<p>
-						For the Targets page specifically, I ensured that the
-						card-based layout remains accessible by maintaining
-						logical tab order and providing sufficient color
-						contrast for the icon elements. The responsive design
-						ensures that content remains accessible regardless of
-						screen size.
-					</p>
-				</section>
+	<div id="footer-container"></div>
+	<div id="theme-switcher"></div>
+	<div id="back-to-top"></div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			fetch('../components/header.html')
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById('header-container').innerHTML =
+						data;
+					if (typeof adjustBodyPadding === 'function') {
+						adjustBodyPadding();
+					}
+					if (typeof initHamburgerMenu === 'function') {
+						initHamburgerMenu();
+					}
+				})
+				.catch((error) =>
+					console.error('Error loading header:', error)
+				);
 
-				<section id="compliance" class="editor-section">
-					<h2>Compliance</h2>
+			// Load the footer
+			fetch('../components/footer.html')
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById('footer-container').innerHTML =
+						data;
+				})
+				.catch((error) =>
+					console.error('Error loading footer:', error)
+				);
+			// Load the theme switcher
+			fetch('../components/theme_switcher.html')
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById('theme-switcher').innerHTML =
+						data;
+					if (typeof initThemeToggle === 'function') {
+						initThemeToggle();
+					}
+				})
+				.catch((error) =>
+					console.error('Error loading theme switcher:', error)
+				);
+			// Load the back to top button
+			fetch('../components/back_to_top.html')
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById('back-to-top').innerHTML = data;
+					if (typeof initBackToTop === 'function') {
+						initBackToTop();
+					}
+				})
+				.catch((error) =>
+					console.error(
+						'Error loading back to top button:',
+						error
+					)
+				);
+			// Add smooth scrolling for internal links
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
 
-					<p>
-						All pages I've created comply with Janet regulations
-						governing web page publication. I've ensured compliance
-						in the following ways:
-					</p>
-
-					<ul>
-						<li>
-							<strong>Semantic Structure:</strong> Pages use
-							proper HTML5 semantic structure that provides clear
-							content hierarchy and improves SEO.
-						</li>
-						<li>
-							<strong>Responsive Design:</strong> All pages are
-							fully responsive and function across a wide range of
-							devices in compliance with mobile-first design
-							principles.
-						</li>
-						<li>
-							<strong>Accessibility Standards:</strong> Content
-							meets WCAG 2.1 AA accessibility standards including
-							proper color contrast, keyboard accessibility, and
-							screen reader compatibility.
-						</li>
-						<li>
-							<strong>Performance Optimization:</strong> Images
-							are optimized for web delivery, and CSS is
-							structured to minimize rendering time and optimize
-							critical path rendering.
-						</li>
-						<li>
-							<strong>Cross-browser Compatibility:</strong> All
-							pages have been tested across major browsers to
-							ensure consistency and compatibility.
-						</li>
-						<li>
-							<strong>Content Standards:</strong> Text content is
-							clear, accurate, and free from spelling and
-							grammatical errors.
-						</li>
-						<li>
-							<strong>Privacy Considerations:</strong> No tracking
-							or analytics scripts are implemented without proper
-							disclosure, respecting user privacy.
-						</li>
-					</ul>
-
-					<p>
-						I've also ensured that all pages properly reference
-						their sources and follow academic integrity guidelines
-						for content creation and citation.
-					</p>
-				</section>
-
-				<section id="references" class="editor-section">
-					<h2>References</h2>
-
-					<p>
-						The following resources were consulted during the
-						development of my contributions to the project:
-					</p>
-
-					<div class="reference-item" id="ref1">
-						<p>
-							<strong>[1]</strong> MDN Web Docs. (2023).
-							<em>CSS Grid Layout</em>. Mozilla Developer Network.
-							<a
-								href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout"
-								target="_blank"
-								>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref2">
-						<p>
-							<strong>[2]</strong> MDN Web Docs. (2023).
-							<em>Using CSS custom properties (variables)</em>.
-							Mozilla Developer Network.
-							<a
-								href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
-								target="_blank"
-								>https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref3">
-						<p>
-							<strong>[3]</strong> W3C. (2023).
-							<em
-								>Web Content Accessibility Guidelines (WCAG)
-								2.1</em
-							>. World Wide Web Consortium.
-							<a
-								href="https://www.w3.org/TR/WCAG21/"
-								target="_blank"
-								>https://www.w3.org/TR/WCAG21/</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref4">
-						<p>
-							<strong>[4]</strong> Cascading Style Sheets Course
-							Materials. (2024).
-							<em>University of Westminster</em>. Web Design &
-							Development (4COSC011W).
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref5">
-						<p>
-							<strong>[5]</strong> Font Awesome. (2023).
-							<em>Font Awesome Icons Documentation</em>.
-							<a
-								href="https://fontawesome.com/docs"
-								target="_blank"
-								>https://fontawesome.com/docs</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref6">
-						<p>
-							<strong>[6]</strong> United Nations. (2023).
-							<em
-								>Sustainable Development Goal 13: Climate
-								Action</em
-							>. United Nations Department of Economic and Social
-							Affairs.
-							<a
-								href="https://sdgs.un.org/goals/goal13"
-								target="_blank"
-								>https://sdgs.un.org/goals/goal13</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref7">
-						<p>
-							<strong>[7]</strong> Fingal Community Facilities
-							Network. (2024).
-							<em
-								>Fingal Climate Action Plan: Keen to be Green
-								2024 Update</em
-							>.
-							<a
-								href="https://fingalcommunityfacilitiesnetwork.ie/fingal-climate-action-plan-keen-to-be-green-2024-update/"
-								target="_blank"
-								>https://fingalcommunityfacilitiesnetwork.ie/fingal-climate-action-plan-keen-to-be-green-2024-update/</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref8">
-						<p>
-							<strong>[8]</strong> Wikipedia. (2024).
-							<em>Sustainable Transport</em>.
-							<a
-								href="https://en.wikipedia.org/wiki/Sustainable_transport#/media/File:Clean_mobility_instead_of_dirty_traffic.jpg"
-								target="_blank"
-								>https://en.wikipedia.org/wiki/Sustainable_transport#/media/File:Clean_mobility_instead_of_dirty_traffic.jpg</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref9">
-						<p>
-							<strong>[9]</strong> Green.org. (2024).
-							<em
-								>The Role of Solar Energy in Carbon Negative
-								Technologies</em
-							>.
-							<a
-								href="https://green.org/2024/01/30/the-role-of-solar-energy-in-carbon-negative-technologies/"
-								target="_blank"
-								>https://green.org/2024/01/30/the-role-of-solar-energy-in-carbon-negative-technologies/</a
-							>
-						</p>
-					</div>
-
-					<div class="reference-item" id="ref10">
-						<p>
-							<strong>[10]</strong> Google Developers. (2023).
-							<em>Web Fundamentals: Responsive Design</em>.
-							<a
-								href="https://developers.google.com/web/fundamentals/design-and-ux/responsive"
-								target="_blank"
-								>https://developers.google.com/web/fundamentals/design-and-ux/responsive</a
-							>
-						</p>
-					</div>
-				</section>
-			</div>
-		</main>
-
-		<div id="footer-container"></div>
-		<div id="theme-switcher"></div>
-		<div id="back-to-top"></div>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				fetch('../components/header.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('header-container').innerHTML =
-							data;
-						if (typeof adjustBodyPadding === 'function') {
-							adjustBodyPadding();
-						}
-						if (typeof initHamburgerMenu === 'function') {
-							initHamburgerMenu();
-						}
-					})
-					.catch((error) =>
-						console.error('Error loading header:', error)
-					);
-
-				// Load the footer
-				fetch('../components/footer.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('footer-container').innerHTML =
-							data;
-					})
-					.catch((error) =>
-						console.error('Error loading footer:', error)
-					);
-				// Load the theme switcher
-				fetch('../components/theme_switcher.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('theme-switcher').innerHTML =
-							data;
-						if (typeof initThemeToggle === 'function') {
-							initThemeToggle();
-						}
-					})
-					.catch((error) =>
-						console.error('Error loading theme switcher:', error)
-					);
-				// Load the back to top button
-				fetch('../components/back_to_top.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('back-to-top').innerHTML = data;
-						if (typeof initBackToTop === 'function') {
-							initBackToTop();
-						}
-					})
-					.catch((error) =>
-						console.error(
-							'Error loading back to top button:',
-							error
-						)
-					);
-				// Add smooth scrolling for internal links
-				document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-					anchor.addEventListener('click', function (e) {
-						e.preventDefault();
-
-						document
-							.querySelector(this.getAttribute('href'))
-							.scrollIntoView({
-								behavior: 'smooth',
-							});
-					});
+					document
+						.querySelector(this.getAttribute('href'))
+						.scrollIntoView({
+							behavior: 'smooth',
+						});
 				});
 			});
-		</script>
-	</body>
+		});
+	</script>
+</body>
+
 </html>
