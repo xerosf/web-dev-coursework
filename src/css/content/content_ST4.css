@@ -3,8 +3,59 @@
 }        
 .image-container{
     background-color: green;
-    background-image: url("../../res/Global+climate+strike+2023.jpg");
+    background-image: url("../../../res/Youth-Climate-Change.jpg");
     background-size: cover;
     padding: 25%;
     border-radius: 0.5rem;
+}
+.challenges-img{
+ display: flex;   
+ justify-content: center;
+
+}
+.challenges-img img{
+    width: 23rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.progress-grid{
+   display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+
+
+}
+.progress-div{
+    text-align: center;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.progress-div h3{
+    background-color: var(--card-background);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.progress-div p{
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.to-top-butt {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 1rem;
+    z-index: 1000;
+    position: fixed; 
+    top: 150px;
+    right: 10px;
+    width: 5rem;
+}
+a{
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+
 }
