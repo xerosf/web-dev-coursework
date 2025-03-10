@@ -289,51 +289,66 @@
                 </form>
             </div>
     </main>
-    <div id="footer-container"></div>
-	<div id="theme-switcher"></div>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				fetch('../components/header.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('header-container').innerHTML =
-							data;
-						if (typeof adjustBodyPadding === 'function') {
-							adjustBodyPadding();
-						}
-						if (typeof initHamburgerMenu === 'function') {
-							initHamburgerMenu();
-						}
-					})
-					.catch((error) =>
-						console.error('Error loading header:', error)
-					);
+<div id="footer-container"></div>
+<div id="theme-switcher"></div>
+<div id="back-to-top"></div>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		fetch('../components/header.html')
+			.then((response) => response.text())
+			.then((data) => {
+				document.getElementById('header-container').innerHTML =
+					data;
+				if (typeof adjustBodyPadding === 'function') {
+					adjustBodyPadding();
+				}
+				if (typeof initHamburgerMenu === 'function') {
+					initHamburgerMenu();
+				}
+			})
+			.catch((error) =>
+				console.error('Error loading header:', error)
+			);
 
-				// Load the footer
-				fetch('../components/footer.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('footer-container').innerHTML =
-							data;
-					})
-					.catch((error) =>
-						console.error('Error loading footer:', error)
-					);
-				// Load the theme switcher
-				fetch('../components/theme_switcher.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('theme-switcher').innerHTML =
-							data;
-						if (typeof initThemeToggle === 'function') {
-							initThemeToggle();
-						}
-					})
-					.catch((error) =>
-						console.error('Error loading theme switcher:', error)
-					);
-			});
-		</script>
-    
+		// Load the footer
+		fetch('../components/footer.html')
+			.then((response) => response.text())
+			.then((data) => {
+				document.getElementById('footer-container').innerHTML =
+					data;
+			})
+			.catch((error) =>
+				console.error('Error loading footer:', error)
+			);
+		// Load the theme switcher
+		fetch('../components/theme_switcher.html')
+			.then((response) => response.text())
+			.then((data) => {
+				document.getElementById('theme-switcher').innerHTML =
+					data;
+				if (typeof initThemeToggle === 'function') {
+					initThemeToggle();
+				}
+			})
+			.catch((error) =>
+				console.error('Error loading theme switcher:', error)
+			);
+		// Load the back to top button
+		fetch('../components/back_to_top.html')
+			.then((response) => response.text())
+			.then((data) => {
+				document.getElementById('back-to-top').innerHTML = data;
+				if (typeof initBackToTop === 'function') {
+					initBackToTop();
+				}
+			})
+			.catch((error) =>
+				console.error(
+					'Error loading back to top button:',
+					error
+				)
+			);
+	});
+</script>
 </body>
 </html>
