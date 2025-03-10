@@ -18,6 +18,7 @@ header {
 .logo-container {
 	display: flex;
 	justify-content: flex-start;
+	padding-top: 1rem;
 	align-items: center;
 }
 
@@ -168,6 +169,7 @@ nav {
 	}
 
 	.profile-picture img {
+		margin-top: 1rem;
 		width: 50px;
 		height: 50px;
 	}
