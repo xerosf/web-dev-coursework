@@ -12,7 +12,6 @@
 		<!-- Base styles -->
 		<link rel="stylesheet" href="../../src/css/style.css" />
         <link rel="stylesheet" href="../../src/css/teampage-styles.css" />
-        <link rel="stylesheet" href="../../src/css/components/responsive-back-to-top.css">
 
 		<link
 			rel="stylesheet"
@@ -25,7 +24,6 @@
 
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/hamburger-menu.js" defer></script>
-        <script src="../js/back-to-top.js" defer></script>
 	</head>
 <body>
     <div id="header-container"></div>
@@ -145,19 +143,6 @@
                 .catch((error) =>
                     console.error('Error loading footer:', error)
                 );
-
-                    // Load the back to top button
-            fetch('../components/back_to_top.html')
-                .then((response) => response.text())
-                .then((data) => {
-                    document.getElementById('back-to-top').innerHTML = data;
-            if (typeof initBackToTop === 'function') {
-                initBackToTop();
-            }
-            })
-            .catch((error) => console.error('Error loading back to top button:', error));
-
-
 
             // Load the theme switcher
             fetch('../components/theme_switcher.html')
