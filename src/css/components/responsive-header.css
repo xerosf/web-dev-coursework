@@ -115,19 +115,17 @@ nav {
 	border-radius: 2px;
 }
 
-/* Animated hamburger menu when active */
 .hamburger-menu.active .bar:nth-child(1) {
-	transform: translateY(8px) rotate(45deg);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .hamburger-menu.active .bar:nth-child(2) {
-	opacity: 0;
+    opacity: 0;
 }
 
 .hamburger-menu.active .bar:nth-child(3) {
-	transform: translateY(-8px) rotate(-45deg);
+    transform: rotate(45deg) translate(-5px, -6px);
 }
-
 .header-right {
 	display: flex;
 	align-content: right;
@@ -251,4 +249,28 @@ nav {
 		height: auto;
 		overflow: visible;
 	}
+
+	.nav-list .dropdown-item.active > a {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-list .dropdown li a {
+        padding-left: 30px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .profile-picture {
+        justify-content: flex-end;
+    }
+    
+    .hamburger-menu {
+        display: none;
+    }
+    
+    nav {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+    }
 }
