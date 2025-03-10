@@ -8,16 +8,26 @@
 }
 
 .content button {
-  background-color: var(--primary-color);
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: 'Helvetica';
+  font-size: 15px;
   padding: 15px;
   width: 95%;
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--button-border);
   border-radius: 15px;
   margin: 10px;
+  opacity: 75%;
 }
+
+h1 {
+  text-align: left;
+}
+
 
 button a {
   color: var(--button-text);
+  font-family: 'Helvetica';
 }
 
 .content:hover .content {
