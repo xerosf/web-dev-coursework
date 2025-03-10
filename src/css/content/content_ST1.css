@@ -2,13 +2,6 @@ body{
     padding-top: 50px;
 }
 
-#banner {
-    background-image: url('../../../res/content/ST1/landscape-1.png');
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-}
-
 .image-container {
     display: flex;
     align-items: center;
