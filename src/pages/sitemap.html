@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climate Action</title>
-		<link
-			rel="icon"
-			href="https://img.icons8.com/color/48/united-nations.png"
-			type="image/x-icon" />
+    <link
+        rel="icon"
+        href="https://img.icons8.com/color/48/united-nations.png"
+        type="image/x-icon" />
 
-		<!-- Base styles -->
-		<link rel="stylesheet" href="../../src/css/style.css" />
+    <!-- Base styles -->
+    <link rel="stylesheet" href="../../src/css/style.css" />
+    <link rel="stylesheet" href="../../src/css/hamburger-menu-animation.css" />
 
-		<link
-			rel="stylesheet"
-			href="../../src/css/hamburger-menu-animation.css" />
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-		<!-- Font Awesome (Social media icons)-->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-		<script src="../js/theme.js" defer></script>
-		<script src="../js/hamburger-menu.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+    <script src="../js/hamburger-menu.js" defer></script>
     <style>                
         text {
             fill: var(--text-color);
@@ -43,26 +40,34 @@
         .node{
             fill: var( --card-background);
         }
+        .sitemap-svg{
+            width: 100%;
+            
+            
+        }
+        .sitemap-container{
+            width: 100%;
+            
+        }
     </style>
 </head>
 <body>
     <div id="header-container"></div>
     <br><br><br><br><br>
-		
+    
     <main>
-        
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+        <div class="sitemap-container" >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" class="sitemap-svg" >
                 <!-- Home node -->
                 <a href="home.html">
-                <rect class="node" tabindex="0" x="450" y="20" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                <text x="500" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white">Home</text>
+                    <rect class="node" tabindex="0" x="450" y="20" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="500" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" font-weight="bold" fill="white">Home</text>
                 </a>
                 <!-- Main vertical bridge -->
                 <line x1="500" y1="70" x2="500" y2="1000" stroke="#555" stroke-width="2"/>
                 
                 <!-- Horizontal lines to nodes (alternating left and right) -->
                 <line x1="500" y1="100" x2="148" y2="100" stroke="#555" stroke-width="2"/>
-                
                 
                 <!-- Volunteer page line -->
                 <line x1="500" y1="260" x2="350" y2="260" stroke="#555" stroke-width="2"/>
@@ -80,84 +85,80 @@
                 <line x1="500" y1="740" x2="350" y2="740" stroke="#555" stroke-width="2"/>
                 <line x1="500" y1="180" x2="600" y2="180" stroke="#555" stroke-width="2"/>
                 
-                
                 <!-- Table page -->
                 <a href="table.html">
-                    <rect class="node"  tabindex="0" data-="table" x="600" y="155" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="table.html" data-label="Table" x="600" y="155" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="650" y="180" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Table</text>
                 </a>    
                 <!-- Volunteer page -->
                 <a href="volunteer.html">
-                <rect class="node"  tabindex="0" data-href="volunteer.html" x="300" y="235" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                <text x="350" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Volunteer</text>
+                    <rect class="node" tabindex="0" data-href="volunteer.html" data-label="Volunteer" x="300" y="235" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="350" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Volunteer</text>
                 </a>
-                <!-- Validaton pages -->
-
+                <!-- Validaton pages -->            
                 <line x1="600" y1="280" x2="600" y2="400" stroke="#555" stroke-width="2"/>
                 <line x1="750" y1="280" x2="750" y2="400" stroke="#555" stroke-width="2"/>
-
+            
                 <a href="../validation/validation_ST1.html">
-                    <rect class="node" data-href="../validation/validation_ST1.html"  tabindex="0" x="545" y="250" width="110" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                    <text x="600" y="275" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Validation ST1</text>
+                    <rect class="node" tabindex="0" data-href="../validation/validation_ST1.html" data-label="Validation ST1" x="545" y="250" width="130" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="610" y="275" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Sanseth's Validation </text>
                 </a>
-
-            <a href="../validation/validation_ST2.html">
-                <rect class="node" data-href="../validation/validation_ST2.html"  tabindex="0" x="695" y="250" width="110" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-            </a>
+            
+                <a href="../validation/validation_ST2.html">
+                    <rect class="node" tabindex="0" data-href="../validation/validation_ST2.html" data-label="Validation ST2" x="695" y="250" width="130" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="760" y="275" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Lison's Validation </text>
+                </a>
+                
                 <a href="../validation/validation_ST4.html">
-                    <rect class="node" data-href="../validation/validation_ST4.html"  tabindex="0" x="695" y="370" width="110" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                    <text x="750" y="400" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Validation ST4</text>
-            </a>
+                    <rect class="node" tabindex="0" data-href="../validation/validation_ST4.html" data-label="Validation ST4" x="695" y="370" width="130" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="760" y="400" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Oshan's Validation</text>
+                </a>
+                
                 <a href="../validation/validation_ST3.html">
-                <rect class="node" data-href="../validation/validation_ST3.html"  tabindex="0" x="545" y="370" width="110" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                <text x="750" y="275" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Validation ST3</text>
-            </a>
-
-            <text x="600" y="400" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Validation ST2</text>
+                    <rect class="node" tabindex="0" data-href="../validation/validation_ST3.html" data-label="Validation ST3" x="545" y="370" width="130" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="610" y="400" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Emika's Validation</text>
+                </a>
+            
                 <!-- Profile page -->
                 <a href="profile.html">
-                    <rect class="node" data-href="profile.html" tabindex="0" data-="profile" x="300" y="395" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="profile.html" data-label="Profile" x="300" y="395" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="350" y="420" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Profile</text>
                 </a>                
                 <!-- Feedback page -->
                 <a href="feedback.html">
-                    <rect class="node" data-href="feedback.html" tabindex="0" data-="feedback" x="600" y="475" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="feedback.html" data-label="Feedback" x="600" y="475" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="650" y="500" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Feedback</text>
                 </a>
-                <!-- Page edior -->
-
-                
+                <!-- Page editor -->                
                 <line x1="150" y1="520" x2="150" y2="630" stroke="#555" stroke-width="2"/>
-                <line x1="280" y1="520" x2="280" y2="630" stroke="#555" stroke-width="2"/>
+                <line x1="337" y1="520" x2="337" y2="630" stroke="#555" stroke-width="2"/>
                 <a href="../pageEditor/pageEditor_ST1.html">
-                    <rect class="node"  tabindex="0" data-href="../pageEditor/pageEditor_ST1.html" x="100" y="510" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                    <text x="150" y="535" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Page Editor</text>
+                    <rect class="node" tabindex="0" data-href="../pageEditor/pageEditor_ST1.html" data-label="Page Editor 1" x="100" y="510" width="150" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="174" y="535" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Sanseth's Page Editor</text>
                 </a>
                 <a href="../pageEditor/pageEditor_ST2.html">
-                    <rect class="node"  tabindex="0" data-href="../pageEditor/pageEditor_ST1.html" x="230" y="510" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                    <text x="280" y="535" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Page Editor</text>
+                    <rect class="node" tabindex="0" data-href="../pageEditor/pageEditor_ST2.html" data-label="Page Editor 2" x="270" y="510" width="140" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="337" y="535" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Lison's Page Editor</text>
                 </a>
                 <a href="../pageEditor/pageEditor_ST3.html">
-                    <rect class="node"  tabindex="0" data-href="../pageEditor/pageEditor_ST1.html" x="100" y="600" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                    <text x="150" y="625" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Page Editor</text>
+                    <rect class="node" tabindex="0" data-href="../pageEditor/pageEditor_ST3.html" data-label="Page Editor 3" x="100" y="600" width="150" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="174" y="625" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Emika's PageEditor</text>
                 </a>
                 <a href="../pageEditor/pageEditor_ST4.html">
-                    <rect class="node"  tabindex="0" data-href="../pageEditor/pageEditor_ST1.html" x="230" y="600" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                    <text x="280" y="625" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Page Editor</text>
+                    <rect class="node" tabindex="0" data-href="../pageEditor/pageEditor_ST4.html" data-label="Page Editor 4" x="270" y="600" width="140" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="337" y="625" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Oshan's PageEditor</text>
                 </a>
-
+            
                 <!-- Team page -->
                 <a href="team.html">
-                    <rect class="node"  tabindex="0" data-href="team.html" x="600" y="635" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="team.html" data-label="Team" x="600" y="635" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="650" y="660" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Team</text>
                 </a>
                 <!-- Sitemap -->
                 <a href="sitemap.html">
-                <rect class="node"  tabindex="0" data-href="sitemap.html" x="300" y="715" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
-                <text x="350" y="740" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Sitemap</text>
+                    <rect class="node" tabindex="0" data-href="sitemap.html" data-label="Sitemap" x="300" y="715" width="100" height="50" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <text x="350" y="740" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="14" fill="white">Sitemap</text>
                 </a>
-                
-                
                 
                 <!-- Content pages -->
                 <line x1="150" y1="100" x2="150" y2="60" stroke="#555" stroke-width="2"/>
@@ -166,27 +167,32 @@
                 <line x1="300" y1="100" x2="300" y2="60" stroke="#555" stroke-width="2"/>
                 
                 <a href="../content/content_ST1.html">
-                    <rect class="node" data-href="../content/content_ST1.html" tabindex="0" x="100" y="35" width="100" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="../content/content_ST1.html" data-label="Overview" x="100" y="35" width="100" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="150" y="55" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12" fill="white">Overview</text>
                 </a>
                 <a href="../content/content_ST2.html">
-                    <rect class="node" data-href="../content/content_ST2.html" tabindex="0" x="100" y="120" width="100" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="../content/content_ST2.html" data-label="Insights" x="100" y="120" width="100" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="150" y="140" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12" fill="white">Insights</text>
                 </a>
                 <a href="../content/content_ST3.html">
-                    <rect class="node" data-href="../content/content_ST3.html"  tabindex="0" x="235" y="120" width="140" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="../content/content_ST3.html" data-label="Sustainable Energy" x="235" y="120" width="140" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="300" y="140" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12" fill="white">Sustainable Energy</text>
                 </a>
                 <a href="../content/content_ST4.html">
-                    <rect class="node" data-href="../content/content_ST4.html"  tabindex="0" x="250" y="35" width="100" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
+                    <rect class="node" tabindex="0" data-href="../content/content_ST4.html" data-label="Challenges" x="250" y="35" width="100" height="40" rx="10" fill="black" stroke="#555" stroke-width="2"/>
                     <text x="300" y="55" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="12" fill="white">Challenges</text>
                 </a>
             </svg>
-        
+            
+        </div>
+
     </main>
+    
     <div id="footer-container"></div>
-	<div id="theme-switcher"></div>
+    <div id="theme-switcher"></div>
+    
     <script>
+        // Keyboard navigation
         let nodelist=document.querySelectorAll(".node")
         let node=0
         function focusItem(index) {
@@ -208,16 +214,11 @@
                 console.log(path)
                 window.location.href = path;        
             }
-        });
-        
-
-
-        document.addEventListener('DOMContentLoaded', function () {
+        });    // Load components
             fetch('../components/header.html')
                 .then((response) => response.text())
                 .then((data) => {
-                    document.getElementById('header-container').innerHTML =
-                        data;
+                    document.getElementById('header-container').innerHTML = data;
                     if (typeof adjustBodyPadding === 'function') {
                         adjustBodyPadding();
                     }
@@ -225,34 +226,27 @@
                         initHamburgerMenu();
                     }
                 })
-                .catch((error) =>
-                    console.error('Error loading header:', error)
-                );
+                .catch((error) => console.error('Error loading header:', error));
 
             // Load the footer
             fetch('../components/footer.html')
                 .then((response) => response.text())
                 .then((data) => {
-                    document.getElementById('footer-container').innerHTML =
-                        data;
+                    document.getElementById('footer-container').innerHTML = data;
                 })
-                .catch((error) =>
-                    console.error('Error loading footer:', error)
-                );
+                .catch((error) => console.error('Error loading footer:', error));
+                
             // Load the theme switcher
             fetch('../components/theme_switcher.html')
                 .then((response) => response.text())
                 .then((data) => {
-                    document.getElementById('theme-switcher').innerHTML =
-                        data;
+                    document.getElementById('theme-switcher').innerHTML = data;
                     if (typeof initThemeToggle === 'function') {
                         initThemeToggle();
                     }
                 })
-                .catch((error) =>
-                    console.error('Error loading theme switcher:', error)
-                );
-        });
+                .catch((error) => console.error('Error loading theme switcher:', error));
+        
     </script>
 </body>
 </html>

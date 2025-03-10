@@ -24,12 +24,136 @@
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/hamburger-menu.js" defer></script>
 	</head>
-
+	<style>
+		h1{
+			text-align: center;
+			font-size: 3rem;
+		}
+		.section{
+			background-color: var(--card-background);
+			border-radius: 1rem;
+			padding: 1rem;
+			margin: 1rem;
+		}	
+		h2{
+			margin: 1rem;
+			font-size: 2rem;
+			text-align: center;
+		}
+		h3{
+			margin: 1rem;
+			font-size: 1.5rem;
+		}
+		ul{
+			margin: 1.5rem;
+			
+		}
+		li{
+			margin: 0.5rem;
+		}
+		p{
+			margin-left: 1rem;
+			text-align: left;
+			margin-bottom: 0.5rem;
+		}
+		a{
+			margin: 1rem;
+			color: var(--text-color);
+		}
+		.link-section{
+			display: flex;
+			justify-content: center;
+		}
+	</style>
 	<body>
 		<div id="header-container"></div>
-        <br><br><br><br><br><br>
-			
+        <br><br>
+		<main>
+			<h1>K.G.R.Oshan Student 04</h1>
+			<div class="section">
+				<h2>Profile page</h2>
+				<h3>Technical Description</h3>
+				<p>
+				The Profile Page is a simple, layout designed to display a user’s personal information such as their name, 
+				profile picture, bio, their intrests and etc...The page is structured using HTML5 elements, with the layout styled using CSS for visual presentation. 				
+				</p>
+				<ul>
+					<li>Used nested &lt;div&gt; tags for a structured hierarchical layout.</li>
+					<li>Implemented Flexbox for responsive and well-aligned content.</li>
+					<li>Used list elements to organize structured information effectively.</li>
+					<li>Added a "Contact Me" section with forms for user interaction.</li>
+					<li>Used position: relative for skill progress bars to enhance visuals.</li>
+					<li>Applied overflow: scroll for scrollable content where needed.</li>
+					<li>Used CSS variables for consistent colors and design coherence.</li>
+				</ul>
+				<h3>Accessibility Features</h3>
+
+				<ul>
+					<li>Implemented semantic HTML tags to improve accessibility, ensuring a logical structure that is easily navigable by assistive technologies.</li>
+					<li>Ensured sufficient color contrast throughout the site to enhance visual accessibility for users with impaired vision.</li>
+					<li>Designed forms with clear, properly associated labels to support users relying on screen readers.</li>
+					<li>Incorporated name validation, with visual feedback (field turning red) when a number is entered, to guide users in correcting input errors.</li>
+				</ul>
+				<div class="link-section">
+					<a href="../pages/profile.html"><h3>Link to Profile page</h3></a>
+					<a href="../validation/validation_ST4.html"><h3>Link to Validation page</h3></a>
+				</div>				
+				
+
+				
+				
+
+			</div>
+
+			<div class="section">
+				<h2>Challenges-Content Page</h2>
+				<h3>Technical Description</h3>
+				<p>
+					Climate change presents significant challenges, and in my section of the website, I discuss the obstacles we face, the progress being made, and future initiatives aimed at mitigating its impact.
+				</p>
+				<ul>
+					<li>Implemented the position: fixed property for the "Go to Top" button to keep it accessible during scrolling.</li>
+					<li>Incorporated CSS background images to add depth and visual interest to key sections.</li>
+					<li>Used CSS variables to manage colors for consistency and flexibility in the site's design.</li>
+				</ul>
+				<h3>Accessibility Features</h3>
+				<ul>
+					<li>Ensured sufficient color contrast to improve accessibility for users with visual impairments.</li>
+					<li>Implemented `alt` attributes for all images to provide descriptive text for screen readers and improve content accessibility.</li>
+					<li>Added a "Go to Top" button for improved navigation, enhancing the user experience for those using keyboards or assistive devices.</li>
+				</ul>
+				<div class="link-section">					
+					<a href="../content/content_ST4.html"><h3>Link to Content page</h3></a>
+					<a href="../validation/validation_ST4.html"><h3>Link to Validation page</h3></a> 
+				</div>
+				  
+			</div>
+			<div class="section">
+				<h2>Sitemap</h2>
+				<h3>Technical Description</h3>
+				<p>
+					The sitemap is an essential feature that helps both users and search engines efficiently understand and navigate the website's content.
+				</p>
+				<ul>
+					<li>Created the sitemap using SVG elements with rectangles, lines, and text for nodes and connections.</li>
+					<li>Used coordinate-based placement for precise positioning of elements.</li>
+					<li>Implemented JavaScript for keyboard navigation, allowing users to move focus with arrow keys.</li>
+					<li>Leveraged HTML data-* attributes to store directory paths for systematic redirection with the Enter key.</li>
+					<li>Applied CSS global variables and hover effects for design consistency and visual feedback.</li>
+				</ul>
+				<h3>Accessibility Features</h3>
+				<ul>
+					<li>Implemented keyboard navigation using the up and down arrow keys to enhance accessibility and ease of use.</li>
+					<li>Enabled navigation to site pages via nodes, with redirection triggered by pressing the Enter key for improved user interaction.</li>
+				</ul>
+				<div class="link-section">
+					<a href="../pages/sitemap.html"><h3>Link to sitemap page</h3></a>
+					<a href="../validation/validation_ST4.html"><h3>Link to Validation page</h3></a> 
+				</div>
+				
+			</div>
 		</main>
+		
 		<div id="footer-container"></div>
 		<div id="theme-switcher"></div>
 		<script>
