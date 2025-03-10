@@ -6,14 +6,23 @@
 
 .validation-report .validation-summary {
     background-color: var(--card-background);
-    padding: 20px;
     border-radius: 15px;
 }
 
-h1,h2,h3,p,ul {
-    padding: 13px;
-    margin: auto;
+.validation-report:hover {
+    transition: 1s;
+    transform: scale(1.02);
 }
+
+h1,h2,h3,p,ul {
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
 .validation-image-container img {
     border-radius: 15px;
 }
