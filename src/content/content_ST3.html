@@ -12,7 +12,8 @@
 
     <!-- Base styles -->
     <link rel="stylesheet" href="../../src/css/style.css" />
-    <link rel="stylesheet" href="../../src/css/content/content-ST3.css" />
+    <link rel="stylesheet" href="../../src/css/content/content_ST3.css" />
+
 
     <link rel="stylesheet" href="../../src/css/hamburger-menu-animation.css" />
 
@@ -24,12 +25,12 @@
 
     <script src="../js/theme.js" defer></script>
     <script src="../js/hamburger-menu.js" defer></script>
+
   </head>
   <br /><br />
 
   <body>
     <div id="header-container"></div>
-    <div id="top"></div>
     <main id="main-content">
       <h1 class="title">Overview</h1>
       <br />
@@ -127,11 +128,6 @@
             </p>
           </div>
         </div>
-        <br />
-        <br />
-        <div id="back-to-top">
-          <button id="back-to-top-button" title="Go to top"><a href="#top"><i class="fas fa-arrow-up"></i>
-          </a></button>
         </div>
       </div>
     </main>
@@ -159,6 +155,7 @@
             document.getElementById("footer-container").innerHTML = data;
           })
           .catch((error) => console.error("Error loading footer:", error));
+
         // Load the theme switcher
         fetch("../components/theme_switcher.html")
           .then((response) => response.text())

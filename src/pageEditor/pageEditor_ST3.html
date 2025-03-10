@@ -11,7 +11,8 @@
 
 		<!-- Base styles -->
 		<link rel="stylesheet" href="../../src/css/style.css" />
-        <link rel="stylesheet" href="../../src/css/pageEditor/page-editor-ST3.css">
+    <link rel="stylesheet" href="../../src/css/pageEditor/pageEditor_ST3-styles.css">
+    <link rel="stylesheet" href="../../src/css/components/responsive-back-to-top.css">
 
 		<link rel="stylesheet"
 			href="../../src/css/hamburger-menu-animation.css" />
@@ -23,6 +24,7 @@
 
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/hamburger-menu.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
 
 
 	</head>
@@ -222,6 +224,17 @@
 					.catch((error) =>
 						console.error('Error loading theme switcher:', error)
 					);
+
+        //Back to top button
+        fetch('../components/back_to_top.html')
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById('back-to-top').innerHTML = data;
+          if (typeof initBackToTop === 'function') {
+            initBackToTop();
+          }
+          })
+          .catch((error) => console.error('Error loading back to top button:', error));
 			});
 		</script>
 	</body>

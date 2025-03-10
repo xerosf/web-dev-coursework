@@ -1,0 +1,25 @@
+.image_container {
+  text-align: center;
+}
+
+#greenearth_img {
+  border-radius: 15px;
+  opacity: 80%;
+  text-align: center;
+}
+
+#greenearth_img:hover {
+  transform: scale(1.01);
+  transition: ease-in-out 1s;
+  opacity: 40%;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+body {
+  color: var(--text-color);
+}
+
