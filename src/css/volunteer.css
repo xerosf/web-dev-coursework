@@ -83,6 +83,13 @@ p {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.image-container img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 /* Benefits section */

@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-		<title>Climate Action</title>
-
-		<link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon"/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lison's Page Editor</title>
+		<link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon" />
 
 		<!-- Base styles -->
-		<link rel="stylesheet" href="../../src/css/style.css"/>
-        <link rel="stylesheet" href="../css/pageEditor/pageEditor_ST1-styles.css">
+		<link rel="stylesheet" href="../../src/css/style.css" />
+		<link rel="stylesheet" href="../css/pageEditor/pageEditor_ST1.css" />
 
-		<link rel="stylesheet" href="../../src/css/hamburger-menu-animation.css"/>
+		<link rel="stylesheet" href="../../src/css/hamburger-menu-animation.css" />
 
-		<!-- Font Awesome (Social media icons)-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+		<!-- Font Awesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/hamburger-menu.js" defer></script>
+		<script src="../js/back-to-top.js" defer></script>
 	</head>
 
 	<body>
 		<div id="header-container"></div>
-        
-        <section class="stud">
+
+		<section class="stud">
             <h2>Sansith Fernando - Student 01</h2>
         </section>
     
@@ -257,14 +256,13 @@
                     </ul>
                 </section>
     
-                <button id="back-to-top" aria-label="Scroll back to top"><i class="fas fa-arrow-up"></i></button>
             </main>
+
         </div>
 
 		<div id="footer-container"></div>
-
 		<div id="theme-switcher"></div>
-
+		<div id="back-to-top"></div>
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
 				fetch('../components/header.html')
@@ -306,27 +304,34 @@
 					.catch((error) =>
 						console.error('Error loading theme switcher:', error)
 					);
+				// Load the back to top button
+				fetch('../components/back_to_top.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('back-to-top').innerHTML = data;
+						if (typeof initBackToTop === 'function') {
+							initBackToTop();
+						}
+					})
+					.catch((error) =>
+						console.error(
+							'Error loading back to top button:',
+							error
+						)
+					);
+				// Add smooth scrolling for internal links
+				document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+					anchor.addEventListener('click', function (e) {
+						e.preventDefault();
+
+						document
+							.querySelector(this.getAttribute('href'))
+							.scrollIntoView({
+								behavior: 'smooth',
+							});
+					});
+				});
 			});
-            document.addEventListener('DOMContentLoaded', function() {
-                const backToTopButton = document.getElementById('back-to-top');
-                
-                // Show button when user scrolls down 300px from the top
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > 300) {
-                        backToTopButton.classList.add('visible');
-                    } else {
-                        backToTopButton.classList.remove('visible');
-                    }
-                });
-                
-                // Smooth scroll to top when button is clicked
-                backToTopButton.addEventListener('click', function() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            });
 		</script>
 	</body>
 </html>
