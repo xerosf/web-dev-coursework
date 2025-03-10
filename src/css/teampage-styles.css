@@ -1,96 +1,92 @@
 h1 {
-  text-align: center;
-  font-size: 2vw;
-  padding: 2vw;
+	text-align: center;
+	font-size: 2vw;
+	padding: 2vw;
 }
 
 #information {
-  font-size: 1.2rem;
-  text-align: center;
+	font-size: 1.2rem;
+	text-align: center;
 }
 
 .image_container img {
-  border-radius: 10px;
+	border-radius: 10px;
 }
 
 .image_container {
-  display: flex;
-  height: 500px;
-  gap: 15px;
-  justify-content: center;
-  padding: 3vw;
-  border-radius: 15px;
+	display: flex;
+	height: 500px;
+	gap: 15px;
+	justify-content: center;
+	padding: 3vw;
+	border-radius: 15px;
 }
 
 .team-member {
-  position: relative;
+	position: relative;
 }
 
 .member-details {
-  display: none;
-  font-size: 12px;
-  position: absolute;
-  bottom: 10;
-  background-color: #353535;
-  color: white;
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
+	display: none;
+	font-size: 12px;
+	position: absolute;
+	bottom: 10;
+	background-color: #353535;
+	color: white;
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 .team-member:hover .member-details {
-  display: block;
-  transition: 2s;
-  transform: scale(1.05);
+	display: block;
+	transition: 2s;
+	transform: scale(1.05);
 }
 
 .team-member:hover img {
-  opacity: 50%;
-  transform: scale(1.05);
-  transition: 1.2s;
+	transform: scale(1.03);
+	transition: 1.2s;
 }
 
 #thanku {
-  font-size: 30px;
-  text-align: center;
+	font-size: 30px;
+	text-align: center;
 }
 
 .icons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 .icons i {
-  color: white;
+	color: white;
 }
 a {
-  color: var(--text-color);
+	color: var(--text-color);
 }
-
-
 
 /* Responsive Design for mobile devices */
 @media (max-width: 768px) {
-  .image_container {
-    flex-direction: column;
-    gap: 300px;
-    align-items: center;
-    height: auto;
-  }
+	.image_container {
+		flex-direction: column;
+		gap: 300px;
+		align-items: center;
+		height: auto;
+	}
 
-  .team-member {
-    justify-content: center;
-    flex: none;
-    width: 90%;
-  }
+	.team-member {
+		justify-content: center;
+		flex: none;
+		width: 90%;
+	}
 
-  .image_container .team-member .member-details {
-    transition: 1s;
-    margin: auto;
-    font-size: 13px;
-    width: 100%;
-    height: 100%;
-    bottom: 10;
-  }
-
+	.image_container .team-member .member-details {
+		transition: 1s;
+		margin: auto;
+		font-size: 13px;
+		width: 100%;
+		height: 100%;
+		bottom: 10;
+	}
 }
