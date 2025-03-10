@@ -1,0 +1,25 @@
+.validation-report {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.validation-report .validation-summary {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h1,h2,h3,p,ul {
+    padding: 10px;
+    margin: auto;
+}
+.validation-image-container img {
+    border-radius: 15px;
+}
+
+.validation-image-container:hover img {
+    transform: scale(1.02);
+    transition: 1s;
+}
+

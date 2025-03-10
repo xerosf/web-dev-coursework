@@ -20,6 +20,10 @@
   opacity: 75%;
 }
 
+.content button:hover button {
+  transform: scale(1.05);
+}
+
 h1 {
   text-align: left;
 }
