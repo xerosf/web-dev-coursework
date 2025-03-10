@@ -63,7 +63,9 @@ h1 {
 .icons i {
   color: white;
 }
-
+a {
+  color: var(--text-color);
+}
 
 
 

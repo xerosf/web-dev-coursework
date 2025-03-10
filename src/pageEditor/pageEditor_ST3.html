@@ -16,8 +16,6 @@
 		<link rel="stylesheet"
 			href="../../src/css/hamburger-menu-animation.css" />
 
-        <link rel="stylesheet" href="../../src/css/components/responsive-backto-top.css">
-
 		<!-- Font Awesome (Social media icons)-->
 		<link
 			rel="stylesheet"
@@ -25,14 +23,14 @@
 
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/hamburger-menu.js" defer></script>
-        <script src="../js/back-to-top.js" defer></script>
+
 
 	</head>
 
 	<body>
 		<div id="header-container"></div>
         <br><br>
-			
+			<div id="top"></div>
         <main id="main-content">
             <h1 class="title">Feedback Page</h1>
             <br />
@@ -175,7 +173,10 @@
                 </div>
               </div>
       
-            <div id="back-to-top"></div>
+              <div id="back-to-top">
+                <button id="back-to-top-button" title="Go to top"><a href="#top"><i class="fas fa-arrow-up"></i>
+                </a></button>
+              </div>
 
         </main>
 		<div id="footer-container"></div>
@@ -221,27 +222,6 @@
 					.catch((error) =>
 						console.error('Error loading theme switcher:', error)
 					);
-                // Load the back to top button
-                document.addEventListener('DOMContentLoaded', function() {
-                const backToTopButton = document.getElementById('back-to-top');
-                
-                // Show button when user scrolls down 300px from the top
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > 300) {
-                        backToTopButton.classList.add('visible');
-                    } else {
-                        backToTopButton.classList.remove('visible');
-                    }
-                });
-                
-                // Smooth scroll to top when button is clicked
-                backToTopButton.addEventListener('click', function() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            });
 			});
 		</script>
 	</body>
