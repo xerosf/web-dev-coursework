@@ -4,22 +4,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Climate Action</title>
-    <link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home-styles.css">
-    <link rel="stylesheet" href="../css/content/content_ST4.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="../js/theme.js"></script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Climate Action</title>
+	<link rel="icon" href="https://img.icons8.com/color/48/united-nations.png" type="image/x-icon" />
 
+	<!-- Base styles -->
+	<link rel="stylesheet" href="../../src/css/style.css" />
+  <link rel="stylesheet" href="../css/content/content_ST4.css">
+  
+
+	<!-- Component styles -->
+	<link rel="stylesheet" href="../../src/css/components/responsive-back-to-top.css" />
+
+	<!-- Font Awesome (Social media icons)-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+	<script src="../js/theme.js" defer></script>
+	<script src="../js/hamburger-menu.js" defer></script>
+	<script src="../js/back-to-top.js" defer></script>
 </head>
 
 <body>
     <div id="header-container"></div>
     <p><br><br><br></p>
-    <a href="#"><div class="to-top-butt">Go to Top</div></a>
+    
     <main>
         <h1 class="title"> Climate Change: The Crisis, the Challenges, and the Way Forward</h1>
         <br>
@@ -97,38 +106,66 @@
         </p>
       </div>
     </main>
-
     <div id="footer-container"></div>
     <div id="theme-switcher"></div>
-
+    <div id="back-to-top"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Load the header
-            fetch('../components/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-
-            // Load the footer
-            fetch('../components/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading footer:', error));
-
-            // Load the theme switcher
-            fetch('../components/theme_switcher.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('theme-switcher').innerHTML = data;
-                    // Initialize theme toggle AFTER header is loaded
-                    initThemeToggle();
-                })
-                .catch(error => console.error('Error loading header:', error));
-        });
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('../components/header.html')
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById('header-container').innerHTML =
+              data;
+            if (typeof adjustBodyPadding === 'function') {
+              adjustBodyPadding();
+            }
+            if (typeof initHamburgerMenu === 'function') {
+              initHamburgerMenu();
+            }
+          })
+          .catch((error) =>
+            console.error('Error loading header:', error)
+          );
+    
+        // Load the footer
+        fetch('../components/footer.html')
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById('footer-container').innerHTML =
+              data;
+          })
+          .catch((error) =>
+            console.error('Error loading footer:', error)
+          );
+        // Load the theme switcher
+        fetch('../components/theme_switcher.html')
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById('theme-switcher').innerHTML =
+              data;
+            if (typeof initThemeToggle === 'function') {
+              initThemeToggle();
+            }
+          })
+          .catch((error) =>
+            console.error('Error loading theme switcher:', error)
+          );
+        // Load the back to top button
+        fetch('../components/back_to_top.html')
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById('back-to-top').innerHTML = data;
+            if (typeof initBackToTop === 'function') {
+              initBackToTop();
+            }
+          })
+          .catch((error) =>
+            console.error(
+              'Error loading back to top button:',
+              error
+            )
+          );
+      });
     </script>
 </body>
 
