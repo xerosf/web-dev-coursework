@@ -1,0 +1,30 @@
+.content ul {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.content ul li {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: var(--primary-color);
+  padding: 15px;
+  width: 95%;
+  border: 1px solid var(--accent-color);
+  border-radius: 15px;
+  margin: 10px;
+}
+
+button a {
+  color: var(--button-text);
+}
+
+.content:hover .content {
+  transition: 1s;
+  transform: scale(1.02);
+}
+
+.content p {
+  text-align: left;
+}

@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Climate Action</title>
-		<link
-			rel="icon"
-			href="https://img.icons8.com/color/48/united-nations.png"
-			type="image/x-icon" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate Action</title>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/color/48/united-nations.png"
+      type="image/x-icon"
+    />
 
-		<!-- Base styles -->
-		<link rel="stylesheet" href="../../src/css/style.css" />
+    <!-- Base styles -->
+    <link rel="stylesheet" href="../../src/css/style.css" />
     <link rel="stylesheet" href="../../src/css/content/content-ST3.css" />
 
-		<link
-			rel="stylesheet"
-			href="../../src/css/hamburger-menu-animation.css" />
+    <link rel="stylesheet" href="../../src/css/hamburger-menu-animation.css" />
 
-		<!-- Font Awesome (Social media icons)-->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Font Awesome (Social media icons)-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-		<script src="../js/theme.js" defer></script>
-		<script src="../js/hamburger-menu.js" defer></script>
-	</head>
+    <script src="../js/theme.js" defer></script>
+    <script src="../js/hamburger-menu.js" defer></script>
+  </head>
   <br /><br />
-  
+
   <body>
     <div id="header-container"></div>
 
     <main id="main-content">
-      <h1 class="title">Overview - Sustainable Development Goals</h1>
+      <h1 class="title">Overview</h1>
       <br />
       <div class="image_container">
         <img
@@ -127,52 +127,50 @@
             </p>
           </div>
         </div>
+        <br />
+        <br />
+        <a href="#" id="back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
       </div>
     </main>
     <div id="footer-container"></div>
     <div id="theme-switcher"></div>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				fetch('../components/header.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('header-container').innerHTML =
-							data;
-						if (typeof adjustBodyPadding === 'function') {
-							adjustBodyPadding();
-						}
-						if (typeof initHamburgerMenu === 'function') {
-							initHamburgerMenu();
-						}
-					})
-					.catch((error) =>
-						console.error('Error loading header:', error)
-					);
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("../components/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+            if (typeof adjustBodyPadding === "function") {
+              adjustBodyPadding();
+            }
+            if (typeof initHamburgerMenu === "function") {
+              initHamburgerMenu();
+            }
+          })
+          .catch((error) => console.error("Error loading header:", error));
 
-				// Load the footer
-				fetch('../components/footer.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('footer-container').innerHTML =
-							data;
-					})
-					.catch((error) =>
-						console.error('Error loading footer:', error)
-					);
-				// Load the theme switcher
-				fetch('../components/theme_switcher.html')
-					.then((response) => response.text())
-					.then((data) => {
-						document.getElementById('theme-switcher').innerHTML =
-							data;
-						if (typeof initThemeToggle === 'function') {
-							initThemeToggle();
-						}
-					})
-					.catch((error) =>
-						console.error('Error loading theme switcher:', error)
-					);
-			});
-		</script>
+        // Load the footer
+        fetch("../components/footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footer:", error));
+        // Load the theme switcher
+        fetch("../components/theme_switcher.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("theme-switcher").innerHTML = data;
+            if (typeof initThemeToggle === "function") {
+              initThemeToggle();
+            }
+          })
+          .catch((error) =>
+            console.error("Error loading theme switcher:", error)
+          );
+      });
+    </script>
   </body>
 </html>

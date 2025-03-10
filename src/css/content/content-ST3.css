@@ -14,10 +14,19 @@
   opacity: 40%;
 }
 
-h1,h2,h3 {
-    color: var(--primary-color);
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
 }
 body {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
+#back-to-top {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 25px;
+  padding: 25px;
+  border-radius: 15px;
+}
