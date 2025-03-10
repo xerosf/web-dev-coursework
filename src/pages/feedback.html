@@ -12,6 +12,7 @@
 		<!-- Base styles -->
 		<link rel="stylesheet" href="../../src/css/style.css" />
     <link rel="stylesheet" href="../../src/css/feedback-styles.css" />
+    <link rel="stylesheet" href="../../src/css/components/responsive-back-to-top.css" />
 
 		<link
 			rel="stylesheet"
@@ -25,11 +26,13 @@
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/hamburger-menu.js" defer></script>
     <script src="../js/feedback.js" defer></script>
+    <script src="../js/back-to-top.js" defer></script>
 	</head>
 
   <body>
     <div id="header-container"></div>
     <br /><br /><br />
+    <div id="top"></div>
     <main>
       <h1><i class="fas fa-comment-dots"></i> Feedback Page</h1>
       <p>
@@ -313,14 +316,16 @@
               <p><strong><i class="fas fa-message"></i> Comment:</strong> <span id="preview-feedback"></span></p>
             </div>
           </fieldset>
-
           <br>
-
           <div>
             <button type="submit">Submit Feedback</button>
           </div>
         </div>
       </form>
+      <div id="back-to-top">
+        <button id="back-to-top-button" title="Go to top"><a href="#top"><i class="fas fa-arrow-up"></i>
+        </a></button>
+      </div>
     </main>
 
     <div id="footer-container"></div>
@@ -353,6 +358,18 @@
 					.catch((error) =>
 						console.error('Error loading footer:', error)
 					);
+
+        //Back to top button
+        fetch('../components/back_to_top.html')
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById('back-to-top').innerHTML = data;
+          if (typeof initBackToTop === 'function') {
+            initBackToTop();
+          }
+          })
+          .catch((error) => console.error('Error loading back to top button:', error));  
+
 				// Load the theme switcher
 				fetch('../components/theme_switcher.html')
 					.then((response) => response.text())
