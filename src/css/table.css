@@ -32,7 +32,6 @@ body {
 }
 
 .climate-table caption {
-	display: block;
 	font-size: 1.5rem;
 	font-weight: 600;
 	padding: 1rem;
@@ -251,6 +250,7 @@ body {
 
 	.climate-table caption {
 		font-size: 1.3rem;
+		display: block;
 	}
 
 	/* Fix header alignment on smaller screens */
