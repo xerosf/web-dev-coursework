@@ -15,7 +15,7 @@
 		<link
 			rel="stylesheet"
 			href="../../src/css/hamburger-menu-animation.css" />
-		
+
 		<!-- Component styles -->
 		<link
 			rel="stylesheet"
@@ -33,9 +33,63 @@
 
 	<body>
 		<div id="header-container"></div>
-        <br><br><br><br><br><br>
+		<main>
+			<div class="featured-section">
+				<h2>Placeholder content</h2>
+				<div class="featured-cards">
+				  <div class="featured-card">
+					<i class="fas fa-tree fa-3x"></i>
+					<h3>Placeholder content</h3>
+					<p>
+						Placeholder content
+					</p>
+				  </div>
+		
+				  <div class="featured-card">
+					<i class="fas fa-thermometer-half fa-3x"></i>
+					<h3>Placeholder content</h3>
+					<p>
+						Placeholder content
+					</p>
+				  </div>
+		
+				  <div class="featured-card">
+					<i class="fas fa-cloud fa-3x"></i>
+					<h3>Placeholder content</h3>
+					<p>
+						Placeholder content
+					</p>
+				  </div>
+				</div>
+				<div class="featured-section">
+					<h2>Placeholder content</h2>
+					<div class="featured-cards">
+					  <div class="featured-card">
+						<i class="fas fa-tree fa-3x"></i>
+						<h3>Placeholder content</h3>
+						<p>
+							Placeholder content
+						</p>
+					  </div>
 			
+					  <div class="featured-card">
+						<i class="fas fa-thermometer-half fa-3x"></i>
+						<h3>Placeholder content</h3>
+						<p>
+							Placeholder content
+						</p>
+					  </div>
+			
+					  <div class="featured-card">
+						<i class="fas fa-cloud fa-3x"></i>
+						<h3>Placeholder content</h3>
+						<p>
+						  Placeholder content
+						</p>
+					  </div>
+					</div>
 		</main>
+	</body>
 		<div id="footer-container"></div>
 		<div id="theme-switcher"></div>
 		<div id="back-to-top"></div>
@@ -84,14 +138,16 @@
 				fetch('../components/back_to_top.html')
 					.then((response) => response.text())
 					.then((data) => {
-						document.getElementById('back-to-top').innerHTML =
-							data;
+						document.getElementById('back-to-top').innerHTML = data;
 						if (typeof initBackToTop === 'function') {
 							initBackToTop();
 						}
 					})
 					.catch((error) =>
-						console.error('Error loading back to top button:', error)
+						console.error(
+							'Error loading back to top button:',
+							error
+						)
 					);
 			});
 		</script>
