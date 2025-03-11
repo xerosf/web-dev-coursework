@@ -4,8 +4,8 @@
 **Team:** Sansith (ST1), Lison (ST2), Emika (ST3), Oshan (ST4)  
 **Due Date:** 10 March 2025  
 **Submission:** ZIP file (code + reports) + Group Agreement via Blackboard\
-**Github Repository** https://github.com/xerosf/web-dev-coursework \
-**Github Pages**: https://xerosf.github.io/web-dev-coursework/
+**Github Repository:** https://github.com/xerosf/web-dev-coursework \
+**Github Pages:** https://xerosf.github.io/web-dev-coursework/
 
 ---
 
@@ -103,10 +103,6 @@ To include the header and the footer in your pages, use this HTMl template:
 		<!-- Base styles -->
 		<link rel="stylesheet" href="../../src/css/style.css" />
 
-		<link
-			rel="stylesheet"
-			href="../../src/css/hamburger-menu-animation.css" />
-
 		<!-- Font Awesome (Social media icons)-->
 		<link
 			rel="stylesheet"
@@ -114,15 +110,17 @@ To include the header and the footer in your pages, use this HTMl template:
 
 		<script src="../js/theme.js" defer></script>
 		<script src="../js/hamburger-menu.js" defer></script>
+		<script src="../js/back-to-top.js" defer></script>
 	</head>
 
 	<body>
 		<div id="header-container"></div>
         <br><br><br><br><br><br>
-
+			
 		</main>
 		<div id="footer-container"></div>
 		<div id="theme-switcher"></div>
+		<div id="back-to-top"></div>
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
 				fetch('../components/header.html')
@@ -164,11 +162,23 @@ To include the header and the footer in your pages, use this HTMl template:
 					.catch((error) =>
 						console.error('Error loading theme switcher:', error)
 					);
+				// Load the back to top button
+				fetch('../components/back_to_top.html')
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById('back-to-top').innerHTML =
+							data;
+						if (typeof initBackToTop === 'function') {
+							initBackToTop();
+						}
+					})
+					.catch((error) =>
+						console.error('Error loading back to top button:', error)
+					);
 			});
 		</script>
 	</body>
 </html>
-
 ```
 
 ---
